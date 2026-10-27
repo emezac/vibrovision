@@ -1,0 +1,171 @@
+{
+  "kind": "analytic mechanical illustration; not reconstructed from the fan recordings",
+  "model": {
+    "M": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "K": [
+      [
+        6.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        4.0
+      ]
+    ],
+    "scale_matrix": [
+      [
+        2.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "pixel_operator": [
+      [
+        6.0,
+        -4.0
+      ],
+      [
+        -1.0,
+        4.0
+      ]
+    ],
+    "recovered_operator": [
+      [
+        6.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        4.0
+      ]
+    ]
+  },
+  "scale_identity_max_abs_error_100_trials": 1.041481514324134e-15,
+  "phase": {
+    "in_phase_spectral_matrix": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "opposed_spectral_matrix": [
+      [
+        1.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        1.0
+      ]
+    ],
+    "equal_individual_power": true,
+    "joint_relationship_changes": true
+  },
+  "modes": {
+    "baseline_eigenvalues": [
+      2.76393202250021,
+      7.23606797749979
+    ],
+    "baseline_vectors": [
+      [
+        0.5257311121191335,
+        0.8506508083520399
+      ],
+      [
+        0.8506508083520399,
+        -0.5257311121191335
+      ]
+    ],
+    "weaker_joint_K": [
+      [
+        5.2,
+        -1.2
+      ],
+      [
+        -1.2,
+        3.2
+      ]
+    ],
+    "weaker_eigenvalues": [
+      2.6379500648186696,
+      5.762049935181331
+    ],
+    "weaker_vectors": [
+      [
+        0.42415539624972365,
+        0.9055894212236802
+      ],
+      [
+        0.9055894212236802,
+        -0.42415539624972365
+      ]
+    ]
+  },
+  "uncertainty": {
+    "overlapping_example": {
+      "operator_change": 1.5999999999999999,
+      "relative_change": 0.22111456180001676,
+      "eigenvalue_changes": [
+        -0.12598195768154064,
+        -1.474018042318459
+      ],
+      "uncertainty_available": true,
+      "resolved": false,
+      "location_stable": false,
+      "reason": "change overlaps empirical uncertainty",
+      "epsilon_combined": 1.8,
+      "eigenvalue_changes_resolved": [
+        false,
+        false
+      ],
+      "mode_sine_angle_bound": [
+        0.8049844718999243,
+        0.8049844718999243
+      ],
+      "uncertainty_scope": "conditional perturbation diagnostics using empirical bootstrap radii; not a certified coverage claim"
+    },
+    "resolved_example": {
+      "operator_change": 1.5999999999999999,
+      "relative_change": 0.22111456180001676,
+      "eigenvalue_changes": [
+        -0.12598195768154064,
+        -1.474018042318459
+      ],
+      "uncertainty_available": true,
+      "resolved": true,
+      "location_stable": true,
+      "reason": "change exceeds empirical operator uncertainty",
+      "epsilon_combined": 0.2,
+      "eigenvalue_changes_resolved": [
+        false,
+        true
+      ],
+      "mode_sine_angle_bound": [
+        0.08944271909999159,
+        0.08944271909999159
+      ],
+      "uncertainty_scope": "conditional perturbation diagnostics using empirical bootstrap radii; not a certified coverage claim"
+    },
+    "radii_are_selected_illustrative_values": true,
+    "not_a_fitted_bootstrap_or_coverage_claim": true
+  },
+  "units": "normalized illustrative model units; not calibrated stiffness, force, or fan frequencies",
+  "scope": "Positive diagonal mass and fixed positive region scales; reciprocal linear spring couplings; full observable coordinates. Empirical radii exclude model bias and nonstationarity.",
+  "verified_against": "vibrovision.mechanics.invariant_operator and compare_operators"
+}

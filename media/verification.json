@@ -2,33 +2,35 @@
   "files": [
     {
       "file": "vibrovision_demo.mp4",
-      "duration_s": 147.9,
+      "duration_s": 224.4,
       "resolution": [
         1920,
         1080
       ],
+      "embedded_english_captions": true,
       "fps": "30/1",
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_rate_hz": "48000",
       "decoded_without_errors": true,
-      "sha256": "49cb318bd10df2227ec093e8c619bc3f3da7e30c3e8a4cf0b3cfb74a53ec097a",
-      "size_bytes": 13001623
+      "sha256": "141feec9809b51291f3f9ec98ce4b23b6b7d00e41c09c46cb757a1285b3a94da",
+      "size_bytes": 19905224
     },
     {
       "file": "vibrovision_hackathon.mp4",
-      "duration_s": 196.616,
+      "duration_s": 273.117,
       "resolution": [
         1920,
         1080
       ],
+      "embedded_english_captions": true,
       "fps": "30/1",
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_rate_hz": "48000",
       "decoded_without_errors": true,
-      "sha256": "e285550552c8447740a9bd689ee416daae2b6ab46a151799ef90469fd1f5847c",
-      "size_bytes": 21184263
+      "sha256": "b3eec2498dd4b261d4ebef35422e91ba65c4d4c5596f89f62f18a1928bab6579",
+      "size_bytes": 28401962
     }
   ],
   "english_speech_and_captions": true,
@@ -39,7 +41,179 @@
   "observed_tone_amplitude_ratio": 35.899884613118985,
   "synthetic_agent_job": "7b61959df6ab",
   "synthetic_trace_explicitly_identified": true,
-  "chapters": 10,
+  "chapters": 14,
+  "mathematical_illustration": {
+    "kind": "analytic mechanical illustration; not reconstructed from the fan recordings",
+    "model": {
+      "M": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "K": [
+        [
+          6.0,
+          -2.0
+        ],
+        [
+          -2.0,
+          4.0
+        ]
+      ],
+      "scale_matrix": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pixel_operator": [
+        [
+          6.0,
+          -4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "recovered_operator": [
+        [
+          6.0,
+          -2.0
+        ],
+        [
+          -2.0,
+          4.0
+        ]
+      ]
+    },
+    "scale_identity_max_abs_error_100_trials": 1.041481514324134e-15,
+    "phase": {
+      "in_phase_spectral_matrix": [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "opposed_spectral_matrix": [
+        [
+          1.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          1.0
+        ]
+      ],
+      "equal_individual_power": true,
+      "joint_relationship_changes": true
+    },
+    "modes": {
+      "baseline_eigenvalues": [
+        2.76393202250021,
+        7.23606797749979
+      ],
+      "baseline_vectors": [
+        [
+          0.5257311121191335,
+          0.8506508083520399
+        ],
+        [
+          0.8506508083520399,
+          -0.5257311121191335
+        ]
+      ],
+      "weaker_joint_K": [
+        [
+          5.2,
+          -1.2
+        ],
+        [
+          -1.2,
+          3.2
+        ]
+      ],
+      "weaker_eigenvalues": [
+        2.6379500648186696,
+        5.762049935181331
+      ],
+      "weaker_vectors": [
+        [
+          0.42415539624972365,
+          0.9055894212236802
+        ],
+        [
+          0.9055894212236802,
+          -0.42415539624972365
+        ]
+      ]
+    },
+    "uncertainty": {
+      "overlapping_example": {
+        "operator_change": 1.5999999999999999,
+        "relative_change": 0.22111456180001676,
+        "eigenvalue_changes": [
+          -0.12598195768154064,
+          -1.474018042318459
+        ],
+        "uncertainty_available": true,
+        "resolved": false,
+        "location_stable": false,
+        "reason": "change overlaps empirical uncertainty",
+        "epsilon_combined": 1.8,
+        "eigenvalue_changes_resolved": [
+          false,
+          false
+        ],
+        "mode_sine_angle_bound": [
+          0.8049844718999243,
+          0.8049844718999243
+        ],
+        "uncertainty_scope": "conditional perturbation diagnostics using empirical bootstrap radii; not a certified coverage claim"
+      },
+      "resolved_example": {
+        "operator_change": 1.5999999999999999,
+        "relative_change": 0.22111456180001676,
+        "eigenvalue_changes": [
+          -0.12598195768154064,
+          -1.474018042318459
+        ],
+        "uncertainty_available": true,
+        "resolved": true,
+        "location_stable": true,
+        "reason": "change exceeds empirical operator uncertainty",
+        "epsilon_combined": 0.2,
+        "eigenvalue_changes_resolved": [
+          false,
+          true
+        ],
+        "mode_sine_angle_bound": [
+          0.08944271909999159,
+          0.08944271909999159
+        ],
+        "uncertainty_scope": "conditional perturbation diagnostics using empirical bootstrap radii; not a certified coverage claim"
+      },
+      "radii_are_selected_illustrative_values": true,
+      "not_a_fitted_bootstrap_or_coverage_claim": true
+    },
+    "units": "normalized illustrative model units; not calibrated stiffness, force, or fan frequencies",
+    "scope": "Positive diagonal mass and fixed positive region scales; reciprocal linear spring couplings; full observable coordinates. Empirical radii exclude model bias and nonstationarity.",
+    "verified_against": "vibrovision.mechanics.invariant_operator and compare_operators"
+  },
+  "math_is_distinguished_from_real_fan_measurements": true,
   "cool_speedup_claim": false,
   "field_fault_sensitivity_claim": false,
   "team_introduction": "To be added by the submitting team; no personal footage was supplied."

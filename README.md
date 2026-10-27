@@ -2,9 +2,9 @@
 
 **Turn machine video into motion measurements, inspectable evidence, and a clear next step.**
 
-VibroVision uses OpenCV 5 to measure vibration from video. An inspection agent checks the measurement, adapts its next action, and requests human review. Spectral analysis and a conditional mechanical model help distinguish an observed change from a supported structural diagnosis.
+VibroVision uses OpenCV 5 to measure vibration from video. An inspection agent checks the measurement, adapts its next action, and requests human review. Spectral analysis and a conditional mechanical model help distinguish an observed change from a supported structural diagnosis. The expanded video explains joint motion, image-scale cancellation, natural modes and uncertainty; a [mathematical video companion](docs/VIDEO_MATHEMATICS.md) gives the exact examples and assumptions.
 
-[Live AWS application](https://d30icy4clt3p0c.cloudfront.net/) · [Demonstration video — 3:17](media/vibrovision_hackathon.mp4) · [Technical report](docs/TECHNICAL_REPORT.md) · [Devpost narrative](docs/DEVPOST.md) · [Español](README_ES.md)
+[Live AWS application](https://d30icy4clt3p0c.cloudfront.net/) · [Demonstration video — 4:33](media/vibrovision_hackathon.mp4) · [Technical report](docs/TECHNICAL_REPORT.md) · [Devpost narrative](docs/DEVPOST.md) · [Español](README_ES.md)
 
 Live analysis requires an API key supplied separately to authorized reviewers. The page and `/healthz` are public. No credentials are included in this repository.
 

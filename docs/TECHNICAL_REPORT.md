@@ -34,7 +34,7 @@ The code checks physical signs, positivity, conditioning and compatibility befor
 
 A joint spectral matrix preserves relationships between channels that an individual scalar summary discards. Its current comparison is descriptive, without a calibrated field alarm threshold. Alpha can increase or decrease depending on the spectral change, so the method does not assert that every fault lowers alpha.
 
-The [full mathematical appendix](MATHEMATICS.md), in Spanish, contains derivations, modal sensitivity, finite stiffness loss, graph cuts, perturbation bounds and implementation conditions.
+The [full mathematical appendix](MATHEMATICS.md), in Spanish, contains derivations, modal sensitivity, finite stiffness loss, graph cuts, perturbation bounds and implementation conditions. The [video mathematics guide](VIDEO_MATHEMATICS.md) explains the animated examples and their exact numbers.
 
 ## Evaluation and principal results
 
