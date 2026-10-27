@@ -1,0 +1,3 @@
+{"note": "Surrogate (true motion + measured tracker-error spectrum) vs end-to-end video pipeline on the same 24 held-out seeds (12 healthy, 12 fault), alpha CUSUM at h=3. Error model calibrated on seed 900 (results/tracker_error_model.json).",
+ "end_to_end": {"healthy_alpha_mean": 1.585, "null_cusum_max_q50": 0.63, "null_cusum_max_q95": 2.82, "false_alarm_at_h3": 0.036, "fault_detected": 1.0, "median_delay_s": 70.5},
+ "surrogate":  {"healthy_alpha_mean": 1.586, "null_cusum_max_q50": 0.85, "null_cusum_max_q95": 3.20, "false_alarm_at_h3": 0.095, "fault_detected": 1.0, "median_delay_s": 70.5}}

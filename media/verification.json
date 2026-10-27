@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "file": "vibrovision_demo.mp4",
+      "duration_s": 147.9,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": "30/1",
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_rate_hz": "48000",
+      "decoded_without_errors": true,
+      "sha256": "49cb318bd10df2227ec093e8c619bc3f3da7e30c3e8a4cf0b3cfb74a53ec097a",
+      "size_bytes": 13001623
+    },
+    {
+      "file": "vibrovision_hackathon.mp4",
+      "duration_s": 196.616,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": "30/1",
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_rate_hz": "48000",
+      "decoded_without_errors": true,
+      "sha256": "e285550552c8447740a9bd689ee416daae2b6ab46a151799ef90469fd1f5847c",
+      "size_bytes": 21184263
+    }
+  ],
+  "english_speech_and_captions": true,
+  "original_score": true,
+  "source_hashes_match_aws": true,
+  "real_comparison_job": "7459d1077a62",
+  "observed_comparison_wall_s": 43.9,
+  "observed_tone_amplitude_ratio": 35.899884613118985,
+  "synthetic_agent_job": "7b61959df6ab",
+  "synthetic_trace_explicitly_identified": true,
+  "chapters": 10,
+  "cool_speedup_claim": false,
+  "field_fault_sensitivity_claim": false,
+  "team_introduction": "To be added by the submitting team; no personal footage was supplied."
+}

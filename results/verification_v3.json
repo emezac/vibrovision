@@ -1,0 +1,144 @@
+{
+  "version": "3.0.0",
+  "pytest": {
+    "passed": 55,
+    "warnings": 2
+  },
+  "notebook": {
+    "all_code_cells_executed": true,
+    "code_cells": 14,
+    "actual_input_directory": "/Users/admin/code/hackaton/videos",
+    "input_files": [
+      "cuatro.mp4",
+      "dos.mp4",
+      "tres.mp4",
+      "uno.mp4"
+    ],
+    "mit_unique_recordings": 1,
+    "mit_duplicate_file": "cuatro.mp4",
+    "mit_sha256": "b6f2beb327fcd569ff5d6f34d1b64c0abddc04985c86ccf3efd25b2aa07a5055",
+    "segment_s": [
+      100,
+      110
+    ],
+    "ic_tracking_supported": true,
+    "lk_tracking_supported": true,
+    "cross_validation": {
+      "available": true,
+      "methods": [
+        "ic",
+        "lk"
+      ],
+      "channels": {
+        "Union_izquierda": {
+          "correlation": 0.9073841090392148,
+          "difference_rms_px": 0.012204154201026435
+        },
+        "Union_centro": {
+          "correlation": -0.2796015213846613,
+          "difference_rms_px": 0.02148366232684069
+        },
+        "Tablero_centro": {
+          "correlation": -0.01669597747931859,
+          "difference_rms_px": 0.009515030713271191
+        }
+      },
+      "dominant_frequency_primary": 0.7992007992007991,
+      "dominant_frequency_alternate": 0.7992007992007991,
+      "peak_tolerance": 0.3996003996003996,
+      "dominant_peaks_agree": true,
+      "minimum_correlation_heuristic": 0.8,
+      "series_agree": false,
+      "consistent": false,
+      "scope": "Comparación descriptiva: dos bins y correlación 0,8 son heurísticos, no umbrales de daño calibrados.",
+      "interpretation": "Los picos coinciden, pero las series no concuerdan en todas las regiones; no se confirma un modo estructural."
+    },
+    "structural_diagnosis": "abstain",
+    "cloud_execution": false,
+    "videos_embedded": false,
+    "notebook_bytes": 138732,
+    "result_json": "/Users/admin/Documents/Codex/2026-10-20/ne/work/local-video-fix/notebook-run/vibrovision_colab_v3/results/c083eebbad0a/validacion_colab.json"
+  },
+  "synthetic_operator_relative_error": 0.020270887782744593,
+  "real_video_tone_amplitude_ratio": 36.7189636625547,
+  "agent_runs": [
+    {
+      "scenario": "struct_healthy",
+      "incidents": 0,
+      "abstentions": 0
+    },
+    {
+      "scenario": "struct_loose_joint",
+      "incidents": 1,
+      "abstentions": 4
+    }
+  ],
+  "web": "comparison and single-clip upload completed through API; comparison verified in browser",
+  "not_executed": [
+    "Docker image build (Docker unavailable)",
+    "AWS resource creation/deployment",
+    "Google Colab cloud execution and live Google Drive authentication/mount",
+    "full historical v2 evaluation rerun"
+  ],
+  "previous_official_mit_sample_validation": {
+    "code_cells": 14,
+    "all_executed": true,
+    "runtime": "local Python 3.14 / OpenCV 5; local Drive layout, original MIT excerpt",
+    "notebook_bytes": 136027,
+    "embedded_videos": false,
+    "fan_optional_without_files": true,
+    "colab_cloud_executed": false,
+    "download": "70 s extracted with FFmpeg from the official MIT OCW Archive URL; full lecture download canceled",
+    "mit_excerpts": [
+      {
+        "name": "Primer movimiento",
+        "sha256": "258c47d01195cd58a1fe3489cc1c87afdc5609dcf473a24d5437053a7cd7a157",
+        "frames": 150,
+        "measurement_supported": true,
+        "frequency_unit": "ciclos/s de reproducción (no Hz físicos verificados)",
+        "dominant_frequency": 0.7991999999999999,
+        "dominant_phase_deg": [
+          5.137858332354145,
+          -2.1078449640035727e-15
+        ],
+        "diagnosis": "abstain"
+      },
+      {
+        "name": "Segundo movimiento",
+        "sha256": "258c47d01195cd58a1fe3489cc1c87afdc5609dcf473a24d5437053a7cd7a157",
+        "frames": 480,
+        "measurement_supported": true,
+        "frequency_unit": "ciclos/s de reproducción (no Hz físicos verificados)",
+        "dominant_frequency": 2.7472499999999997,
+        "dominant_phase_deg": [
+          -7.0167092985348775e-15,
+          178.3110249867037
+        ],
+        "diagnosis": "abstain"
+      }
+    ],
+    "embedded_clips": false,
+    "stored_result_fallback": false
+  },
+  "notebook_before_actual_local_video_fix": {
+    "all_code_cells_executed": true,
+    "code_cells": 14,
+    "default_files": [
+      "tres.mp4",
+      "cuatro.mp4"
+    ],
+    "automatic_download": false,
+    "distributed_full_video_start_times_s": [
+      654,
+      690
+    ],
+    "validation": "Local 70 s official fixture, with start offsets changed only in the execution copy; additional video previewed and correctly withheld without ROIs.",
+    "actual_user_drive_files_inspected": false,
+    "colab_cloud_execution": false,
+    "notebook_bytes": 138392,
+    "additional_file_without_regions_blocks_primary": false,
+    "embedded_videos": false,
+    "embedded_clips": false,
+    "stored_result_fallback": false
+  }
+}

@@ -1,0 +1,891 @@
+{
+ "noise_grid": [
+  {
+   "noise": 1.0,
+   "contrast": 1.0,
+   "sigma_true": 1.0408329997330663,
+   "sigma_hat": 1.0922465221453537,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.011684468708174925,
+   "pred_rms": 0.004983873339895287,
+   "crb_rms": 0.003273855555260315,
+   "floor_ratio": 1.8049498558537491,
+   "lambda_min": 207369.89291044674
+  },
+  {
+   "noise": 1.0,
+   "contrast": 1.0,
+   "sigma_true": 1.0408329997330663,
+   "sigma_hat": 1.0922465221453537,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.010880925836415593,
+   "pred_rms": 0.005004197904196603,
+   "crb_rms": 0.0032956242326073,
+   "floor_ratio": 1.6929385243356967,
+   "lambda_min": 205556.65370482008
+  },
+  {
+   "noise": 1.0,
+   "contrast": 1.0,
+   "sigma_true": 1.0408329997330663,
+   "sigma_hat": 1.0922465221453537,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.009156216647691215,
+   "pred_rms": 0.0061021662772058035,
+   "crb_rms": 0.0037755578816233808,
+   "floor_ratio": 1.007348781504192,
+   "lambda_min": 163423.98663512844
+  },
+  {
+   "noise": 1.0,
+   "contrast": 1.0,
+   "sigma_true": 1.0408329997330663,
+   "sigma_hat": 1.0922465221453537,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.010370738958312108,
+   "pred_rms": 0.005973629923620619,
+   "crb_rms": 0.00388365802907066,
+   "floor_ratio": 1.2592100546043725,
+   "lambda_min": 139124.85772814308
+  },
+  {
+   "noise": 1.0,
+   "contrast": 1.0,
+   "sigma_true": 1.0408329997330663,
+   "sigma_hat": 1.0922465221453537,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.00441810554297068,
+   "pred_rms": 0.004666780788948879,
+   "crb_rms": 0.0019341688531948262,
+   "floor_ratio": 0.9129799674395269,
+   "lambda_min": 585173.3670130388
+  },
+  {
+   "noise": 2.0,
+   "contrast": 1.0,
+   "sigma_true": 2.0207259421636903,
+   "sigma_hat": 2.0384508146637788,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.013586910692243522,
+   "pred_rms": 0.009254567413601329,
+   "crb_rms": 0.00608188349661866,
+   "floor_ratio": 1.1243856459769013,
+   "lambda_min": 209732.88810233065
+  },
+  {
+   "noise": 2.0,
+   "contrast": 1.0,
+   "sigma_true": 2.0207259421636903,
+   "sigma_hat": 2.0384508146637788,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.013036631923210001,
+   "pred_rms": 0.009308734534274983,
+   "crb_rms": 0.006134806626670727,
+   "floor_ratio": 1.0891105349126264,
+   "lambda_min": 206512.51395984215
+  },
+  {
+   "noise": 2.0,
+   "contrast": 1.0,
+   "sigma_true": 2.0207259421636903,
+   "sigma_hat": 2.0384508146637788,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.012611174400345128,
+   "pred_rms": 0.011368003361700985,
+   "crb_rms": 0.0070495659796597976,
+   "floor_ratio": 0.8751188614088556,
+   "lambda_min": 163362.36678735327
+  },
+  {
+   "noise": 2.0,
+   "contrast": 1.0,
+   "sigma_true": 2.0207259421636903,
+   "sigma_hat": 2.0384508146637788,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.013421734811606934,
+   "pred_rms": 0.011100607231011719,
+   "crb_rms": 0.0072281453840990035,
+   "floor_ratio": 0.9700488879473803,
+   "lambda_min": 140167.90458613768
+  },
+  {
+   "noise": 2.0,
+   "contrast": 1.0,
+   "sigma_true": 2.0207259421636903,
+   "sigma_hat": 2.0384508146637788,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.008542266946439144,
+   "pred_rms": 0.008705631603916365,
+   "crb_rms": 0.0036130508210048652,
+   "floor_ratio": 0.9816790642404375,
+   "lambda_min": 583373.1302869617
+  },
+  {
+   "noise": 4.0,
+   "contrast": 1.0,
+   "sigma_true": 4.010403138505321,
+   "sigma_hat": 4.025996535770595,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.019555269989322607,
+   "pred_rms": 0.018078418060578715,
+   "crb_rms": 0.011938262472437752,
+   "floor_ratio": 0.9109839412772249,
+   "lambda_min": 212577.97076006525
+  },
+  {
+   "noise": 4.0,
+   "contrast": 1.0,
+   "sigma_true": 4.010403138505321,
+   "sigma_hat": 4.025996535770595,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.019412447332589743,
+   "pred_rms": 0.01820144159231022,
+   "crb_rms": 0.012060197679602515,
+   "floor_ratio": 0.9537657939800519,
+   "lambda_min": 208260.7232105771
+  },
+  {
+   "noise": 4.0,
+   "contrast": 1.0,
+   "sigma_true": 4.010403138505321,
+   "sigma_hat": 4.025996535770595,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.02149417881043783,
+   "pred_rms": 0.022268134459921023,
+   "crb_rms": 0.013977126728734744,
+   "floor_ratio": 0.8188434814073391,
+   "lambda_min": 161818.5129222618
+  },
+  {
+   "noise": 4.0,
+   "contrast": 1.0,
+   "sigma_true": 4.010403138505321,
+   "sigma_hat": 4.025996535770595,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.02191828748727145,
+   "pred_rms": 0.02160627765624432,
+   "crb_rms": 0.01421925004938033,
+   "floor_ratio": 0.9189265217692177,
+   "lambda_min": 142738.69663048163
+  },
+  {
+   "noise": 4.0,
+   "contrast": 1.0,
+   "sigma_true": 4.010403138505321,
+   "sigma_hat": 4.025996535770595,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.016964081577656897,
+   "pred_rms": 0.01714619693252502,
+   "crb_rms": 0.007165714315432897,
+   "floor_ratio": 0.9995822924879082,
+   "lambda_min": 577502.4975234445
+  },
+  {
+   "noise": 3.0,
+   "contrast": 0.45,
+   "sigma_true": 3.013856886670854,
+   "sigma_hat": 3.021538653465278,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.029601040340409918,
+   "pred_rms": 0.029510978893826076,
+   "crb_rms": 0.019780303228308486,
+   "floor_ratio": 0.9116490672451704,
+   "lambda_min": 43583.26923153196
+  },
+  {
+   "noise": 3.0,
+   "contrast": 0.45,
+   "sigma_true": 3.013856886670854,
+   "sigma_hat": 3.021538653465278,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.029603216043940513,
+   "pred_rms": 0.029733620708611068,
+   "crb_rms": 0.020020025091748002,
+   "floor_ratio": 0.9601969449574277,
+   "lambda_min": 42408.25244471954
+  },
+  {
+   "noise": 3.0,
+   "contrast": 0.45,
+   "sigma_true": 3.013856886670854,
+   "sigma_hat": 3.021538653465278,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.034598103595097275,
+   "pred_rms": 0.036420705633923356,
+   "crb_rms": 0.023516968849178695,
+   "floor_ratio": 0.840574579020446,
+   "lambda_min": 31764.97622649908
+  },
+  {
+   "noise": 3.0,
+   "contrast": 0.45,
+   "sigma_true": 3.013856886670854,
+   "sigma_hat": 3.021538653465278,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.03495724731337536,
+   "pred_rms": 0.0350870394900954,
+   "crb_rms": 0.023534087427760718,
+   "floor_ratio": 0.9694763467179085,
+   "lambda_min": 29915.47281850153
+  },
+  {
+   "noise": 3.0,
+   "contrast": 0.45,
+   "sigma_true": 3.013856886670854,
+   "sigma_hat": 3.021538653465278,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.028400331291447853,
+   "pred_rms": 0.02830277106156855,
+   "crb_rms": 0.012022561194245196,
+   "floor_ratio": 1.0067620002003472,
+   "lambda_min": 115100.43561485334
+  },
+  {
+   "noise": 8.0,
+   "contrast": 1.0,
+   "sigma_true": 8.005206639015219,
+   "sigma_hat": 8.022763550296204,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.03474335720582346,
+   "pred_rms": 0.034775100693065476,
+   "crb_rms": 0.023510507792966446,
+   "floor_ratio": 0.9395461464043766,
+   "lambda_min": 218192.6786206333
+  },
+  {
+   "noise": 8.0,
+   "contrast": 1.0,
+   "sigma_true": 8.005206639015219,
+   "sigma_hat": 8.022763550296204,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.03498033559079212,
+   "pred_rms": 0.03508116298302609,
+   "crb_rms": 0.02388273938275004,
+   "floor_ratio": 0.9842106822624984,
+   "lambda_min": 209491.2894688096
+  },
+  {
+   "noise": 8.0,
+   "contrast": 1.0,
+   "sigma_true": 8.005206639015219,
+   "sigma_hat": 8.022763550296204,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.04128132062929378,
+   "pred_rms": 0.042948259425238555,
+   "crb_rms": 0.02823882000088082,
+   "floor_ratio": 0.8841368014957983,
+   "lambda_min": 155760.53404967563
+  },
+  {
+   "noise": 8.0,
+   "contrast": 1.0,
+   "sigma_true": 8.005206639015219,
+   "sigma_hat": 8.022763550296204,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.04170938875581053,
+   "pred_rms": 0.041203920315231984,
+   "crb_rms": 0.027928164490932706,
+   "floor_ratio": 1.0011834722017574,
+   "lambda_min": 151141.31144374885
+  },
+  {
+   "noise": 8.0,
+   "contrast": 1.0,
+   "sigma_true": 8.005206639015219,
+   "sigma_hat": 8.022763550296204,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.03402039259082993,
+   "pred_rms": 0.03353409401771923,
+   "crb_rms": 0.014413539400236167,
+   "floor_ratio": 1.031663398558187,
+   "lambda_min": 563679.3618573522
+  }
+ ],
+ "blur_sweep": [
+  {
+   "blur": 0.5,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.021566122286629887,
+   "pred_noise_rms": 0.007733120976181278
+  },
+  {
+   "blur": 0.5,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.021352260613400748,
+   "pred_noise_rms": 0.007801594328389859
+  },
+  {
+   "blur": 0.5,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.022906612859057162,
+   "pred_noise_rms": 0.009271642967439696
+  },
+  {
+   "blur": 0.5,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.015236468131135645,
+   "pred_noise_rms": 0.009189803505206328
+  },
+  {
+   "blur": 0.5,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.005189660597065942,
+   "pred_noise_rms": 0.005297610376385388
+  },
+  {
+   "blur": 0.7,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.01686916638190046,
+   "pred_noise_rms": 0.008153489381107711
+  },
+  {
+   "blur": 0.7,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.015916785393933215,
+   "pred_noise_rms": 0.008200026837184534
+  },
+  {
+   "blur": 0.7,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.01707066373856092,
+   "pred_noise_rms": 0.009909939709213493
+  },
+  {
+   "blur": 0.7,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.012607505019481074,
+   "pred_noise_rms": 0.009751118512636384
+  },
+  {
+   "blur": 0.7,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.00640116959295995,
+   "pred_noise_rms": 0.006479597616675132
+  },
+  {
+   "blur": 1.0,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.013759614427833806,
+   "pred_noise_rms": 0.00917791693444518
+  },
+  {
+   "blur": 1.0,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.012479312950143836,
+   "pred_noise_rms": 0.00925267191789358
+  },
+  {
+   "blur": 1.0,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.013930444938915161,
+   "pred_noise_rms": 0.011384021156668018
+  },
+  {
+   "blur": 1.0,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.011801841767651615,
+   "pred_noise_rms": 0.011025970292358918
+  },
+  {
+   "blur": 1.0,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.008527326345262511,
+   "pred_noise_rms": 0.008629933819548873
+  },
+  {
+   "blur": 1.4,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.013096246091765558,
+   "pred_noise_rms": 0.011297882164184031
+  },
+  {
+   "blur": 1.4,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.011865548044001376,
+   "pred_noise_rms": 0.011364433334055185
+  },
+  {
+   "blur": 1.4,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.014351774283051724,
+   "pred_noise_rms": 0.01421746530109105
+  },
+  {
+   "blur": 1.4,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.013218862376411088,
+   "pred_noise_rms": 0.01337663615149839
+  },
+  {
+   "blur": 1.4,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.011668068526369129,
+   "pred_noise_rms": 0.011871620855949642
+  },
+  {
+   "blur": 2.0,
+   "roi": "Motor",
+   "static": false,
+   "meas_rms": 0.016690467525614056,
+   "pred_noise_rms": 0.016115524372712995
+  },
+  {
+   "blur": 2.0,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "meas_rms": 0.014620262528130994,
+   "pred_noise_rms": 0.015154764998253445
+  },
+  {
+   "blur": 2.0,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "meas_rms": 0.018457343556831585,
+   "pred_noise_rms": 0.01906900975138684
+  },
+  {
+   "blur": 2.0,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "meas_rms": 0.0176303108738753,
+   "pred_noise_rms": 0.017850875892098522
+  },
+  {
+   "blur": 2.0,
+   "roi": "__reference__",
+   "static": true,
+   "meas_rms": 0.01570112875004582,
+   "pred_noise_rms": 0.015943285084438215
+  }
+ ],
+ "codec": [
+  {
+   "crf": null,
+   "roi": "Motor",
+   "static": false,
+   "sigma_hat": 2.0384465141837076,
+   "floor_ratio": 1.3305756996071691,
+   "meas_rms": 0.01375594314731521,
+   "pred_rms": 0.009258401840704377
+  },
+  {
+   "crf": null,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "sigma_hat": 2.0384465141837076,
+   "floor_ratio": 0.9828274014357886,
+   "meas_rms": 0.012476522127027522,
+   "pred_rms": 0.009333812381168406
+  },
+  {
+   "crf": null,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "sigma_hat": 2.0384465141837076,
+   "floor_ratio": 0.9954834156153465,
+   "meas_rms": 0.013928133629038275,
+   "pred_rms": 0.011483852292882428
+  },
+  {
+   "crf": null,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "sigma_hat": 2.0384465141837076,
+   "floor_ratio": 0.854958659842176,
+   "meas_rms": 0.011799133404897456,
+   "pred_rms": 0.011122661534144583
+  },
+  {
+   "crf": null,
+   "roi": "__reference__",
+   "static": true,
+   "sigma_hat": 2.0384465141837076,
+   "floor_ratio": 0.9926368039350442,
+   "meas_rms": 0.008523968256666086,
+   "pred_rms": 0.008705613237814543
+  },
+  {
+   "crf": 12,
+   "roi": "Motor",
+   "static": false,
+   "sigma_hat": 1.2712625913877051,
+   "floor_ratio": 51.84600931779439,
+   "meas_rms": 0.04587091918489206,
+   "pred_rms": 0.00578666682348735
+  },
+  {
+   "crf": 12,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "sigma_hat": 1.2712625913877051,
+   "floor_ratio": 42.438963851289444,
+   "meas_rms": 0.0436790486911711,
+   "pred_rms": 0.005811193194790261
+  },
+  {
+   "crf": 12,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "sigma_hat": 1.2712625913877051,
+   "floor_ratio": 27.705297303096952,
+   "meas_rms": 0.047836615363220376,
+   "pred_rms": 0.00719579848335283
+  },
+  {
+   "crf": 12,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "sigma_hat": 1.2712625913877051,
+   "floor_ratio": 28.13920969662557,
+   "meas_rms": 0.04644444304621915,
+   "pred_rms": 0.00691253538450746
+  },
+  {
+   "crf": 12,
+   "roi": "__reference__",
+   "static": true,
+   "sigma_hat": 1.2712625913877051,
+   "floor_ratio": 0.5698373596009352,
+   "meas_rms": 0.00919864169297402,
+   "pred_rms": 0.0054390769878241
+  },
+  {
+   "crf": 18,
+   "roi": "Motor",
+   "static": false,
+   "sigma_hat": 0.7453866019584747,
+   "floor_ratio": 262.1270014412257,
+   "meas_rms": 0.06583295551833157,
+   "pred_rms": 0.0034110075796841143
+  },
+  {
+   "crf": 18,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "sigma_hat": 0.7453866019584747,
+   "floor_ratio": 207.44699479226696,
+   "meas_rms": 0.06300290476067744,
+   "pred_rms": 0.0034274898896687494
+  },
+  {
+   "crf": 18,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "sigma_hat": 0.7453866019584747,
+   "floor_ratio": 150.94443355990245,
+   "meas_rms": 0.06978374491771297,
+   "pred_rms": 0.004215865767488818
+  },
+  {
+   "crf": 18,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "sigma_hat": 0.7453866019584747,
+   "floor_ratio": 125.97644886064653,
+   "meas_rms": 0.06978416486712952,
+   "pred_rms": 0.004069762910648975
+  },
+  {
+   "crf": 18,
+   "roi": "__reference__",
+   "static": true,
+   "sigma_hat": 0.7453866019584747,
+   "floor_ratio": 0.13493615649218985,
+   "meas_rms": 0.014046762333743584,
+   "pred_rms": 0.003213478501438453
+  },
+  {
+   "crf": 23,
+   "roi": "Motor",
+   "static": false,
+   "sigma_hat": 0.6316296504720091,
+   "floor_ratio": 481.9319694154079,
+   "meas_rms": 0.09861613082709121,
+   "pred_rms": 0.002927379595915149
+  },
+  {
+   "crf": 23,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "sigma_hat": 0.6316296504720091,
+   "floor_ratio": 417.5493326377552,
+   "meas_rms": 0.0930703472458327,
+   "pred_rms": 0.002914439577413599
+  },
+  {
+   "crf": 23,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "sigma_hat": 0.6316296504720091,
+   "floor_ratio": 265.0139653343194,
+   "meas_rms": 0.09776613012231745,
+   "pred_rms": 0.003603513826011702
+  },
+  {
+   "crf": 23,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "sigma_hat": 0.6316296504720091,
+   "floor_ratio": 204.30961026771902,
+   "meas_rms": 0.09929111969490094,
+   "pred_rms": 0.003427814548446524
+  },
+  {
+   "crf": 23,
+   "roi": "__reference__",
+   "static": true,
+   "sigma_hat": 0.6316296504720091,
+   "floor_ratio": 0.09912623822972025,
+   "meas_rms": 0.013975942201349793,
+   "pred_rms": 0.0029613814719003403
+  },
+  {
+   "crf": 28,
+   "roi": "Motor",
+   "static": false,
+   "sigma_hat": 0.5525084940716029,
+   "floor_ratio": 724.4455933817067,
+   "meas_rms": 0.14194171892523735,
+   "pred_rms": 0.002751787496791518
+  },
+  {
+   "crf": 28,
+   "roi": "Caja_Engranajes",
+   "static": false,
+   "sigma_hat": 0.5525084940716029,
+   "floor_ratio": 719.2427896751433,
+   "meas_rms": 0.13347103568070567,
+   "pred_rms": 0.002678873115785966
+  },
+  {
+   "crf": 28,
+   "roi": "Rodamiento_A",
+   "static": false,
+   "sigma_hat": 0.5525084940716029,
+   "floor_ratio": 449.4899235554895,
+   "meas_rms": 0.14728207154570402,
+   "pred_rms": 0.003311864561309447
+  },
+  {
+   "crf": 28,
+   "roi": "Rodamiento_B",
+   "static": false,
+   "sigma_hat": 0.5525084940716029,
+   "floor_ratio": 341.5261578122459,
+   "meas_rms": 0.15052995488460985,
+   "pred_rms": 0.003076535126457861
+  },
+  {
+   "crf": 28,
+   "roi": "__reference__",
+   "static": true,
+   "sigma_hat": 0.5525084940716029,
+   "floor_ratio": 0.5020412609311293,
+   "meas_rms": 0.03536832748122528,
+   "pred_rms": 0.002795594779898629
+  }
+ ],
+ "real": [
+  {
+   "clip": "fan_nocoin.mp4",
+   "box": [
+    226,
+    322,
+    48,
+    48
+   ],
+   "sigma_hat": 0.44506703360715816,
+   "pred_rms": 0.0030119751510985088,
+   "meas_rms": 0.04387652675903204,
+   "floor_ratio": 11.590531384919357
+  },
+  {
+   "clip": "fan_nocoin.mp4",
+   "box": [
+    274,
+    82,
+    48,
+    48
+   ],
+   "sigma_hat": 0.4302997707168212,
+   "pred_rms": 0.00208909371510523,
+   "meas_rms": 0.03137607098435236,
+   "floor_ratio": 13.630326458648069
+  },
+  {
+   "clip": "fan_nocoin.mp4",
+   "box": [
+    250,
+    394,
+    48,
+    48
+   ],
+   "sigma_hat": 0.4549021076778422,
+   "pred_rms": 0.003858713680935096,
+   "meas_rms": 0.04231502432149164,
+   "floor_ratio": 7.2290251502760325
+  },
+  {
+   "clip": "fan_nocoin.mp4",
+   "box": [
+    370,
+    10,
+    48,
+    48
+   ],
+   "sigma_hat": 0.41204672226106975,
+   "pred_rms": 0.002664929042377543,
+   "meas_rms": 0.045530657431365085,
+   "floor_ratio": 13.248329544965776
+  },
+  {
+   "clip": "fan_nocoin.mp4",
+   "box": [
+    106,
+    82,
+    48,
+    48
+   ],
+   "sigma_hat": 0.40772844578944434,
+   "pred_rms": 0.0019526467179340468,
+   "meas_rms": 0.03576616440042381,
+   "floor_ratio": 25.327531314094628
+  },
+  {
+   "clip": "fan_nocoin.mp4",
+   "box": [
+    202,
+    10,
+    48,
+    48
+   ],
+   "sigma_hat": 0.3831029721828678,
+   "pred_rms": 0.004158839562185557,
+   "meas_rms": 0.08431871955866554,
+   "floor_ratio": 14.273835089475043
+  },
+  {
+   "clip": "fan_coin.mp4",
+   "box": [
+    226,
+    58,
+    48,
+    48
+   ],
+   "sigma_hat": 0.44258041948374227,
+   "pred_rms": 0.002720009742085192,
+   "meas_rms": 0.046443669824635506,
+   "floor_ratio": 8.884658986963567
+  },
+  {
+   "clip": "fan_coin.mp4",
+   "box": [
+    322,
+    10,
+    48,
+    48
+   ],
+   "sigma_hat": 0.4027770404161427,
+   "pred_rms": 0.0032726495126053135,
+   "meas_rms": 0.05142817885746949,
+   "floor_ratio": 10.728788987400742
+  },
+  {
+   "clip": "fan_coin.mp4",
+   "box": [
+    130,
+    298,
+    48,
+    48
+   ],
+   "sigma_hat": 0.5560291648388815,
+   "pred_rms": 0.004091859105968925,
+   "meas_rms": 0.05950543581423885,
+   "floor_ratio": 7.8020470322357935
+  },
+  {
+   "clip": "fan_coin.mp4",
+   "box": [
+    130,
+    226,
+    48,
+    48
+   ],
+   "sigma_hat": 0.4226358196212173,
+   "pred_rms": 0.003338394089800809,
+   "meas_rms": 0.09739634445210374,
+   "floor_ratio": 20.1856877386375
+  },
+  {
+   "clip": "fan_coin.mp4",
+   "box": [
+    130,
+    106,
+    48,
+    48
+   ],
+   "sigma_hat": 0.5295000649126754,
+   "pred_rms": 0.004644893588807965,
+   "meas_rms": 0.09453036405081655,
+   "floor_ratio": 12.360521121842416
+  },
+  {
+   "clip": "fan_coin.mp4",
+   "box": [
+    274,
+    226,
+    48,
+    48
+   ],
+   "sigma_hat": 0.4107259901600852,
+   "pred_rms": 0.0031333640690535593,
+   "meas_rms": 0.03625131066093978,
+   "floor_ratio": 8.201087952507976
+  }
+ ]
+}

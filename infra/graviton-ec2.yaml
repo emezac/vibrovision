@@ -1,0 +1,135 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  VibroVision on a single AWS Graviton instance: OpenCV 5 pipeline + inspection agent behind
+  an HTTP endpoint, logs/metrics in CloudWatch (EMF), artifacts in a private S3 bucket,
+  approvals optionally fanned out through SNS. Access via SSM (no SSH key, no port 22).
+
+Parameters:
+  InstanceType:
+    Type: String
+    Default: c7g.large
+    AllowedValues: [c7g.large, c7g.xlarge, c8g.large, c8g.xlarge, m7g.large]
+  AmiId:
+    Type: String
+    Default: ""
+    Description: >
+      Leave empty for Amazon Linux 2023 arm64 (stock OpenCV from pip). Alternatively,
+      a custom arm64 AMI may be supplied; it does not replace OpenCV inside Docker.
+  RepoUrl:
+    Type: String
+    Description: HTTPS git URL of this repository (public, or use a CodeCommit/S3 mirror)
+  AllowedCidr:
+    Type: String
+    Default: 0.0.0.0/0
+    Description: Who may reach the demo endpoint (restrict to judges/your IP when possible)
+  ApiKey:
+    Type: String
+    NoEcho: true
+    Default: ""
+    Description: Optional API key required by /v1 routes
+  AlertEmail:
+    Type: String
+    Default: ""
+
+Conditions:
+  UseAL2023: !Equals [!Ref AmiId, ""]
+  HasEmail: !Not [!Equals [!Ref AlertEmail, ""]]
+
+Resources:
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules: [{Id: expire, Status: Enabled, ExpirationInDays: 30}]
+
+  IncidentTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      Subscription: !If [HasEmail, [{Protocol: email, Endpoint: !Ref AlertEmail}], !Ref AWS::NoValue]
+
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties: {LogGroupName: /vibrovision/service, RetentionInDays: 14}
+
+  Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement: [{Effect: Allow, Principal: {Service: ec2.amazonaws.com}, Action: sts:AssumeRole}]
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      Policies:
+        - PolicyName: least-privilege
+          PolicyDocument:
+            Statement:
+              - {Effect: Allow, Action: [s3:PutObject, s3:GetObject], Resource: !Sub "${ArtifactBucket.Arn}/*"}
+              - {Effect: Allow, Action: sns:Publish, Resource: !Ref IncidentTopic}
+              - {Effect: Allow, Action: [logs:CreateLogStream, logs:PutLogEvents, logs:DescribeLogStreams], Resource: !GetAtt LogGroup.Arn}
+
+  Profile:
+    Type: AWS::IAM::InstanceProfile
+    Properties: {Roles: [!Ref Role]}
+
+  SG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: VibroVision HTTP
+      SecurityGroupIngress:
+        - {IpProtocol: tcp, FromPort: 80, ToPort: 80, CidrIp: !Ref AllowedCidr}
+
+  Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      ImageId: !If [UseAL2023, "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-arm64}}", !Ref AmiId]
+      IamInstanceProfile: !Ref Profile
+      SecurityGroupIds: [!Ref SG]
+      MetadataOptions: {HttpTokens: required, HttpPutResponseHopLimit: 2}
+      BlockDeviceMappings:
+        - {DeviceName: /dev/xvda, Ebs: {VolumeSize: 20, VolumeType: gp3, Encrypted: true}}
+      Tags: [{Key: Name, Value: vibrovision}]
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          set -euo pipefail
+          if command -v dnf; then dnf install -y docker git; else apt-get update && apt-get install -y docker.io git; fi
+          systemctl enable --now docker
+          git clone ${RepoUrl} /opt/vibrovision
+          cd /opt/vibrovision
+          docker build -t vibrovision -f infra/Dockerfile .
+          docker run -d --restart unless-stopped -p 80:8000 \
+            -e API_KEY='${ApiKey}' -e S3_BUCKET='${ArtifactBucket}' -e SNS_TOPIC_ARN='${IncidentTopic}' \
+            -e AWS_REGION='${AWS::Region}' -e AWS_DEFAULT_REGION='${AWS::Region}' \
+            --log-driver awslogs --log-opt awslogs-region=${AWS::Region} \
+            --log-opt awslogs-group=/vibrovision/service --log-opt awslogs-create-group=false \
+            --name vibrovision vibrovision
+
+  HighFalseAlarmRate:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Many escalations in an hour usually means a camera/setup problem, not many failing bearings
+      Namespace: VibroVision
+      MetricName: Escalations
+      Dimensions: [{Name: Service, Value: vibrovision}, {Name: Arch, Value: aarch64}]
+      Statistic: Sum
+      Period: 3600
+      EvaluationPeriods: 1
+      Threshold: 5
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+      AlarmActions: [!Ref IncidentTopic]
+
+Outputs:
+  Endpoint: {Value: !Sub "http://${Instance.PublicDnsName}/"}
+  Bucket: {Value: !Ref ArtifactBucket}
+  InstanceId: {Value: !Ref Instance}
+  BenchCommand:
+    Value: !Sub "aws ssm start-session --target ${Instance} ; then: docker exec vibrovision python bench/bench_pipeline.py --label ${InstanceType}"

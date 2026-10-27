@@ -1,0 +1,11 @@
+# Runtime (tested with Python 3.13 on x86_64; same pins build on linux/arm64 for Graviton)
+opencv-python-headless==5.0.0.93
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+fastapi==0.146.0
+starlette==1.6.0
+uvicorn==0.53.0
+python-multipart==0.0.32
+pydantic==2.13.5
+boto3==1.43.115

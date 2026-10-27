@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VibroVision Inspector</title>
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#16191d;--mute:#5d6570;--line:#dfe3e8;--acc:#1f6feb;
+--ok:#1a7f37;--watch:#9a6700;--sus:#bc4c00;--bad:#cf222e;--cal:#6e7781}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1116;--panel:#161b22;--ink:#e6edf3;--mute:#9da7b3;--line:#30363d;--acc:#4493f8;
+--ok:#3fb950;--watch:#d29922;--sus:#f0883e;--bad:#f85149;--cal:#8b949e}}
+[hidden]{display:none!important}*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:18px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{margin:0;font-size:20px}header p{margin:4px 0 0;color:var(--mute);font-size:13.5px}
+main{display:grid;grid-template-columns:340px 1fr;gap:16px;padding:16px;max-width:1400px;margin:auto}
+@media (max-width:900px){main{grid-template-columns:1fr}}
+section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+h2{font-size:15px;margin:0 0 10px}label{display:block;font-size:13px;color:var(--mute);margin:10px 0 4px}
+input,select,textarea,button{font:inherit;color:inherit}input,select,textarea{width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg)}
+button{padding:8px 14px;border-radius:7px;border:1px solid var(--line);background:var(--bg);cursor:pointer}
+button.primary{background:var(--acc);border-color:var(--acc);color:#fff}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.row{display:flex;gap:8px;align-items:center}.row>*{flex:1}.muted{color:var(--mute);font-size:13px}
+.bar{height:8px;background:var(--line);border-radius:5px;overflow:hidden}.bar>div{height:100%;background:var(--acc);width:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+.card{border:1px solid var(--line);border-radius:9px;padding:10px}.card b{font-size:14px}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 7px;border-radius:999px;border:1px solid currentColor}
+.CALIBRATING{color:var(--cal)}.NOMINAL{color:var(--ok)}.WATCH{color:var(--watch)}.SUSPECT{color:var(--sus)}.AWAITING_HUMAN,.ESCALATED{color:var(--bad)}
+canvas{width:100%;height:260px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+img.ev{max-width:100%;border:1px solid var(--line);border-radius:8px;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;table-layout:fixed}
+td.mono{word-break:break-all}th:nth-child(1){width:48px}th:nth-child(2){width:170px}th:nth-child(3){width:120px}th:nth-child(4){width:28%}
+main>div{min-width:0}td,th{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}
+th{color:var(--mute);font-weight:600}.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+.incident{border-left:4px solid var(--bad)}.stack>*+*{margin-top:14px}
+</style>
+</head>
+<body>
+<header>
+  <h1>VibroVision Inspector</h1>
+  <p>Camera-based vibration monitoring with OpenCV 5 and an inspection agent. Advisory only: escalations need a human decision.</p>
+</header>
+<main>
+  <div class="stack">
+    <section aria-labelledby="src-h">
+      <h2 id="src-h">1 · Source</h2>
+      <label for="scenario">Synthetic test scenario</label>
+      <select id="scenario"></select>
+      <div class="row"><div><label for="seed">Seed</label><input id="seed" type="number" value="7"></div></div>
+      <p><button id="compare-example">Compare the two real fan videos</button></p>
+      <p class="muted">Fresh analysis of the included clips. Short clips can show a change without identifying every machine part.</p>
+      <label for="video">…or inspect one video (≥ 12 s, fixed camera)</label>
+      <input id="video" type="file" accept=".mp4,.mov,.avi,.mkv">
+      <label for="rois">Optional ROIs JSON {"name":[x,y,w,h]}</label>
+      <textarea id="rois" rows="2" placeholder='{"bearing":[250,60,44,44]}'></textarea>
+      <label for="ref">Optional static reference [x,y,w,h]</label>
+      <input id="ref" placeholder="[130,186,56,44]">
+      <label><input id="structural" type="checkbox" style="width:auto"> Analyze structure (manual ROIs on distinct parts required)</label>
+      <label><input id="common-scale" type="checkbox" style="width:auto"> ROIs have a calibrated common spatial scale</label>
+      <label for="key">API key (if the server requires one)</label>
+      <input id="key" type="password" autocomplete="off">
+      <p><button class="primary" id="run">Start inspection</button></p>
+      <div class="bar" aria-hidden="true"><div id="prog"></div></div>
+      <p class="muted" id="status" aria-live="polite">Idle.</p>
+    </section>
+    <section aria-labelledby="inc-h">
+      <h2 id="inc-h">3 · Incidents (human sign-off)</h2>
+      <div id="incidents" class="stack"><p class="muted">None.</p></div>
+    </section>
+  </div>
+  <div class="stack">
+    <section aria-labelledby="roi-h">
+      <h2 id="roi-h">2 · Components</h2>
+      <div id="rois-cards" class="grid"></div>
+      <p class="muted" id="measurement-note">The system reports when the footage is insufficient for a diagnosis.</p>
+      <label id="chart-label">Spectral exponent α(t) per component (dashed: learned baseline)</label>
+      <canvas id="chart" width="1000" height="260" role="img" aria-label="alpha over time per component"></canvas>
+      <img id="healthmap" class="ev" alt="Health map of the machine with component status" hidden>
+    </section>
+    <section aria-labelledby="tr-h">
+      <h2 id="tr-h">4 · Agent trace (perception → decision → action)</h2>
+      <table><thead><tr><th>t (s)</th><th>tool</th><th>component</th><th>decision</th><th>result</th></tr></thead>
+      <tbody id="trace"></tbody></table>
+    </section>
+  </div>
+</main>
+<script>
+const $=s=>document.querySelector(s);let job=null,timer=null;
+const COLORS=["#1f6feb","#8250df","#1a7f37","#cf222e","#bc4c00","#0a7ea4"];
+function key(){try{return localStorage.getItem("vv_key")||""}catch(e){return""}}
+$("#key").value=key();$("#key").addEventListener("change",e=>{try{localStorage.setItem("vv_key",e.target.value)}catch(_){}loadScenarios()});
+function H(){const k=$("#key").value;return k?{"X-API-Key":k}:{}}
+async function api(p,o={}){o.headers=Object.assign(H(),o.headers||{});const r=await fetch(p,o);if(!r.ok)throw new Error((await r.text())||r.status);return r.json()}
+const qj=new URLSearchParams(location.search).get("job");if(qj){job=qj;timer=setInterval(poll,1500);setTimeout(poll,50)}
+async function loadScenarios(){try{const s=await api("/v1/scenarios");$("#scenario").innerHTML=s.scenarios.map(x=>`<option ${x==="fault"?"selected":""}>${x}</option>`).join("");if(!job)$("#status").textContent="Ready."}catch(e){$("#status").textContent="Enter a valid API key to load scenarios. "+e.message}}
+loadScenarios();
+$("#run").onclick=async()=>{const fd=new FormData();const v=$("#video").files[0];
+ if(v){fd.append("video",v);if($("#rois").value.trim())fd.append("rois",$("#rois").value);if($("#ref").value.trim())fd.append("reference",$("#ref").value);fd.append("structural",$("#structural").checked);fd.append("common_scale",$("#common-scale").checked)}
+ else{fd.append("scenario",$("#scenario").value);fd.append("seed",$("#seed").value)}
+ $("#status").textContent="Submitting…";
+ try{const r=await api("/v1/jobs",{method:"POST",body:fd});job=r.job_id;history.replaceState(null,"","?job="+job);clearInterval(timer);timer=setInterval(poll,1500);poll()}catch(e){$("#status").textContent="Error: "+e.message}};
+$("#compare-example").onclick=async()=>{try{const r=await api("/v1/compare-example",{method:"POST"});job=r.job_id;history.replaceState(null,"","?job="+job);clearInterval(timer);timer=setInterval(poll,1500);poll()}catch(e){$("#status").textContent=e.message}};
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function fmt(v){return v==null||Number.isNaN(v)?"–":(+v).toFixed(2)}
+async function poll(){if(!job)return;let j;try{j=await api(`/v1/jobs/${job}`)}catch(e){$("#status").textContent=e.message;return}
+ const dur=j.source&&j.source.kind==="synthetic"?180:null;
+ $("#prog").style.width=dur?Math.min(100,100*(j.progress_s||0)/dur)+"%":(j.status==="done"?"100%":"30%");
+ $("#status").textContent=`Job ${j.id}: ${j.status}${j.progress_s?` · ${j.progress_s}s analysed`:""}${j.wall_s?` · ${j.wall_s}s wall`:""}${j.error?" · "+j.error:""}`;
+ if(j.comparison)renderComparison(j);else if(j.summary){$("#chart").hidden=false;$("#chart-label").hidden=false;$("#roi-h").textContent="2 · Components";render(j);const s=j.summary.structure;$("#measurement-note").textContent=s?(s.decision==="localized_change"?"A structural change is supported by the current measurement.":s.decision==="abstain"||s.decision==="change_unlocalized"||s.decision==="collect_more_data"?"More stationary footage is needed before naming a damaged part.":"Monitoring structure; a quiet result is not proof that every fault is absent."):(j.measurement_scope||"Advisory inspection; every incident requires human review.")}if(j.status==="done"||j.status==="error"){clearInterval(timer);if(j.status==="done"){$("#healthmap").src=art(j.comparison?"comparison.png":"healthmap.png");$("#healthmap").alt=j.comparison?"Comparison of the two real fan videos":"Health map of machine components";$("#healthmap").hidden=false}}}
+function renderComparison(j){const c=j.comparison;$("#chart").hidden=true;$("#chart-label").hidden=true;$("#roi-h").textContent="2 · Real video comparison";$("#incidents").innerHTML='<p class="muted">A/B evidence for review. No automatic maintenance diagnosis.</p>';$("#measurement-note").textContent="The clips show a change in fan motion. They are too short and show too few independent parts to identify the full machine structure.";$("#rois-cards").innerHTML=c.clips.map(x=>`<div class="card"><b>${esc(x.label)}</b><p>Rotation band: ${fmt(x.motion.tone_hz)} Hz</p><p>Tone amplitude: ${fmt(x.motion.tone_displacement_rms_px)} px</p><p>Recorded: ${fmt(x.analyzed_seconds)} s</p></div>`).join("")+`<div class="card"><b>Tone amplitude ratio</b><p>${fmt(c.tone_amplitude_ratio)}×</p><p class="muted">Observed difference between these two recordings.</p></div>`;$("#trace").innerHTML=`<tr><td>–</td><td>Compare real videos</td><td>Fan housing</td><td>Measure motion and spectral change; withhold structural diagnosis</td><td>α ranges ${c.range_separation.alpha?"do not overlap":"overlap"}; no field sensitivity claim</td></tr>`}
+function pct(o){return Object.entries(o||{}).map(([k,v])=>`${esc(k)} ${(100*v).toFixed(0)}%`).join(", ")}
+function machineLine(p,ev){const st=ev.structure||{};
+ if(ev.line_hz!==undefined)return `${esc(p.fault_class)} · ${ev.line_hz} Hz line: ${Object.entries(ev.line_db_change||{}).map(([k,v])=>`${k} Hz ${v>0?"+":""}${v} dB`).join(", ")} · force per unit mass: ${Object.entries(ev.force_per_unit_mass_at_line||{}).map(([k,v])=>`${esc(k)} ${v}`).join(", ")}`;
+ return `${esc(p.fault_class)} · mounts k/m: ${pct(st.mount_rel)} · couplings: ${pct(st.coupling_rel)} · graph gap ${fmt(st.graph_gap)} (baseline ${fmt(st.graph_gap_baseline)})`}
+function art(n){const k=$("#key").value;return `/v1/jobs/${job}/artifacts/${encodeURIComponent(n)}`+(k?`?key=${encodeURIComponent(k)}`:"")}
+function render(j){const R=j.summary.rois;
+ $("#rois-cards").innerHTML=Object.entries(R).map(([n,r],i)=>`<div class="card"><b style="color:${COLORS[i%6]}">${esc(n)}</b><br>
+ <span class="badge ${r.phase}">${r.phase.replace("_"," ")}</span><div class="muted">α ${fmt(r.alpha)} · baseline ${fmt(r.baseline)}<br>CUSUM ${fmt(r.cusum)} · window ${r.window_s}s</div></div>`).join("");
+ chart(j.series||{});
+ const inc=j.summary.incidents;
+ $("#incidents").innerHTML=inc.length?inc.map(p=>{const ev=p.evidence||{};const imgs=["spectrum_png","xt_slice_png"].filter(k=>ev[k]).map(k=>{const u=art(ev[k].split("/").pop());return `<a href="${u}" target="_blank" rel="noopener"><img class="ev" alt="${k.replace("_png","")} evidence (opens full size)" src="${u}"></a>`}).join("");
+  const env=ev.envelope_update||ev.envelope||{};
+  return `<div class="card incident"><b>${esc(p.incident_id)}</b> · ${esc(p.component)} · t=${p.t_s}s<br>
+  <span class="muted">${p.kind==="gross_part_motion"?"Camera steady but parts move by whole pixels (tracking lost)":
+   p.alpha_now===undefined&&p.fault_class?machineLine(p,ev):
+   `α ${p.alpha_now} (95% CI ${(p.alpha_ci95||[]).join("–")}) vs baseline ${p.alpha_baseline}±${p.alpha_baseline_sd} · envelope ${fmt(env.impact_rate_hz)} Hz ${env.match?"= "+env.nearest_defect:""}${p.fault_class?" · "+esc(p.fault_class):""}`}</span>
+  <p>${esc(p.recommended_action)}</p>${imgs}
+  ${p.status==="AWAITING_ENGINEER_SIGN_OFF"?`<div class="row" style="margin-top:8px"><input aria-label="reviewer name" placeholder="reviewer" id="rv-${p.incident_id}">
+  <button class="primary" onclick="decide('${p.incident_id}',true)">Approve work order</button><button onclick="decide('${p.incident_id}',false)">Reject</button></div>`:`<p><span class="badge ${p.status==="APPROVED"?"ESCALATED":"NOMINAL"}">${esc(p.status)}</span> by ${esc(p.reviewer||"")}</p>`}</div>`}).join(""):'<p class="muted">None.</p>';
+ $("#trace").innerHTML=(j.trace||[]).slice(-60).reverse().map(e=>`<tr><td>${e.t}</td><td class="mono">${esc(e.tool)}</td><td>${esc(e.roi||"camera")}</td><td>${esc(e.decision)}</td><td class="mono">${esc(JSON.stringify(e.result)).slice(0,160)}</td></tr>`).join("")}
+async function decide(id,ok){const who=(document.getElementById("rv-"+id)||{}).value||"engineer";
+ try{await api(`/v1/incidents/${id}/decision`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({approve:ok,reviewer:who})});poll()}catch(e){alert(e.message)}}
+function chart(S){const c=$("#chart"),g=c.getContext("2d"),W=c.width,Hh=c.height,pad=36;g.clearRect(0,0,W,Hh);
+ const names=Object.keys(S);if(!names.length)return;let tmax=1,lo=9,hi=-9;
+ names.forEach(n=>S[n].forEach(([t,a,b])=>{tmax=Math.max(tmax,t);if(a!=null){lo=Math.min(lo,a);hi=Math.max(hi,a)}}));lo-=.1;hi+=.1;
+ const X=t=>pad+(W-pad-8)*t/tmax,Y=a=>Hh-pad+(-(Hh-pad-8))*(a-lo)/(hi-lo);
+ g.strokeStyle=getComputedStyle(document.body).color;g.globalAlpha=.25;g.beginPath();g.moveTo(pad,8);g.lineTo(pad,Hh-pad);g.lineTo(W-8,Hh-pad);g.stroke();g.globalAlpha=1;
+ g.fillStyle=getComputedStyle(document.body).color;g.font="12px system-ui";
+ for(let k=0;k<=4;k++){const a=lo+(hi-lo)*k/4;g.fillText(a.toFixed(2),2,Y(a)+4)}g.fillText("t (s)",W-40,Hh-12);g.fillText(String(Math.round(tmax)),X(tmax)-24,Hh-pad+16);
+ names.forEach((n,i)=>{const col=COLORS[i%6];g.strokeStyle=col;g.lineWidth=1.6;g.setLineDash([]);g.beginPath();let f=1;
+  S[n].forEach(([t,a])=>{if(a==null)return;f?g.moveTo(X(t),Y(a)):g.lineTo(X(t),Y(a));f=0});g.stroke();
+  const b=S[n].filter(r=>r[2]!=null);if(b.length){g.setLineDash([5,4]);g.beginPath();g.moveTo(X(b[0][0]),Y(b[0][2]));g.lineTo(X(tmax),Y(b[0][2]));g.stroke()}
+  g.setLineDash([]);g.fillStyle=col;g.fillText(n,pad+8+i*150,20)})}
+</script>
+</body>
+</html>

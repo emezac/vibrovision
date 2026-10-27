@@ -1,0 +1,425 @@
+{
+  "schema_version": "3.0",
+  "software": {
+    "python": "3.14.6",
+    "opencv": "5.0.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "algebra": {
+    "passed": true,
+    "roi_scale_trials": 100,
+    "max_operator_relative_error": 9.075252401974259e-17,
+    "rank_one_inverse_absolute_error": 1.4763968935305097e-20,
+    "sensitivity_relative_tolerance": 0.0001,
+    "disconnected_graph_gap": 0.0,
+    "shared_coordinate_spectral_invariance_error": 1.3877787807814457e-17,
+    "explanation": "Cambiar la escala de cada regi\u00f3n no inventa da\u00f1o en el operador. Las f\u00f3rmulas de sensibilidad y flexibilidad coinciden con el c\u00e1lculo directo."
+  },
+  "synthetic_video": {
+    "passed": true,
+    "source": "fresh synthetic video -> OpenCV -> SSI -> invariant operator",
+    "operator_relative_error": 0.020270887782744593,
+    "operator_error": 715.5981717326208,
+    "operator": [
+      [
+        10427.281827341292,
+        -6790.4981247778815,
+        0.0,
+        0.0
+      ],
+      [
+        -6790.4981247778815,
+        19237.157998508057,
+        -6277.373407276008,
+        0.0
+      ],
+      [
+        0.0,
+        -6277.373407276008,
+        28240.048863880176,
+        -8444.109431791654
+      ],
+      [
+        0.0,
+        0.0,
+        -8444.109431791654,
+        21297.809715853517
+      ]
+    ],
+    "true_operator": [
+      [
+        10500.0,
+        -6957.010852370435,
+        0.0,
+        0.0
+      ],
+      [
+        -6957.010852370435,
+        19200.0,
+        -6324.555320336759,
+        0.0
+      ],
+      [
+        0.0,
+        -6324.555320336759,
+        28000.0,
+        -8000.0
+      ],
+      [
+        0.0,
+        0.0,
+        -8000.0,
+        21000.0
+      ]
+    ],
+    "uncertainty": {
+      "available": true,
+      "replicates": 24,
+      "valid_replicates": 20,
+      "blocks": 10,
+      "block_seconds": 4.0,
+      "method": "centered multichannel block covariance bootstrap; empirical 95% radius",
+      "coverage": "uncalibrated conditional estimate; model bias and nonstationarity excluded",
+      "operator_radius": 2132.6274165563145,
+      "entry_lower": [
+        [
+          9967.219213702847,
+          -8179.833149411249,
+          -157.43976959077867,
+          -40.04439480787348
+        ],
+        [
+          -8179.833149411249,
+          18824.21112428374,
+          -6760.359429678257,
+          -340.56883120070427
+        ],
+        [
+          -157.43976959077867,
+          -6760.359429678257,
+          28038.92422578136,
+          -8727.736342919481
+        ],
+        [
+          -40.04439480787348,
+          -340.56883120070427,
+          -8727.736342919481,
+          20879.96650203668
+        ]
+      ],
+      "entry_upper": [
+        [
+          12293.017859763113,
+          -6465.666674160936,
+          0.0,
+          0.0
+        ],
+        [
+          -6465.666674160936,
+          19764.296722629726,
+          -5796.467584242874,
+          0.0
+        ],
+        [
+          0.0,
+          -5796.467584242874,
+          28655.308875687606,
+          -8165.305182569292
+        ],
+        [
+          0.0,
+          0.0,
+          -8165.305182569292,
+          21724.45737641053
+        ]
+      ],
+      "graph_radius": 0.04923687572668907,
+      "fiedler_sine_angle_bound": 0.21687664918202304
+    },
+    "physical_diagnostics": {
+      "similarity_residual": 0.011034848462318282,
+      "cycle_residual": 3.0235322834985704e-16,
+      "positive_offdiagonal_fraction": 0.0150584413350707
+    },
+    "frequency_hz": [
+      12.489671601338598,
+      19.270549038806386,
+      23.94133036125876,
+      30.095263259997864
+    ],
+    "wall_seconds": 5.14669337507803,
+    "explanation": "En un video simulado conocemos la m\u00e1quina original y podemos comparar la estimaci\u00f3n con la verdad. Esto no equivale a validaci\u00f3n industrial."
+  },
+  "alpha_intervals": {
+    "trials": 200,
+    "empirical_coverage": 0.945,
+    "nominal_coverage": 0.95,
+    "scope": "exact stationary power law only; no tracker, codec or resonance",
+    "explanation": "El intervalo se comprueba en se\u00f1ales ideales. Su cobertura real con compresi\u00f3n necesita una evaluaci\u00f3n aparte."
+  },
+  "scope": "algebraic checks and one synthetic-video recovery; no field accuracy claim",
+  "real_video": {
+    "schema_version": "3.0",
+    "source": "fresh_analysis",
+    "clips": [
+      {
+        "label": "Sin moneda",
+        "sha256": "ea3a0395ba3be7686260e4ea36dded788e5e9328316b7705c61b2b99860e2d6a",
+        "file": "fan_nocoin.mp4",
+        "fps": 29.898592283820804,
+        "analyzed_seconds": 15.084322222222221,
+        "summary": {
+          "alpha": {
+            "median": 1.535424512764716,
+            "min": 0.7210545805591572,
+            "max": 1.9828293924362732,
+            "n": 10
+          },
+          "tonal_db": {
+            "median": -0.24102190008225285,
+            "min": -1.3704662815538886,
+            "max": 2.3884755024335393,
+            "n": 10
+          },
+          "tone_hz": {
+            "median": 11.679137610867503,
+            "min": 11.679137610867503,
+            "max": 11.679137610867503,
+            "n": 10
+          },
+          "band_ratio": {
+            "median": -0.34840710080353426,
+            "min": -0.4098804975982157,
+            "max": 0.08299029585843513,
+            "n": 10
+          },
+          "flatness": {
+            "median": 0.6159358136909048,
+            "min": 0.5594906390604888,
+            "max": 0.8334665061421022,
+            "n": 10
+          },
+          "rms": {
+            "median": 0.8106311079775186,
+            "min": 0.7691820806015225,
+            "max": 0.8852286059821941,
+            "n": 10
+          },
+          "hf_rms": {
+            "median": 0.015364943957091398,
+            "min": 0.01403504555358677,
+            "max": 0.017802042352296227,
+            "n": 10
+          }
+        },
+        "motion": {
+          "file": "fan_nocoin.mp4",
+          "fps": 29.898592283820804,
+          "frames": 451,
+          "circle": [
+            615.75,
+            237.75,
+            188.75
+          ],
+          "drift_px": [
+            7.191752769397112,
+            1.5117481345849342
+          ],
+          "rotation_deg": -0.21188528163089038,
+          "housing_inliers": 0.9616900536481278,
+          "vibration_rms_px_per_frame": 0.06868418473392826,
+          "camera_motion_rms_px_per_frame": 0.03670225292444229,
+          "video_peak_hz": 11.679137610867503,
+          "camera_peak_hz": 3.2701585310429007,
+          "audio_modulation_peak_hz": 3.173828125,
+          "audio_rms": 0.006727768726230799,
+          "tone_hz": 11.679137610867503,
+          "tone_displacement_rms_px": 0.027935738687075454,
+          "tone_prominence_db_video": 19.502103502079166,
+          "tone_prominence_db_audio_at_same_hz": 2.8695189869075044,
+          "outline_radius_px": 188.75
+        }
+      },
+      {
+        "label": "Con moneda",
+        "sha256": "77d8d94e13a76046bd292830f641be503842dd3d57ace575b20ae8c0aa5ac7d0",
+        "file": "fan_coin.mp4",
+        "fps": 29.864639772758625,
+        "analyzed_seconds": 15.302377777777778,
+        "summary": {
+          "alpha": {
+            "median": 1.621822424847895,
+            "min": 1.1881177945747232,
+            "max": 2.3541054364090543,
+            "n": 10
+          },
+          "tonal_db": {
+            "median": 6.719455242089484,
+            "min": 5.5134211848497126,
+            "max": 7.350179068394972,
+            "n": 10
+          },
+          "tone_hz": {
+            "median": 12.599144904132546,
+            "min": 12.599144904132546,
+            "max": 12.599144904132546,
+            "n": 10
+          },
+          "band_ratio": {
+            "median": -0.35367102834881337,
+            "min": -0.6164606341495603,
+            "max": -0.1676869071158785,
+            "n": 10
+          },
+          "flatness": {
+            "median": 0.6414635967344992,
+            "min": 0.5124603898258311,
+            "max": 0.7141456286946329,
+            "n": 10
+          },
+          "rms": {
+            "median": 12.645835151496486,
+            "min": 8.81488252404874,
+            "max": 17.185159058785427,
+            "n": 10
+          },
+          "hf_rms": {
+            "median": 0.25493238322171696,
+            "min": 0.2075257054294231,
+            "max": 0.26876608651085376,
+            "n": 10
+          }
+        },
+        "motion": {
+          "file": "fan_coin.mp4",
+          "fps": 29.864639772758625,
+          "frames": 457,
+          "circle": [
+            594.75,
+            240.75,
+            189.8000030517578
+          ],
+          "drift_px": [
+            107.77270260598755,
+            -6.217713581834346
+          ],
+          "rotation_deg": -9.731486533141362,
+          "housing_inliers": 0.6095250324888721,
+          "vibration_rms_px_per_frame": 2.209672998397166,
+          "camera_motion_rms_px_per_frame": 0.09204494953155518,
+          "video_peak_hz": 12.365827405907869,
+          "camera_peak_hz": 12.365827405907869,
+          "audio_modulation_peak_hz": 12.451171875,
+          "audio_rms": 0.004858306623139217,
+          "tone_hz": 12.365827405907869,
+          "tone_displacement_rms_px": 1.025771373737347,
+          "tone_prominence_db_video": 28.889515476190933,
+          "tone_prominence_db_audio_at_same_hz": 33.0050248174464,
+          "outline_radius_px": 189.8000030517578
+        }
+      }
+    ],
+    "range_separation": {
+      "alpha": false,
+      "tonal_db": true,
+      "tone_hz": true,
+      "band_ratio": false,
+      "flatness": false,
+      "rms": true,
+      "hf_rms": true
+    },
+    "tone_amplitude_ratio": 36.7189636625547,
+    "joint_spectral": {
+      "available": true,
+      "shape_distance": 1.2922844093743688,
+      "log_power_gain": 6.01475773434017,
+      "frequency_hz": [
+        1.8686620177388005,
+        2.802993026608201,
+        3.737324035477601,
+        4.671655044347001,
+        5.605986053216402,
+        6.540317062085801,
+        7.474648070955202,
+        8.408979079824602,
+        9.343310088694002,
+        10.277641097563402,
+        11.211972106432803,
+        12.146303115302203,
+        13.080634124171603
+      ],
+      "generalized_eigenvalues": [
+        [
+          391.62276214098716,
+          570.6854819777411
+        ],
+        [
+          295.4699598116833,
+          523.227012722452
+        ],
+        [
+          215.06050732885396,
+          355.31489746517485
+        ],
+        [
+          198.56970429691,
+          463.4252435078664
+        ],
+        [
+          120.06071339071227,
+          371.9397714998906
+        ],
+        [
+          82.3957029293597,
+          290.43943489648404
+        ],
+        [
+          270.2222238735047,
+          434.2068810298109
+        ],
+        [
+          170.05665720762386,
+          487.09622332053794
+        ],
+        [
+          193.64418180736877,
+          510.2523203860683
+        ],
+        [
+          265.4192796022951,
+          328.2508869595208
+        ],
+        [
+          36.35153672529263,
+          1519.4011437241943
+        ],
+        [
+          207.9245903303907,
+          11214.071380705584
+        ],
+        [
+          1374.6741358884165,
+          21458.117625584156
+        ]
+      ],
+      "most_changed_band_hz": 13.080634124171603,
+      "scope": "descriptive shared-coordinate spectral comparison; not a calibrated fault probability or stiffness estimate",
+      "regularization": "2% diagonal-relative shrinkage and 1e-8 baseline diagonal floor"
+    },
+    "structural_verdict": {
+      "decision": "abstain",
+      "reason": "Only one housing is measured and clips are shorter than a structural window. No complete machine stiffness is identified."
+    },
+    "explanation": "El segundo video cambia el movimiento y los tonos del ventilador. Esto no demuestra desgaste temprano ni identifica todos sus anclajes.",
+    "limits": [
+      "one short recording per condition",
+      "overlapping windows are not independent trials",
+      "no contact-sensor ground truth",
+      "audio is a corroborating channel, not calibrated ground truth",
+      "joint spectrum compares housing x/y channels, not two independent parts",
+      "range separation is descriptive, not a significance test"
+    ],
+    "artifact": "math_validation_v3.png"
+  }
+}

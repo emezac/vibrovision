@@ -1,0 +1,28 @@
+{
+  "endpoint": "https://d30icy4clt3p0c.cloudfront.net/",
+  "health": {
+    "ok": true,
+    "version": "3.0.0",
+    "opencv": "5.0.0",
+    "arch": "aarch64",
+    "cv_threads": 1,
+    "build_flags": [
+      "Baseline:                    NEON FP16",
+      "Dispatched code generation:  NEON_DOTPROD NEON_FP16 NEON_BF16",
+      "Custom HAL:                  YES (carotene (ver 0.0.1) KleidiCV (ver 26.03))"
+    ],
+    "jobs": 0,
+    "release_sha256": "fe66a33c35cde2f46a58fd6cb25f5eaed815e9442bb324202ff8d3ae8d7fda89"
+  },
+  "unauthenticated_api": 401,
+  "real_comparison_job": "62c0bf0f39eb",
+  "tone_amplitude_ratio": 35.899884613118985,
+  "evidence_persisted": true,
+  "evidence_bucket_private": true,
+  "browser_image_route_verified": true,
+  "comparison_wall_s": 45.5,
+  "verified_at_utc": "2026-10-27T01:40:24.524116+00:00",
+  "local_tests_passed": 60,
+  "static_permission_repair_verified": true,
+  "active": true
+}

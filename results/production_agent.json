@@ -1,0 +1,380 @@
+[
+ {
+  "kind": "healthy",
+  "seed": 8000,
+  "escalations": [],
+  "faulty": [],
+  "watch_events": 0,
+  "xval_rejections": 0,
+  "bpfo": [],
+  "wall_s": 552.4060814380646,
+  "decisions": [
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Motor",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Caja_Engranajes",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Rodamiento_A",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Rodamiento_B",
+    "decision": "ok"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Motor",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Caja_Engranajes",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Rodamiento_A",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Rodamiento_B",
+    "decision": "baseline learned; monitoring starts"
+   }
+  ]
+ },
+ {
+  "kind": "fault",
+  "seed": 8000,
+  "escalations": [
+   [
+    1244.0,
+    "Rodamiento_B"
+   ]
+  ],
+  "faulty": [
+   "Rodamiento_B"
+  ],
+  "watch_events": 1,
+  "xval_rejections": 0,
+  "bpfo": [
+   1314.0
+  ],
+  "wall_s": 543.8413200378418,
+  "decisions": [
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Motor",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Caja_Engranajes",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Rodamiento_A",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Rodamiento_B",
+    "decision": "ok"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Motor",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Caja_Engranajes",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Rodamiento_A",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Rodamiento_B",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 1214.0,
+    "tool": "watch",
+    "roi": "Rodamiento_B",
+    "decision": "alpha drifting below baseline -> watch"
+   },
+   {
+    "t": 1230.0,
+    "tool": "cross_validate",
+    "roi": "Rodamiento_B",
+    "decision": "independent estimator agrees (z=4.2) -> SUSPECT"
+   },
+   {
+    "t": 1244.0,
+    "tool": "envelope_analysis",
+    "roi": "Rodamiento_B",
+    "decision": "no defect-frequency match"
+   },
+   {
+    "t": 1244.0,
+    "tool": "render_evidence",
+    "roi": "Rodamiento_B",
+    "decision": "magnified x-t slice + spectrum for reviewer"
+   },
+   {
+    "t": 1244.0,
+    "tool": "request_human_approval",
+    "roi": "Rodamiento_B",
+    "decision": "human sign-off required"
+   },
+   {
+    "t": 1246.0,
+    "tool": "create_work_order",
+    "roi": "Rodamiento_B",
+    "decision": "approved by simulated-reviewer"
+   },
+   {
+    "t": 1314.0,
+    "tool": "envelope_analysis",
+    "roi": "Rodamiento_B",
+    "decision": "diagnosis refined: envelope lines match BSF (4.67 Hz) -> incident updated"
+   }
+  ]
+ },
+ {
+  "kind": "healthy",
+  "seed": 8001,
+  "escalations": [],
+  "faulty": [],
+  "watch_events": 2,
+  "xval_rejections": 0,
+  "bpfo": [],
+  "wall_s": 545.0013897418976,
+  "decisions": [
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Motor",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Caja_Engranajes",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Rodamiento_A",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Rodamiento_B",
+    "decision": "ok"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Motor",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Caja_Engranajes",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Rodamiento_A",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Rodamiento_B",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 772.0,
+    "tool": "watch",
+    "roi": "Motor",
+    "decision": "alpha drifting below baseline -> watch"
+   },
+   {
+    "t": 838.0,
+    "tool": "clear",
+    "roi": "Motor",
+    "decision": "evidence vanished -> NOMINAL"
+   },
+   {
+    "t": 930.0,
+    "tool": "watch",
+    "roi": "Rodamiento_B",
+    "decision": "alpha drifting below baseline -> watch"
+   },
+   {
+    "t": 1032.0,
+    "tool": "clear",
+    "roi": "Rodamiento_B",
+    "decision": "evidence vanished -> NOMINAL"
+   }
+  ]
+ },
+ {
+  "kind": "fault",
+  "seed": 8001,
+  "escalations": [
+   [
+    1416.0,
+    "Rodamiento_B"
+   ]
+  ],
+  "faulty": [
+   "Rodamiento_B"
+  ],
+  "watch_events": 2,
+  "xval_rejections": 0,
+  "bpfo": [
+   1526.0
+  ],
+  "wall_s": 547.651581287384,
+  "decisions": [
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Motor",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Caja_Engranajes",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Rodamiento_A",
+    "decision": "ok"
+   },
+   {
+    "t": 2.0,
+    "tool": "assess_roi_quality",
+    "roi": "Rodamiento_B",
+    "decision": "ok"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Motor",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Caja_Engranajes",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Rodamiento_A",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 600.0,
+    "tool": "calibrate",
+    "roi": "Rodamiento_B",
+    "decision": "baseline learned; monitoring starts"
+   },
+   {
+    "t": 772.0,
+    "tool": "watch",
+    "roi": "Motor",
+    "decision": "alpha drifting below baseline -> watch"
+   },
+   {
+    "t": 838.0,
+    "tool": "clear",
+    "roi": "Motor",
+    "decision": "evidence vanished -> NOMINAL"
+   },
+   {
+    "t": 1350.0,
+    "tool": "watch",
+    "roi": "Rodamiento_B",
+    "decision": "alpha drifting below baseline -> watch"
+   },
+   {
+    "t": 1386.0,
+    "tool": "cross_validate",
+    "roi": "Rodamiento_B",
+    "decision": "independent estimator agrees (z=1.1) -> SUSPECT"
+   },
+   {
+    "t": 1416.0,
+    "tool": "envelope_analysis",
+    "roi": "Rodamiento_B",
+    "decision": "no defect-frequency match"
+   },
+   {
+    "t": 1416.0,
+    "tool": "render_evidence",
+    "roi": "Rodamiento_B",
+    "decision": "magnified x-t slice + spectrum for reviewer"
+   },
+   {
+    "t": 1416.0,
+    "tool": "request_human_approval",
+    "roi": "Rodamiento_B",
+    "decision": "human sign-off required"
+   },
+   {
+    "t": 1418.0,
+    "tool": "create_work_order",
+    "roi": "Rodamiento_B",
+    "decision": "approved by simulated-reviewer"
+   },
+   {
+    "t": 1526.0,
+    "tool": "envelope_analysis",
+    "roi": "Rodamiento_B",
+    "decision": "diagnosis refined: envelope lines match BPFO (7.29 Hz) -> incident updated"
+   }
+  ]
+ }
+]

@@ -1,0 +1,87 @@
+{
+ "baseline": {
+  "track_err_px": 0.010965443716805108,
+  "alpha_bias": -0.009539009957744551,
+  "alpha_bias_sd": 0.0049654018155241815,
+  "healthy_series": 21,
+  "false_alarms_at_h3": 3,
+  "faults": 3,
+  "detected": 3,
+  "median_delay_s": 66.0
+ },
+ "auto_exposure": {
+  "track_err_px": 0.010963870173444268,
+  "alpha_bias": -0.008662932294459897,
+  "alpha_bias_sd": 0.004786547497420077,
+  "healthy_series": 21,
+  "false_alarms_at_h3": 3,
+  "faults": 3,
+  "detected": 3,
+  "median_delay_s": 65.0
+ },
+ "auto_exposure_no_photometric": {
+  "track_err_px": 0.13086024572622798,
+  "alpha_bias": -0.019813021977538727,
+  "alpha_bias_sd": 0.009590180392026113,
+  "healthy_series": 21,
+  "false_alarms_at_h3": 1,
+  "faults": 3,
+  "detected": 3,
+  "median_delay_s": 71.0
+ },
+ "rolling_shutter_8ms": {
+  "track_err_px": 0.0502578434955733,
+  "alpha_bias": -0.003296445492996606,
+  "alpha_bias_sd": 0.007482896767011212,
+  "healthy_series": 21,
+  "false_alarms_at_h3": 3,
+  "faults": 3,
+  "detected": 3,
+  "median_delay_s": 67.0
+ },
+ "h264_crf18": {
+  "track_err_px": 0.048938846272330416,
+  "alpha_bias": 0.17006339648910837,
+  "alpha_bias_sd": 0.031436810809358555,
+  "healthy_series": 21,
+  "false_alarms_at_h3": 4,
+  "faults": 3,
+  "detected": 3,
+  "median_delay_s": 73.0
+ },
+ "h264_crf23": {
+  "track_err_px": 0.07165465274306679,
+  "alpha_bias": 0.35263860550086357,
+  "alpha_bias_sd": 0.048473124730012536,
+  "healthy_series": 21,
+  "false_alarms_at_h3": 3,
+  "faults": 3,
+  "detected": 3,
+  "median_delay_s": 76.0
+ },
+ "h264_crf28": {
+  "track_err_px": 0.10724370162339662,
+  "alpha_bias": 0.5972954136259878,
+  "alpha_bias_sd": 0.07101582822814057,
+  "healthy_series": 21,
+  "false_alarms_at_h3": 6,
+  "faults": 3,
+  "detected": 3,
+  "median_delay_s": 95.0
+ },
+ "phone_like": {
+  "track_err_px": 0.06403291474290101,
+  "alpha_bias": 0.24175427714153083,
+  "alpha_bias_sd": 0.03705145875006025,
+  "healthy_series": 21,
+  "false_alarms_at_h3": 1,
+  "faults": 3,
+  "detected": 3,
+  "median_delay_s": 72.0
+ },
+ "_meta": {
+  "runs": 3,
+  "h_alpha": 3.0,
+  "wall_s": 1790.9827020168304
+ }
+}

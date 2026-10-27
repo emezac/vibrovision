@@ -1,0 +1,14 @@
+results/
+notebooks/
+docs/
+tests/
+eval/
+**/__pycache__
+*.ipynb
+.git/
+.aws-deploy/
+.aws/
+.env
+.env.*
+runtime.env
+media/

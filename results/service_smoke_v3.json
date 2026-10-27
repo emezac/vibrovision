@@ -1,0 +1,22 @@
+{
+  "health": {
+    "ok": true,
+    "version": "3.0.0",
+    "opencv": "5.0.0",
+    "arch": "arm64",
+    "cv_threads": 8,
+    "build_flags": [
+      "Baseline:                    NEON FP16 NEON_DOTPROD NEON_FP16",
+      "Dispatched code generation:  NEON_BF16",
+      "Custom HAL:                  YES (carotene (ver 0.0.1) KleidiCV (ver 26.03))"
+    ],
+    "jobs": 0
+  },
+  "comparison_status": "done",
+  "comparison_ratio": 36.7189636625547,
+  "comparison_alpha_separates": false,
+  "comparison_structural_decision": "abstain",
+  "single_clip_status": "done",
+  "single_clip_profile": "demo",
+  "single_clip_raw_deleted": true
+}

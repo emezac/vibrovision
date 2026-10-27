@@ -1,0 +1,169 @@
+[
+ {
+  "file": "fan_nocoin.mp4",
+  "codec": "h264",
+  "width": 848,
+  "height": 478,
+  "fps": 29.898592283820804,
+  "duration_s": 15.084322,
+  "bitrate_kbps": 1627.944,
+  "bits_per_pixel": 0.1343275122398751,
+  "frames": 451,
+  "reference_box": [
+   712,
+   58,
+   56,
+   56
+  ],
+  "raw_motion_rms_px": {
+   "ROI_1": 0.07311543110846036,
+   "ROI_2": 0.061477313746976875,
+   "ROI_3": 0.06606267575391402,
+   "ROI_4": 0.06598770603858567,
+   "ROI_5": 0.06120016678665235
+  },
+  "after_stabilisation_rms_px": {
+   "ROI_1": 0.1727518873350031,
+   "ROI_2": 0.2863941258719607,
+   "ROI_3": 0.16273766701363826,
+   "ROI_4": 0.22308159368992705,
+   "ROI_5": 0.6204121827147163
+  },
+  "stabilisation_inlier_ratio": 0.9707841750044939,
+  "agent_verdict": {
+   "problems": [],
+   "note": "setup accepted"
+  },
+  "agent_decisions": [
+   {
+    "t": 1.0,
+    "tool": "validate_setup",
+    "decision": "low frame rate: only < 15 Hz observable; higher frequencies alias"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 15.02,
+    "tool": "check_camera_motion",
+    "decision": "static target moves -> camera shake"
+   },
+   {
+    "t": 15.02,
+    "tool": "enable_motion_compensation",
+    "decision": "subtract reference-target motion from every ROI; re-baseline"
+   }
+  ]
+ },
+ {
+  "file": "fan_coin.mp4",
+  "codec": "h264",
+  "width": 848,
+  "height": 478,
+  "fps": 29.864639772758625,
+  "duration_s": 15.302378,
+  "bitrate_kbps": 1629.335,
+  "bits_per_pixel": 0.1345951333972199,
+  "frames": 457,
+  "reference_box": [
+   232,
+   166,
+   56,
+   56
+  ],
+  "raw_motion_rms_px": {
+   "ROI_1": 19.964783420139394,
+   "ROI_2": 15.522962983712738,
+   "ROI_3": 20.966542819850815,
+   "ROI_4": 24.882675278249163,
+   "ROI_5": 29.09656594449358
+  },
+  "after_stabilisation_rms_px": {
+   "ROI_1": 25.314935298318094,
+   "ROI_2": 21.52303100476598,
+   "ROI_3": 8.288180430371002,
+   "ROI_4": 14.612469639648264,
+   "ROI_5": 8.362147406909003
+  },
+  "stabilisation_inlier_ratio": 0.7947449712559985,
+  "agent_verdict": {
+   "t_s": 6.03,
+   "kind": "gross_part_motion",
+   "reference_rms_px": 0.029059954311491373,
+   "median_tracker_quality": 0.28874516727543675,
+   "parts_lost": [
+    "ROI_1",
+    "ROI_2",
+    "ROI_4"
+   ],
+   "problems": [
+    "static reference steady (0.03 px RMS) but 3/5 parts lost sub-pixel tracking (median quality 0.29): the machine itself moves by whole pixels"
+   ],
+   "request": "Inspect mounting now: a part moving by whole pixels while the camera is still indicates loose fixing, a free-standing machine walking, or a severe imbalance."
+  },
+  "agent_decisions": [
+   {
+    "t": 1.0,
+    "tool": "validate_setup",
+    "decision": "low frame rate: only < 15 Hz observable; higher frequencies alias"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 6.03,
+    "tool": "validate_setup",
+    "decision": "camera steady but parts move beyond tracking range -> gross anomaly -> human sign-off"
+   },
+   {
+    "t": 6.03,
+    "tool": "request_human_approval",
+    "decision": "human sign-off required"
+   }
+  ]
+ }
+]

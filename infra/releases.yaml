@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Private, versioned source releases for VibroVision. No source repository is required.
+Metadata:
+  AWSToolsMetrics: {AWSAgentToolkit: 'aws-cloudformation@3'}
+  com.aws.cloudformation.Context:
+    ref: [{at: DEPLOYMENT_AWS.md, has: architecture and lifecycle, scope: shared}]
+Resources:
+  Releases:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketName: !Sub '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'
+      VersioningConfiguration: {Status: Enabled}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      Tags: [{Key: Project, Value: VibroVision}]
+  TransportPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Releases
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource: [!GetAtt Releases.Arn, !Sub '${Releases.Arn}/*']
+            Condition: {Bool: {'aws:SecureTransport': false}}
+Outputs:
+  Bucket: {Value: !Ref Releases}

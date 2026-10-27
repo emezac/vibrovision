@@ -1,0 +1,281 @@
+{
+  "id": "62c0bf0f39eb",
+  "status": "done",
+  "source": {
+    "kind": "comparison"
+  },
+  "progress_s": null,
+  "fps": null,
+  "wall_s": 45.5,
+  "error": null,
+  "created": 1793065094.2515697,
+  "profile": null,
+  "comparison": {
+    "schema_version": "3.0",
+    "source": "fresh_analysis",
+    "clips": [
+      {
+        "label": "Sin moneda",
+        "sha256": "ea3a0395ba3be7686260e4ea36dded788e5e9328316b7705c61b2b99860e2d6a",
+        "file": "fan_nocoin.mp4",
+        "fps": 29.898592283820804,
+        "analyzed_seconds": 15.084322222222221,
+        "summary": {
+          "alpha": {
+            "median": 1.4922027579250008,
+            "min": 1.1963767394762002,
+            "max": 1.8793224801471966,
+            "n": 10
+          },
+          "tonal_db": {
+            "median": 1.0366973516346438,
+            "min": -0.12316060736968797,
+            "max": 1.9242159365356755,
+            "n": 10
+          },
+          "tone_hz": {
+            "median": 11.679137610867503,
+            "min": 11.679137610867503,
+            "max": 11.679137610867503,
+            "n": 10
+          },
+          "band_ratio": {
+            "median": -0.29303038048944186,
+            "min": -0.37074581487936803,
+            "max": -0.10329087638304937,
+            "n": 10
+          },
+          "flatness": {
+            "median": 0.6386239398816334,
+            "min": 0.5605128731153147,
+            "max": 0.727031979411875,
+            "n": 10
+          },
+          "rms": {
+            "median": 0.8171659727622124,
+            "min": 0.7165151088412991,
+            "max": 0.9788757863477928,
+            "n": 10
+          },
+          "hf_rms": {
+            "median": 0.013811054037794625,
+            "min": 0.01192597278637344,
+            "max": 0.016218949506859686,
+            "n": 10
+          }
+        },
+        "motion": {
+          "file": "fan_nocoin.mp4",
+          "fps": 29.898592283820804,
+          "frames": 451,
+          "circle": [
+            615.75,
+            236.25,
+            189.0500030517578
+          ],
+          "drift_px": [
+            6.903640793446584,
+            1.4697646236292883
+          ],
+          "rotation_deg": -0.1944865460469805,
+          "housing_inliers": 0.9623923029594028,
+          "vibration_rms_px_per_frame": 0.0672729234809162,
+          "camera_motion_rms_px_per_frame": 0.03676358982920647,
+          "video_peak_hz": 11.679137610867503,
+          "camera_peak_hz": 5.138820548781701,
+          "audio_modulation_peak_hz": 3.173828125,
+          "audio_rms": 0.006727768726230799,
+          "tone_hz": 11.679137610867503,
+          "tone_displacement_rms_px": 0.02755157316687995,
+          "tone_prominence_db_video": 20.88902178536295,
+          "tone_prominence_db_audio_at_same_hz": 2.869518986907504,
+          "outline_radius_px": 189.0500030517578
+        }
+      },
+      {
+        "label": "Con moneda",
+        "sha256": "77d8d94e13a76046bd292830f641be503842dd3d57ace575b20ae8c0aa5ac7d0",
+        "file": "fan_coin.mp4",
+        "fps": 29.864639772758625,
+        "analyzed_seconds": 15.302377777777778,
+        "summary": {
+          "alpha": {
+            "median": 1.8127919690754233,
+            "min": 1.4503102188244006,
+            "max": 1.908655113134661,
+            "n": 10
+          },
+          "tonal_db": {
+            "median": 6.540392049089933,
+            "min": 4.947685748886775,
+            "max": 9.030322569397883,
+            "n": 10
+          },
+          "tone_hz": {
+            "median": 12.599144904132546,
+            "min": 12.599144904132546,
+            "max": 12.599144904132546,
+            "n": 10
+          },
+          "band_ratio": {
+            "median": -0.40732644997149525,
+            "min": -0.5982794685820205,
+            "max": -0.32081671525797045,
+            "n": 10
+          },
+          "flatness": {
+            "median": 0.5873533881119091,
+            "min": 0.5504104379204396,
+            "max": 0.672129475223981,
+            "n": 10
+          },
+          "rms": {
+            "median": 13.568788405481675,
+            "min": 6.993284076178199,
+            "max": 15.263405775166682,
+            "n": 10
+          },
+          "hf_rms": {
+            "median": 0.23839736085755445,
+            "min": 0.20702550886818674,
+            "max": 0.28835095624026597,
+            "n": 10
+          }
+        },
+        "motion": {
+          "file": "fan_coin.mp4",
+          "fps": 29.864639772758625,
+          "frames": 457,
+          "circle": [
+            617.25,
+            255.75,
+            213.5
+          ],
+          "drift_px": [
+            97.61803008107086,
+            -29.067256909115258
+          ],
+          "rotation_deg": -11.453586363176663,
+          "housing_inliers": 0.6042359376837215,
+          "vibration_rms_px_per_frame": 2.13437091597148,
+          "camera_motion_rms_px_per_frame": 0.09047321230173111,
+          "video_peak_hz": 12.365827405907869,
+          "camera_peak_hz": 12.365827405907869,
+          "audio_modulation_peak_hz": 12.451171875,
+          "audio_rms": 0.004858306438027834,
+          "tone_hz": 12.365827405907869,
+          "tone_displacement_rms_px": 0.9890982976008954,
+          "tone_prominence_db_video": 28.266003347357405,
+          "tone_prominence_db_audio_at_same_hz": 33.00506153962391,
+          "outline_radius_px": 213.5
+        }
+      }
+    ],
+    "range_separation": {
+      "alpha": false,
+      "tonal_db": true,
+      "tone_hz": true,
+      "band_ratio": false,
+      "flatness": false,
+      "rms": true,
+      "hf_rms": true
+    },
+    "tone_amplitude_ratio": 35.899884613118985,
+    "joint_spectral": {
+      "available": true,
+      "shape_distance": 1.4288325839925886,
+      "log_power_gain": 6.097057911842313,
+      "frequency_hz": [
+        1.8686620177388005,
+        2.802993026608201,
+        3.737324035477601,
+        4.671655044347001,
+        5.605986053216402,
+        6.540317062085801,
+        7.474648070955202,
+        8.408979079824602,
+        9.343310088694002,
+        10.277641097563402,
+        11.211972106432803,
+        12.146303115302203,
+        13.080634124171603
+      ],
+      "generalized_eigenvalues": [
+        [
+          351.04066252824776,
+          745.8573469669603
+        ],
+        [
+          282.8567847312296,
+          703.8653473660238
+        ],
+        [
+          230.47718666606775,
+          377.6904305299973
+        ],
+        [
+          186.3403411141582,
+          523.5496241085629
+        ],
+        [
+          103.02391525269314,
+          303.13439152756433
+        ],
+        [
+          84.88231953229058,
+          459.0567452779302
+        ],
+        [
+          274.33761082132236,
+          997.1954874870154
+        ],
+        [
+          166.34593099996772,
+          818.6444759685725
+        ],
+        [
+          205.80651378767408,
+          641.8257165615289
+        ],
+        [
+          177.0825140466711,
+          521.2625611066667
+        ],
+        [
+          28.005104828349452,
+          1697.8433849848116
+        ],
+        [
+          132.62346117847838,
+          15433.057805930606
+        ],
+        [
+          927.2209509420602,
+          31758.270043211363
+        ]
+      ],
+      "most_changed_band_hz": 13.080634124171603,
+      "scope": "descriptive shared-coordinate spectral comparison; not a calibrated fault probability or stiffness estimate",
+      "regularization": "2% diagonal-relative shrinkage and 1e-8 baseline diagonal floor"
+    },
+    "structural_verdict": {
+      "decision": "abstain",
+      "reason": "Only one housing is measured and clips are shorter than a structural window. No complete machine stiffness is identified."
+    },
+    "explanation": "El segundo video cambia el movimiento y los tonos del ventilador. Esto no demuestra desgaste temprano ni identifica todos sus anclajes.",
+    "limits": [
+      "one short recording per condition",
+      "overlapping windows are not independent trials",
+      "no contact-sensor ground truth",
+      "audio is a corroborating channel, not calibrated ground truth",
+      "joint spectrum compares housing x/y channels, not two independent parts",
+      "range separation is descriptive, not a significance test"
+    ],
+    "artifact": "comparison.png"
+  },
+  "artifacts": [
+    "comparison.json",
+    "comparison.png"
+  ],
+  "measurement_scope": null
+}

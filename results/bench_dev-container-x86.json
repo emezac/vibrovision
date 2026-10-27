@@ -1,0 +1,69 @@
+{
+ "label": "dev-container-x86",
+ "instance_type": "",
+ "machine": "x86_64",
+ "processor": "x86_64",
+ "python": "3.13.16",
+ "opencv_version": "5.0.0",
+ "cv2_module": "/usr/local/lib/python3.13/dist-packages/cv2/__init__.py",
+ "cv_threads": 1,
+ "numpy": "2.5.3",
+ "build_highlights": [
+  "Version control:               5.0.0-dirty",
+  "Baseline:                    SSE SSE2 SSE3",
+  "Dispatched code generation:  SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX",
+  "Parallel framework:            pthreads",
+  "Custom HAL:                  YES (ipp (ver 0.0.1))"
+ ],
+ "primitives": {
+  "GaussianBlur_64px_f32": {
+   "median_us": 7.6319997788232286,
+   "p95_us": 9.974300019166549,
+   "reps": 2000
+  },
+  "Sobel_64px_f32": {
+   "median_us": 4.322999302530661,
+   "p95_us": 5.62444965908071,
+   "reps": 2000
+  },
+  "warpAffine_64px_f32": {
+   "median_us": 9.838499863690231,
+   "p95_us": 13.12944987148512,
+   "reps": 2000
+  },
+  "cornerMinEigenVal_frame_f32": {
+   "median_us": 462.2559995368647,
+   "p95_us": 615.9896997814941,
+   "reps": 300
+  },
+  "cvtColor_resize_frame": {
+   "median_us": 325.09800030311453,
+   "p95_us": 419.7679503704422,
+   "reps": 300
+  },
+  "ICTracker.track_1roi": {
+   "median_us": 92.4309993024508,
+   "p95_us": 150.4516505065112,
+   "reps": 2000
+  },
+  "ECCTracker.track_1roi": {
+   "median_us": 79.0644999142387,
+   "p95_us": 140.15485007803358,
+   "reps": 500
+  },
+  "alpha_window_12s": {
+   "median_us": 4854.970500218769,
+   "p95_us": 6731.200099329724,
+   "reps": 200
+  }
+ },
+ "end_to_end": {
+  "frames": 2399,
+  "rois": 5,
+  "seconds": 1.519592227999965,
+  "frames_per_s": 1578.71299668167,
+  "roi_frames_per_s": 7893.56498340835,
+  "realtime_factor_at_120fps": 13.155941639013916
+ },
+ "timestamp": 1792399513.795969
+}

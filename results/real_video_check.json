@@ -1,0 +1,166 @@
+[
+ {
+  "file": "uno.mp4",
+  "codec": "h264",
+  "width": 848,
+  "height": 478,
+  "fps": 29.893628505235537,
+  "duration_s": 13.380778,
+  "bitrate_kbps": 1630.205,
+  "bits_per_pixel": 0.13453641127796528,
+  "frames": 400,
+  "raw_motion_rms_px": {
+   "ROI_1": 6.757511742475885,
+   "ROI_2": 5.708569504472442,
+   "ROI_3": 6.1964603515240215,
+   "ROI_4": 5.197301868309731,
+   "ROI_5": 4.976468271429474
+  },
+  "after_stabilisation_rms_px": {
+   "ROI_1": 1.1521231562122565,
+   "ROI_2": 0.37781113849241593,
+   "ROI_3": 0.44135775499531765,
+   "ROI_4": 0.348917290047188,
+   "ROI_5": 0.5831115306950364
+  },
+  "stabilisation_inlier_ratio": 0.8949089380379981,
+  "agent_verdict": {
+   "t_s": 1.0,
+   "problems": [
+    "static reference moves 1.2 px RMS (limit 1.0 px): camera is not fixed"
+   ],
+   "reference_rms_px": 1.2437874058509386,
+   "median_tracker_quality": 0.8272796229521433,
+   "request": "Re-record with the camera on a tripod or rigid support that does not touch the machine's table, exposure/focus locked, >= 120 fps, >= 60 s per condition, original file (not re-compressed by a messaging app)."
+  },
+  "agent_decisions": [
+   {
+    "t": 1.0,
+    "tool": "validate_setup",
+    "decision": "low frame rate: only < 15 Hz observable; higher frequencies alias"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "texture 46% / corners 88% of best patch on this part -> relocate"
+   },
+   {
+    "t": 1.0,
+    "tool": "relocate_roi",
+    "decision": "ROI moved to the most trackable patch of the same part; history back-filled"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "re-check after relocation"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "validate_setup",
+    "decision": "measurement invalid -> no diagnosis; ask operator to re-record"
+   }
+  ]
+ },
+ {
+  "file": "dos.mp4",
+  "codec": "h264",
+  "width": 848,
+  "height": 478,
+  "fps": 29.873370553701974,
+  "duration_s": 12.287813,
+  "bitrate_kbps": 1632.59,
+  "bits_per_pixel": 0.13482460518287068,
+  "frames": 367,
+  "raw_motion_rms_px": {
+   "ROI_1": 55.63061773296959,
+   "ROI_2": 50.5222151859001,
+   "ROI_3": 17.06315064547974,
+   "ROI_4": 14.806362307271748,
+   "ROI_5": 21.812196522791492
+  },
+  "after_stabilisation_rms_px": {
+   "ROI_1": 13.42892597094572,
+   "ROI_2": 3.882548095642556,
+   "ROI_3": 6.385573802850855,
+   "ROI_4": 4.875904307189848,
+   "ROI_5": 5.979538245603862
+  },
+  "stabilisation_inlier_ratio": 0.7481938604796308,
+  "agent_verdict": {
+   "t_s": 1.0,
+   "problems": [
+    "static reference moves 5.9 px RMS (limit 1.0 px): camera is not fixed"
+   ],
+   "reference_rms_px": 5.914119121551454,
+   "median_tracker_quality": 0.5920359587669373,
+   "request": "Re-record with the camera on a tripod or rigid support that does not touch the machine's table, exposure/focus locked, >= 120 fps, >= 60 s per condition, original file (not re-compressed by a messaging app)."
+  },
+  "agent_decisions": [
+   {
+    "t": 1.0,
+    "tool": "validate_setup",
+    "decision": "low frame rate: only < 15 Hz observable; higher frequencies alias"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "texture 36% / corners 55% of best patch on this part -> relocate"
+   },
+   {
+    "t": 1.0,
+    "tool": "relocate_roi",
+    "decision": "ROI moved to the most trackable patch of the same part; history back-filled"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "re-check after relocation"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "texture 23% / corners 53% of best patch on this part -> relocate"
+   },
+   {
+    "t": 1.0,
+    "tool": "relocate_roi",
+    "decision": "ROI moved to the most trackable patch of the same part; history back-filled"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "re-check after relocation"
+   },
+   {
+    "t": 1.0,
+    "tool": "assess_roi_quality",
+    "decision": "ok"
+   },
+   {
+    "t": 1.0,
+    "tool": "validate_setup",
+    "decision": "measurement invalid -> no diagnosis; ask operator to re-record"
+   }
+  ]
+ }
+]

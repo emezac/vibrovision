@@ -1,0 +1,6105 @@
+{
+ "thresholds": {
+  "mount": 0.08191522965072784,
+  "coupling": 0.07113636873006834,
+  "tonal_db": 3.8665539952883936,
+  "alpha": 0.5470782385766807,
+  "margin": 1.5,
+  "healthy_max": {
+   "mount": 0.054610153100485226,
+   "coupling": 0.04742424582004556,
+   "tonal_db": 2.5777026635255957,
+   "alpha": 0.36471882571778713
+  }
+ },
+ "runs": [
+  {
+   "cond": "healthy",
+   "seed": 100,
+   "sigma": 2.1312114139447744,
+   "final": "healthy",
+   "where": null,
+   "first_flag_t": 150.0,
+   "false_windows": 1,
+   "final_mount_rel": [
+    0.0014999929849084381,
+    0.028077769792401064,
+    -0.03409498339532169,
+    -0.03280164293944576
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": -0.022861340172398936,
+    "Caja_Engranajes|Rodamiento_A": -0.007857647370217435,
+    "Rodamiento_A|Rodamiento_B": -0.002474790471618027
+   },
+   "final_graph_gap": 0.4784981696132795,
+   "graph_gap_cal": 0.4654692273197297,
+   "final_stability_gap": 2.8453089334969754,
+   "stability_gap_cal": 2.3659532447766614,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -0.06307286893393638,
+    "Caja_Engranajes": 0.14959946377894084,
+    "Rodamiento_A": 0.6134364254570706,
+    "Rodamiento_B": -0.036313514661083346
+   },
+   "final_alpha_delta": {
+    "Motor": -0.1926111693480348,
+    "Caja_Engranajes": 0.049071668147814496,
+    "Rodamiento_A": -0.020214075455115776,
+    "Rodamiento_B": -0.04230014254838643
+   },
+   "fiedler_cut": [
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ],
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.005688626859789658,
+      0.007540227230339536,
+      0.006685613095201992,
+      -0.00731783332211311
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.012578022604239347,
+      "Caja_Engranajes|Rodamiento_A": -0.03392774923839781,
+      "Rodamiento_A|Rodamiento_B": -0.013550599801747998
+     },
+     "graph_gap": 0.47087582343024026,
+     "stability_gap": 2.4158151904036833,
+     "tonal_delta": {
+      "Motor": 0.44312982842621906,
+      "Caja_Engranajes": 0.937476264853732,
+      "Rodamiento_A": 0.31497595580333737,
+      "Rodamiento_B": -0.23835118927772747
+     },
+     "alpha_delta": {
+      "Motor": -0.2603967180350204,
+      "Caja_Engranajes": 0.09834283083775808,
+      "Rodamiento_A": 0.1232924701659115,
+      "Rodamiento_B": -0.01046516470284864
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.008133390831572829,
+      0.010476449434764668,
+      0.01491617388143296,
+      -0.0057051821467007935
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.019212247510002056,
+      "Caja_Engranajes|Rodamiento_A": -0.0050656070573271705,
+      "Rodamiento_A|Rodamiento_B": -0.02539879008521484
+     },
+     "graph_gap": 0.46431852435314863,
+     "stability_gap": 2.5284077877466875,
+     "tonal_delta": {
+      "Motor": 1.1655897744567838,
+      "Caja_Engranajes": 0.7876906506908448,
+      "Rodamiento_A": 1.0335309647942168,
+      "Rodamiento_B": 1.1593856459311471
+     },
+     "alpha_delta": {
+      "Motor": -0.3121483590758314,
+      "Caja_Engranajes": 0.1312948327872001,
+      "Rodamiento_A": 0.007054061820294111,
+      "Rodamiento_B": -0.17921345393750798
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.0033213777249425647,
+      0.027758160006443156,
+      0.015611138160690707,
+      -0.04734393047617069
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.009599551448000954,
+      "Caja_Engranajes|Rodamiento_A": -0.01294015561711681,
+      "Rodamiento_A|Rodamiento_B": -0.012563125316022994
+     },
+     "graph_gap": 0.46546683063500877,
+     "stability_gap": 3.0470328433845895,
+     "tonal_delta": {
+      "Motor": 0.3721354840066837,
+      "Caja_Engranajes": 0.3219923112980112,
+      "Rodamiento_A": 0.7040811935373128,
+      "Rodamiento_B": 0.6101043047497257
+     },
+     "alpha_delta": {
+      "Motor": -0.3058255048119467,
+      "Caja_Engranajes": 0.22335664703356595,
+      "Rodamiento_A": -0.07666610351052905,
+      "Rodamiento_B": -0.15564130380286967
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.028510978010912513,
+      0.011396249873460995,
+      0.015594763070107653,
+      -0.008940760703745165
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.03756416172470822,
+      "Caja_Engranajes|Rodamiento_A": 0.018728567780372796,
+      "Rodamiento_A|Rodamiento_B": -0.023307346241286053
+     },
+     "graph_gap": 0.4657823755228789,
+     "stability_gap": 2.5856442077701676,
+     "tonal_delta": {
+      "Motor": 0.5513532551066049,
+      "Caja_Engranajes": 0.1627036622400766,
+      "Rodamiento_A": 0.5305542364019082,
+      "Rodamiento_B": 0.3570201530464576
+     },
+     "alpha_delta": {
+      "Motor": -0.2778913271347938,
+      "Caja_Engranajes": 0.17276613605190572,
+      "Rodamiento_A": -0.0671427325332653,
+      "Rodamiento_B": -0.06981090362672138
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.0028503876350571833,
+      0.012762706129198165,
+      0.015102262141117206,
+      0.0008094054818832408
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.013118703645906837,
+      "Caja_Engranajes|Rodamiento_A": -0.001080067061641099,
+      "Rodamiento_A|Rodamiento_B": -0.02287510976548912
+     },
+     "graph_gap": 0.46390904802628596,
+     "stability_gap": 2.4990178490449297,
+     "tonal_delta": {
+      "Motor": 0.11210959473969595,
+      "Caja_Engranajes": -0.0005941158816114012,
+      "Rodamiento_A": 0.29109745340291227,
+      "Rodamiento_B": 0.6260107641699175
+     },
+     "alpha_delta": {
+      "Motor": -0.22328963917368805,
+      "Caja_Engranajes": 0.11572445187688785,
+      "Rodamiento_A": 0.07136622743160093,
+      "Rodamiento_B": -0.084867577862207
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.015142984680018845,
+      0.0020123694856462038,
+      0.012321750078452265,
+      -0.0017673074433761649
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.01324079905488551,
+      "Caja_Engranajes|Rodamiento_A": -0.00467701878632254,
+      "Rodamiento_A|Rodamiento_B": -0.02253750223100459
+     },
+     "graph_gap": 0.46886903176603156,
+     "stability_gap": 2.4902378423915446,
+     "tonal_delta": {
+      "Motor": 1.07591671610772,
+      "Caja_Engranajes": 0.6370823376058361,
+      "Rodamiento_A": 1.4156198698753606,
+      "Rodamiento_B": 1.7031187909806942
+     },
+     "alpha_delta": {
+      "Motor": -0.44073485146573543,
+      "Caja_Engranajes": 0.23083844876436554,
+      "Rodamiento_A": 0.008430825576659862,
+      "Rodamiento_B": -0.22414788685921228
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01631368692489965,
+      0.004690987572943506,
+      0.03221569628598653,
+      -0.0034238822941383695
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0016536993258786659,
+      "Caja_Engranajes|Rodamiento_A": 0.008334454088771537,
+      "Rodamiento_A|Rodamiento_B": -0.04087961973534393
+     },
+     "graph_gap": 0.46994612496396504,
+     "stability_gap": 2.506319302426647,
+     "tonal_delta": {
+      "Motor": 0.4848846047513362,
+      "Caja_Engranajes": 0.7184571957739756,
+      "Rodamiento_A": -0.02227985059020199,
+      "Rodamiento_B": 0.3866101475222923
+     },
+     "alpha_delta": {
+      "Motor": -0.2031450448154326,
+      "Caja_Engranajes": 0.1263979971890945,
+      "Rodamiento_A": -0.07476999595023137,
+      "Rodamiento_B": -0.06033498453327368
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      3.748847709839076e-05,
+      3.172348999180841e-05,
+      0.02795580141075593,
+      -0.013605396323769559
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0019171611588726378,
+      "Caja_Engranajes|Rodamiento_A": 0.010116181922939393,
+      "Rodamiento_A|Rodamiento_B": -0.01653169173824831
+     },
+     "graph_gap": 0.4732689999426205,
+     "stability_gap": 2.6799503670085483,
+     "tonal_delta": {
+      "Motor": -0.18394991250042736,
+      "Caja_Engranajes": -0.20942796590203372,
+      "Rodamiento_A": -0.08106417672726351,
+      "Rodamiento_B": -0.6729882183384053
+     },
+     "alpha_delta": {
+      "Motor": -0.18396316787151368,
+      "Caja_Engranajes": 0.19749136394262545,
+      "Rodamiento_A": 0.07280964931090961,
+      "Rodamiento_B": -0.16049287043641447
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "impacts",
+     "where": "Motor",
+     "mount_rel": [
+      0.007344140512172803,
+      0.008476007672058916,
+      0.02312032269293285,
+      -0.006727116833557867
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.020015625598199804,
+      "Caja_Engranajes|Rodamiento_A": -0.024614263419598714,
+      "Rodamiento_A|Rodamiento_B": -0.020199274819323376
+     },
+     "graph_gap": 0.46060890244503844,
+     "stability_gap": 2.9713348513480637,
+     "tonal_delta": {
+      "Motor": 0.15670997171885404,
+      "Caja_Engranajes": 0.4495069319509568,
+      "Rodamiento_A": -0.04433130708398281,
+      "Rodamiento_B": 0.18445800567218562
+     },
+     "alpha_delta": {
+      "Motor": -0.5599543016684856,
+      "Caja_Engranajes": 0.18927760231489743,
+      "Rodamiento_A": 0.014870061945676305,
+      "Rodamiento_B": -0.24711121042670015
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.002163679560843512,
+      0.014355254334686318,
+      0.008421664042447041,
+      -0.016756915501883074
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0003487139571620723,
+      "Caja_Engranajes|Rodamiento_A": -0.026921796063617,
+      "Rodamiento_A|Rodamiento_B": -0.000633116860100591
+     },
+     "graph_gap": 0.4614582650991337,
+     "stability_gap": 2.9636016441065935,
+     "tonal_delta": {
+      "Motor": -0.35573362692088395,
+      "Caja_Engranajes": 0.22203448669401382,
+      "Rodamiento_A": 0.8167539014333549,
+      "Rodamiento_B": 0.014245772401372037
+     },
+     "alpha_delta": {
+      "Motor": -0.10072672886804845,
+      "Caja_Engranajes": -0.038259712547559444,
+      "Rodamiento_A": 0.05717590117153537,
+      "Rodamiento_B": 0.05938120961401938
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.010977898152673138,
+      0.02919719301388435,
+      -0.011801792486208162,
+      -0.015939072276521915
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.00023980709216964158,
+      "Caja_Engranajes|Rodamiento_A": -0.019683186046500545,
+      "Rodamiento_A|Rodamiento_B": 0.005644146430727304
+     },
+     "graph_gap": 0.46029302729507604,
+     "stability_gap": 3.138314372742152,
+     "tonal_delta": {
+      "Motor": 0.34795009830470747,
+      "Caja_Engranajes": 0.08810195335527737,
+      "Rodamiento_A": 1.2333150904227637,
+      "Rodamiento_B": 0.8268170282945153
+     },
+     "alpha_delta": {
+      "Motor": -0.10391540295515234,
+      "Caja_Engranajes": 0.21196260310307125,
+      "Rodamiento_A": 0.06426266924217305,
+      "Rodamiento_B": 0.22793408595167475
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.0014999929849084381,
+      0.028077769792401064,
+      -0.03409498339532169,
+      -0.03280164293944576
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.022861340172398936,
+      "Caja_Engranajes|Rodamiento_A": -0.007857647370217435,
+      "Rodamiento_A|Rodamiento_B": -0.002474790471618027
+     },
+     "graph_gap": 0.4784981696132795,
+     "stability_gap": 2.8453089334969754,
+     "tonal_delta": {
+      "Motor": -0.06307286893393638,
+      "Caja_Engranajes": 0.14959946377894084,
+      "Rodamiento_A": 0.6134364254570706,
+      "Rodamiento_B": -0.036313514661083346
+     },
+     "alpha_delta": {
+      "Motor": -0.1926111693480348,
+      "Caja_Engranajes": 0.049071668147814496,
+      "Rodamiento_A": -0.020214075455115776,
+      "Rodamiento_B": -0.04230014254838643
+     }
+    }
+   ]
+  },
+  {
+   "cond": "healthy",
+   "seed": 101,
+   "sigma": 2.1055109217465215,
+   "final": "healthy",
+   "where": null,
+   "first_flag_t": null,
+   "false_windows": 0,
+   "final_mount_rel": [
+    -0.012169809618250982,
+    0.0029582036914395093,
+    -0.004151670134627139,
+    -0.0135787633764195
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.014839437762991459,
+    "Caja_Engranajes|Rodamiento_A": -0.025699824233756274,
+    "Rodamiento_A|Rodamiento_B": 0.003400632906658929
+   },
+   "final_graph_gap": 0.46260275658584143,
+   "graph_gap_cal": 0.47527931703925863,
+   "final_stability_gap": 3.3101088163802608,
+   "stability_gap_cal": 2.5833743007425833,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -0.0635751882115656,
+    "Caja_Engranajes": 0.5481650901250141,
+    "Rodamiento_A": -0.7225751651772327,
+    "Rodamiento_B": -0.1669130697629555
+   },
+   "final_alpha_delta": {
+    "Motor": -0.01023780934030638,
+    "Caja_Engranajes": 0.143181519231115,
+    "Rodamiento_A": -0.0700211894719206,
+    "Rodamiento_B": -0.08805994179162235
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": 0.23359128640753468,
+      "Caja_Engranajes": -1.3000418097976834,
+      "Rodamiento_A": -0.01495782123543421,
+      "Rodamiento_B": 1.0378974283337605
+     },
+     "alpha_delta": {
+      "Motor": 0.03158096548698919,
+      "Caja_Engranajes": 0.1374896383014017,
+      "Rodamiento_A": -0.11814153369086622,
+      "Rodamiento_B": -0.15310227260085518
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": -0.33901287182573725,
+      "Caja_Engranajes": -0.9212648917747011,
+      "Rodamiento_A": -0.8907956993077732,
+      "Rodamiento_B": -0.0336323505077214
+     },
+     "alpha_delta": {
+      "Motor": 0.01574938685266969,
+      "Caja_Engranajes": 0.21287040063986384,
+      "Rodamiento_A": -0.06262832517712402,
+      "Rodamiento_B": -0.053846685691687046
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.008699893448459228,
+      -0.006655298079191629,
+      0.006674528597501617,
+      -0.005893757379922038
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.025960342655509283,
+      "Caja_Engranajes|Rodamiento_A": 0.007385477720235567,
+      "Rodamiento_A|Rodamiento_B": -0.009255629202891247
+     },
+     "graph_gap": 0.467658240101632,
+     "stability_gap": 2.4430398563967257,
+     "tonal_delta": {
+      "Motor": -0.7039281470544942,
+      "Caja_Engranajes": 0.45036322445938026,
+      "Rodamiento_A": -2.029811489269843,
+      "Rodamiento_B": -0.7270520310332902
+     },
+     "alpha_delta": {
+      "Motor": 0.09280420013489121,
+      "Caja_Engranajes": 0.06197910203683521,
+      "Rodamiento_A": -0.20199550675647993,
+      "Rodamiento_B": -0.026313502048513016
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01564236917794548,
+      0.005839869969807676,
+      0.009789025337118229,
+      -0.011718396427875866
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0006575616035657816,
+      "Caja_Engranajes|Rodamiento_A": 0.002029832972404888,
+      "Rodamiento_A|Rodamiento_B": -0.0011567919163366636
+     },
+     "graph_gap": 0.4665865953664305,
+     "stability_gap": 2.571752580773606,
+     "tonal_delta": {
+      "Motor": 0.003593600437923783,
+      "Caja_Engranajes": 0.6724567646557098,
+      "Rodamiento_A": -0.7687951759669076,
+      "Rodamiento_B": 0.7477691891415894
+     },
+     "alpha_delta": {
+      "Motor": -0.15749412417180308,
+      "Caja_Engranajes": 0.1651586779391303,
+      "Rodamiento_A": -0.07966363755455685,
+      "Rodamiento_B": -0.011462000509228742
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.004354993167910992,
+      0.012602898451814504,
+      -0.012188847709466155,
+      -0.015493009998061691
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.015980999929745776,
+      "Caja_Engranajes|Rodamiento_A": -0.0029334520626775884,
+      "Rodamiento_A|Rodamiento_B": 0.01335311775143122
+     },
+     "graph_gap": 0.48057610714102583,
+     "stability_gap": 2.4142344985238813,
+     "tonal_delta": {
+      "Motor": 0.12841722343753403,
+      "Caja_Engranajes": -0.7486166272517529,
+      "Rodamiento_A": -0.3332407056570936,
+      "Rodamiento_B": 1.0462050769524769
+     },
+     "alpha_delta": {
+      "Motor": -0.050935484537819375,
+      "Caja_Engranajes": -0.23480120125565462,
+      "Rodamiento_A": -0.0688395532676287,
+      "Rodamiento_B": -0.07642835663438763
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.013775975811122887,
+      0.016189259801937972,
+      0.007146540734175977,
+      -0.00413298292259201
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.010220526248686967,
+      "Caja_Engranajes|Rodamiento_A": 0.021835900826252086,
+      "Rodamiento_A|Rodamiento_B": -0.010214902719561048
+     },
+     "graph_gap": 0.46614365118433343,
+     "stability_gap": 2.352648609762319,
+     "tonal_delta": {
+      "Motor": -0.7428186061313831,
+      "Caja_Engranajes": -0.8130781275863548,
+      "Rodamiento_A": -1.5168762492268328,
+      "Rodamiento_B": -0.17193525179275682
+     },
+     "alpha_delta": {
+      "Motor": 0.18241514636684397,
+      "Caja_Engranajes": -0.023053796926668646,
+      "Rodamiento_A": -0.18437787971785724,
+      "Rodamiento_B": -0.19239786341518028
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.01326586112913719,
+      0.011897177353101585,
+      -0.003543758756279769,
+      -0.004782440968300716
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.028576816154928686,
+      "Caja_Engranajes|Rodamiento_A": 0.019941470102954995,
+      "Rodamiento_A|Rodamiento_B": -0.0032955616673182586
+     },
+     "graph_gap": 0.4736532394830616,
+     "stability_gap": 2.381474951227466,
+     "tonal_delta": {
+      "Motor": 0.20419435880563697,
+      "Caja_Engranajes": -0.08666820930564256,
+      "Rodamiento_A": -0.3213997608221568,
+      "Rodamiento_B": 0.15880574164073735
+     },
+     "alpha_delta": {
+      "Motor": -0.09664019679649916,
+      "Caja_Engranajes": 0.06410583798659131,
+      "Rodamiento_A": 0.04264918181082589,
+      "Rodamiento_B": 0.0314739370921977
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.004436164811379983,
+      0.005430287584744509,
+      0.007453711147832109,
+      0.008078269484624867
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.033869954466716035,
+      "Caja_Engranajes|Rodamiento_A": 0.01747757080142809,
+      "Rodamiento_A|Rodamiento_B": -0.0008562978330082238
+     },
+     "graph_gap": 0.4704232988138204,
+     "stability_gap": 2.3137758172195766,
+     "tonal_delta": {
+      "Motor": -0.20396607506415876,
+      "Caja_Engranajes": -0.19590607711701935,
+      "Rodamiento_A": -1.0870400677201673,
+      "Rodamiento_B": -0.27151709417468695
+     },
+     "alpha_delta": {
+      "Motor": -0.3511982357474617,
+      "Caja_Engranajes": 0.03111064751771031,
+      "Rodamiento_A": -0.11815433191835989,
+      "Rodamiento_B": 0.07836900050994933
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.0033759182288868317,
+      0.024634173282314542,
+      -0.004929909858332637,
+      0.001507008842372537
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.013468965880659711,
+      "Caja_Engranajes|Rodamiento_A": -0.026987638739006004,
+      "Rodamiento_A|Rodamiento_B": 0.01550989999774588
+     },
+     "graph_gap": 0.4603245378767766,
+     "stability_gap": 2.903581732162111,
+     "tonal_delta": {
+      "Motor": 0.06503460105635384,
+      "Caja_Engranajes": 0.05250314762914954,
+      "Rodamiento_A": -1.0930971447182145,
+      "Rodamiento_B": -0.24110037167694465
+     },
+     "alpha_delta": {
+      "Motor": -0.07733685331447093,
+      "Caja_Engranajes": -0.0837969696980404,
+      "Rodamiento_A": -0.0979794234838075,
+      "Rodamiento_B": 0.016870692521689712
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.023538701305918508,
+      0.003681813724677685,
+      -0.007488947803719559,
+      -0.005603891888346979
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.007165419279750784,
+      "Caja_Engranajes|Rodamiento_A": 0.00440082798025121,
+      "Rodamiento_A|Rodamiento_B": 0.02510649769857931
+     },
+     "graph_gap": 0.47271106704122806,
+     "stability_gap": 3.057845288354778,
+     "tonal_delta": {
+      "Motor": 0.6808703357418366,
+      "Caja_Engranajes": -0.012724836609532275,
+      "Rodamiento_A": 0.15535134196358413,
+      "Rodamiento_B": 1.4854433764537411
+     },
+     "alpha_delta": {
+      "Motor": 0.07189608228356392,
+      "Caja_Engranajes": 0.09931755147990007,
+      "Rodamiento_A": 0.0310419230058957,
+      "Rodamiento_B": 0.0957454967434086
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.013876861415269892,
+      -0.0004498779342978487,
+      -0.006358061427764294,
+      -0.008780575997438422
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.029197226868100223,
+      "Caja_Engranajes|Rodamiento_A": -0.009741122510316558,
+      "Rodamiento_A|Rodamiento_B": 0.008144512410031224
+     },
+     "graph_gap": 0.4693062727072006,
+     "stability_gap": 3.191171155210772,
+     "tonal_delta": {
+      "Motor": -0.040094118600258355,
+      "Caja_Engranajes": -1.1129889166540146,
+      "Rodamiento_A": 0.7727642768403982,
+      "Rodamiento_B": 1.2123694163991896
+     },
+     "alpha_delta": {
+      "Motor": -0.21029115224663153,
+      "Caja_Engranajes": 0.018995930802228944,
+      "Rodamiento_A": 0.026300997202233778,
+      "Rodamiento_B": 0.05118248955213711
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.012169809618250982,
+      0.0029582036914395093,
+      -0.004151670134627139,
+      -0.0135787633764195
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.014839437762991459,
+      "Caja_Engranajes|Rodamiento_A": -0.025699824233756274,
+      "Rodamiento_A|Rodamiento_B": 0.003400632906658929
+     },
+     "graph_gap": 0.46260275658584143,
+     "stability_gap": 3.3101088163802608,
+     "tonal_delta": {
+      "Motor": -0.0635751882115656,
+      "Caja_Engranajes": 0.5481650901250141,
+      "Rodamiento_A": -0.7225751651772327,
+      "Rodamiento_B": -0.1669130697629555
+     },
+     "alpha_delta": {
+      "Motor": -0.01023780934030638,
+      "Caja_Engranajes": 0.143181519231115,
+      "Rodamiento_A": -0.0700211894719206,
+      "Rodamiento_B": -0.08805994179162235
+     }
+    }
+   ]
+  },
+  {
+   "cond": "healthy",
+   "seed": 102,
+   "sigma": 2.115979558026976,
+   "final": "healthy",
+   "where": null,
+   "first_flag_t": null,
+   "false_windows": 0,
+   "final_mount_rel": [
+    0.01411434137721801,
+    0.028616809029218038,
+    -0.04911027161847903,
+    0.010484263916612502
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.011603159173509514,
+    "Caja_Engranajes|Rodamiento_A": -0.016541550790715176,
+    "Rodamiento_A|Rodamiento_B": 0.01073063042280431
+   },
+   "final_graph_gap": 0.46691289723446694,
+   "graph_gap_cal": 0.47134080533830774,
+   "final_stability_gap": 2.137039035489793,
+   "stability_gap_cal": 2.772782649867014,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -0.5922351133030119,
+    "Caja_Engranajes": -0.08403502445099775,
+    "Rodamiento_A": -1.0982080371702985,
+    "Rodamiento_B": -0.3164018902937915
+   },
+   "final_alpha_delta": {
+    "Motor": -0.11022960082983158,
+    "Caja_Engranajes": -0.16596032608518652,
+    "Rodamiento_A": 0.11320048538407712,
+    "Rodamiento_B": 0.16671524294174378
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.023977667190373086,
+      -0.0046225240621171615,
+      -0.021485631268771455,
+      0.015302790189322346
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.00010830051516808048,
+      "Caja_Engranajes|Rodamiento_A": 4.233973463052543e-05,
+      "Rodamiento_A|Rodamiento_B": -0.0009709844345082708
+     },
+     "graph_gap": 0.4640343806778336,
+     "stability_gap": 2.4579735420309303,
+     "tonal_delta": {
+      "Motor": -0.2562913157079798,
+      "Caja_Engranajes": 0.542090420869787,
+      "Rodamiento_A": -0.5877141969614286,
+      "Rodamiento_B": 0.16522500313703148
+     },
+     "alpha_delta": {
+      "Motor": 0.17053760513672622,
+      "Caja_Engranajes": 0.07566851073890923,
+      "Rodamiento_A": 0.11612060470769725,
+      "Rodamiento_B": 0.02834119881972641
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.025734325335376784,
+      -0.0028852949419397866,
+      -0.02801960619736854,
+      0.011494987595442874
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.022388808667396898,
+      "Caja_Engranajes|Rodamiento_A": -0.017034534217396424,
+      "Rodamiento_A|Rodamiento_B": -0.0050877208345352365
+     },
+     "graph_gap": 0.45526130635947154,
+     "stability_gap": 2.3042224825380178,
+     "tonal_delta": {
+      "Motor": -0.6483478858549638,
+      "Caja_Engranajes": -1.1918441778048816,
+      "Rodamiento_A": -0.5801707189194829,
+      "Rodamiento_B": -0.28746976664686663
+     },
+     "alpha_delta": {
+      "Motor": 0.12285063045039046,
+      "Caja_Engranajes": 0.04601720769450468,
+      "Rodamiento_A": 0.01681980899285418,
+      "Rodamiento_B": 0.07036714736007588
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.022659892454224728,
+      -0.0021373498925429946,
+      -0.03312509510419881,
+      0.016284113676911183
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.023786718803690654,
+      "Caja_Engranajes|Rodamiento_A": -0.019029892582467456,
+      "Rodamiento_A|Rodamiento_B": 0.005112925459443529
+     },
+     "graph_gap": 0.4622856694032256,
+     "stability_gap": 2.395741645803164,
+     "tonal_delta": {
+      "Motor": -0.5589242118034576,
+      "Caja_Engranajes": -1.1979415572898056,
+      "Rodamiento_A": -0.23339324726390842,
+      "Rodamiento_B": -0.0927211287250902
+     },
+     "alpha_delta": {
+      "Motor": 0.12065078347394809,
+      "Caja_Engranajes": 0.13780417654193022,
+      "Rodamiento_A": -0.0045826745453265705,
+      "Rodamiento_B": -0.008886909905307938
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01566733013052124,
+      0.004553556790876767,
+      -0.03414215152511302,
+      0.02575099489085142
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.05488535109812376,
+      "Caja_Engranajes|Rodamiento_A": 0.009864403955792689,
+      "Rodamiento_A|Rodamiento_B": 0.009712039545201279
+     },
+     "graph_gap": 0.47118868919295254,
+     "stability_gap": 2.819161029626462,
+     "tonal_delta": {
+      "Motor": 0.5407584326314314,
+      "Caja_Engranajes": -0.5080356548409348,
+      "Rodamiento_A": 0.8615724800472435,
+      "Rodamiento_B": 1.1534480204733732
+     },
+     "alpha_delta": {
+      "Motor": -0.10816924716357468,
+      "Caja_Engranajes": -0.12840005918671604,
+      "Rodamiento_A": 0.043844154393673396,
+      "Rodamiento_B": 0.08932182485660833
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.007777630059429885,
+      -0.011240659635826433,
+      -0.0031230764815519674,
+      0.02230414600866326
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.03196205630019344,
+      "Caja_Engranajes|Rodamiento_A": 0.001275394188596124,
+      "Rodamiento_A|Rodamiento_B": -0.001079831238424589
+     },
+     "graph_gap": 0.4582743421194676,
+     "stability_gap": 2.7635461012080333,
+     "tonal_delta": {
+      "Motor": -0.4481043782852261,
+      "Caja_Engranajes": -1.2792323152052312,
+      "Rodamiento_A": 0.11912440535209612,
+      "Rodamiento_B": 0.4048797883215851
+     },
+     "alpha_delta": {
+      "Motor": 0.1686229831355135,
+      "Caja_Engranajes": 0.03440811032967428,
+      "Rodamiento_A": 0.13718115993062518,
+      "Rodamiento_B": 0.2063229442804928
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.022742528791636518,
+      -0.010784313169976856,
+      -0.014855047530481169,
+      0.01911172861921062
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.015305124667659209,
+      "Caja_Engranajes|Rodamiento_A": 0.02258898479377347,
+      "Rodamiento_A|Rodamiento_B": -0.010810766521957116
+     },
+     "graph_gap": 0.4687330814069981,
+     "stability_gap": 3.0894754672008613,
+     "tonal_delta": {
+      "Motor": -0.34706541270435665,
+      "Caja_Engranajes": -0.24865440595192467,
+      "Rodamiento_A": -0.07600212873455447,
+      "Rodamiento_B": 0.6450644143402169
+     },
+     "alpha_delta": {
+      "Motor": 0.06064599838700713,
+      "Caja_Engranajes": 0.02431849756668769,
+      "Rodamiento_A": 0.021800232752971715,
+      "Rodamiento_B": 0.07230214894214193
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.037759514396592087,
+      0.00676256996308866,
+      -0.007840413219131204,
+      0.03067145467973087
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.02521011330029399,
+      "Caja_Engranajes|Rodamiento_A": 0.005252539897560249,
+      "Rodamiento_A|Rodamiento_B": -0.015528672505741525
+     },
+     "graph_gap": 0.46402589142498296,
+     "stability_gap": 2.9526896956505677,
+     "tonal_delta": {
+      "Motor": -0.028471155952402682,
+      "Caja_Engranajes": -0.6558672640399124,
+      "Rodamiento_A": 1.2789381143513392,
+      "Rodamiento_B": 1.2988159127534562
+     },
+     "alpha_delta": {
+      "Motor": 0.15499818136432442,
+      "Caja_Engranajes": 0.2355990175978553,
+      "Rodamiento_A": 0.11732871327279559,
+      "Rodamiento_B": 0.1551505084935736
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.03132273562925869,
+      0.014371905820532493,
+      -0.02724385661254014,
+      0.003928451209525008
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0029261037023142755,
+      "Caja_Engranajes|Rodamiento_A": 0.029951767316850564,
+      "Rodamiento_A|Rodamiento_B": -0.023398788086369082
+     },
+     "graph_gap": 0.47921168840452993,
+     "stability_gap": 2.49113092791253,
+     "tonal_delta": {
+      "Motor": -1.751731871489035,
+      "Caja_Engranajes": -1.6969546698154687,
+      "Rodamiento_A": -0.5765227801619801,
+      "Rodamiento_B": -1.0678378722403412
+     },
+     "alpha_delta": {
+      "Motor": -0.0036595262877012757,
+      "Caja_Engranajes": 0.06731234982768419,
+      "Rodamiento_A": 0.15136191440410707,
+      "Rodamiento_B": 0.2304573831603105
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.029784423430987417,
+      0.03258141038941398,
+      -0.016157095994006054,
+      0.0013595849526979453
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.007068572730219991,
+      "Caja_Engranajes|Rodamiento_A": -0.012879182392909194,
+      "Rodamiento_A|Rodamiento_B": -0.005534189171892079
+     },
+     "graph_gap": 0.4582501201956889,
+     "stability_gap": 2.5254566505295433,
+     "tonal_delta": {
+      "Motor": -0.22726958869679237,
+      "Caja_Engranajes": -0.19491022996290042,
+      "Rodamiento_A": 0.6641436552893278,
+      "Rodamiento_B": 0.7389781313665367
+     },
+     "alpha_delta": {
+      "Motor": -0.023973375886944925,
+      "Caja_Engranajes": -0.21218403929872554,
+      "Rodamiento_A": -0.014397022605451837,
+      "Rodamiento_B": 0.12966561342395577
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.0416662288009757,
+      0.0300438178506095,
+      -0.05179148344298801,
+      0.011540074872545603
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.004191554106920847,
+      "Caja_Engranajes|Rodamiento_A": 0.007247270599012312,
+      "Rodamiento_A|Rodamiento_B": 0.01656609632963324
+     },
+     "graph_gap": 0.46775904138820884,
+     "stability_gap": 2.6312711162930618,
+     "tonal_delta": {
+      "Motor": 0.8053182133864816,
+      "Caja_Engranajes": -0.3317373800462704,
+      "Rodamiento_A": 1.770696387460477,
+      "Rodamiento_B": 1.8355549901900545
+     },
+     "alpha_delta": {
+      "Motor": -0.1776294793138815,
+      "Caja_Engranajes": 0.022262872165633718,
+      "Rodamiento_A": -0.05544344844457627,
+      "Rodamiento_B": -0.0033092132066286917
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.010685652323446648,
+      0.035402614598025295,
+      -0.02707791004744764,
+      0.0007745135662498015
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.015471673712877276,
+      "Caja_Engranajes|Rodamiento_A": -0.02356600964478628,
+      "Rodamiento_A|Rodamiento_B": 0.002437555452695417
+     },
+     "graph_gap": 0.46617131386988014,
+     "stability_gap": 2.278990124392913,
+     "tonal_delta": {
+      "Motor": 0.015432734521496627,
+      "Caja_Engranajes": -0.8113973934387602,
+      "Rodamiento_A": 1.1868842528527974,
+      "Rodamiento_B": 1.0586948397921496
+     },
+     "alpha_delta": {
+      "Motor": 0.093782403463476,
+      "Caja_Engranajes": -0.18458790088714827,
+      "Rodamiento_A": 0.23143813381297929,
+      "Rodamiento_B": 0.27981991262425154
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01411434137721801,
+      0.028616809029218038,
+      -0.04911027161847903,
+      0.010484263916612502
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.011603159173509514,
+      "Caja_Engranajes|Rodamiento_A": -0.016541550790715176,
+      "Rodamiento_A|Rodamiento_B": 0.01073063042280431
+     },
+     "graph_gap": 0.46691289723446694,
+     "stability_gap": 2.137039035489793,
+     "tonal_delta": {
+      "Motor": -0.5922351133030119,
+      "Caja_Engranajes": -0.08403502445099775,
+      "Rodamiento_A": -1.0982080371702985,
+      "Rodamiento_B": -0.3164018902937915
+     },
+     "alpha_delta": {
+      "Motor": -0.11022960082983158,
+      "Caja_Engranajes": -0.16596032608518652,
+      "Rodamiento_A": 0.11320048538407712,
+      "Rodamiento_B": 0.16671524294174378
+     }
+    }
+   ]
+  },
+  {
+   "cond": "mount",
+   "seed": 100,
+   "sigma": 2.1312114139447744,
+   "final": "structural",
+   "where": "Rodamiento_B",
+   "first_flag_t": 90.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    -0.010745267371820355,
+    0.020714272303417713,
+    -0.019384331193616156,
+    -0.673861716191025
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.02613977779942811,
+    "Caja_Engranajes|Rodamiento_A": -5.3290070087474994e-05,
+    "Rodamiento_A|Rodamiento_B": -0.020035581804691338
+   },
+   "final_graph_gap": 0.4656410585947191,
+   "graph_gap_cal": 0.4654692273197297,
+   "final_stability_gap": 2.7046507862417615,
+   "stability_gap_cal": 2.3659532447766614,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -3.718052229320854,
+    "Caja_Engranajes": -2.0694416756902925,
+    "Rodamiento_A": -3.050585963770324,
+    "Rodamiento_B": -9.808303117146954
+   },
+   "final_alpha_delta": {
+    "Motor": -0.0953918610391451,
+    "Caja_Engranajes": 0.11926761748957704,
+    "Rodamiento_A": 0.3909708364853949,
+    "Rodamiento_B": 1.235520955602912
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.014183431592793783,
+      0.013801070655299785,
+      0.011664698368041737,
+      -0.015275227410249448
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.012748166665450755,
+      "Caja_Engranajes|Rodamiento_A": -0.011821689273880165,
+      "Rodamiento_A|Rodamiento_B": -0.01939981087167164
+     },
+     "graph_gap": 0.46413854374024466,
+     "stability_gap": 2.4088606315927077,
+     "tonal_delta": {
+      "Motor": 0.25495743047578756,
+      "Caja_Engranajes": 0.7710819363174615,
+      "Rodamiento_A": 0.023152348411159096,
+      "Rodamiento_B": -0.4756993654322983
+     },
+     "alpha_delta": {
+      "Motor": -0.32486165632680275,
+      "Caja_Engranajes": 0.035783138526834124,
+      "Rodamiento_A": 0.1142325147185076,
+      "Rodamiento_B": 0.02188858291957918
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.020338313151060383,
+      0.01816645931932248,
+      0.015743250505658724,
+      -0.01913445319776086
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.011213479934749415,
+      "Caja_Engranajes|Rodamiento_A": -0.012374083428347449,
+      "Rodamiento_A|Rodamiento_B": -0.010475236525165244
+     },
+     "graph_gap": 0.46098034115953707,
+     "stability_gap": 2.2986550333303635,
+     "tonal_delta": {
+      "Motor": 0.015470828099736877,
+      "Caja_Engranajes": -0.014703920037614893,
+      "Rodamiento_A": -0.8188087859195718,
+      "Rodamiento_B": -0.4616349342379511
+     },
+     "alpha_delta": {
+      "Motor": -0.21131307543439415,
+      "Caja_Engranajes": 0.08750746514018348,
+      "Rodamiento_A": 0.07582248453049101,
+      "Rodamiento_B": 0.050022842139492596
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.0029943156928291526,
+      0.013605463393764783,
+      0.026413361751065123,
+      -0.08689651429389555
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.000221792173599189,
+      "Caja_Engranajes|Rodamiento_A": 0.00045193925319186867,
+      "Rodamiento_A|Rodamiento_B": -0.016671570356220244
+     },
+     "graph_gap": 0.4651551413634639,
+     "stability_gap": 2.4855305368108493,
+     "tonal_delta": {
+      "Motor": -1.6426186135221066,
+      "Caja_Engranajes": -1.0599346979509328,
+      "Rodamiento_A": -2.106955426042113,
+      "Rodamiento_B": -2.6674813589989217
+     },
+     "alpha_delta": {
+      "Motor": -0.18995321402023624,
+      "Caja_Engranajes": 0.13840157297046662,
+      "Rodamiento_A": 0.006735364736040417,
+      "Rodamiento_B": 0.13323628116179886
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.010955141670663693,
+      0.01733882950152643,
+      0.00930348102268641,
+      -0.13788073648676535
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0013615527097157187,
+      "Caja_Engranajes|Rodamiento_A": 0.01960525864959628,
+      "Rodamiento_A|Rodamiento_B": -0.032102369594861346
+     },
+     "graph_gap": 0.4771562759487758,
+     "stability_gap": 2.7858445630584088,
+     "tonal_delta": {
+      "Motor": -1.9951989395151344,
+      "Caja_Engranajes": -1.3375137807731008,
+      "Rodamiento_A": -2.809423059766182,
+      "Rodamiento_B": -4.125405380378394
+     },
+     "alpha_delta": {
+      "Motor": -0.18934422240106374,
+      "Caja_Engranajes": 0.16187044987891297,
+      "Rodamiento_A": -0.005039488413167925,
+      "Rodamiento_B": 0.2867938430816628
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      2.8245760022249655e-05,
+      0.009560777552654276,
+      0.01666126563392467,
+      -0.1956675058673989
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0017127781575887457,
+      "Caja_Engranajes|Rodamiento_A": -0.021964485031396697,
+      "Rodamiento_A|Rodamiento_B": -0.033977737183649825
+     },
+     "graph_gap": 0.4800932734104185,
+     "stability_gap": 2.561973293028568,
+     "tonal_delta": {
+      "Motor": -2.9301067469372484,
+      "Caja_Engranajes": -2.085440770193369,
+      "Rodamiento_A": -4.058777329051672,
+      "Rodamiento_B": -4.9647053385478355
+     },
+     "alpha_delta": {
+      "Motor": -0.22340494223586904,
+      "Caja_Engranajes": 0.08696385536409412,
+      "Rodamiento_A": 0.22092365383418566,
+      "Rodamiento_B": 0.4841257703359996
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.002187950422999796,
+      -0.0020517543591193066,
+      0.02423731249119454,
+      -0.23629766106625438
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0019628530796020893,
+      "Caja_Engranajes|Rodamiento_A": 0.05762582912780845,
+      "Rodamiento_A|Rodamiento_B": -0.04940681786880219
+     },
+     "graph_gap": 0.5124952836109371,
+     "stability_gap": 2.1111395013369085,
+     "tonal_delta": {
+      "Motor": -2.5129208836321304,
+      "Caja_Engranajes": -1.1481296020974199,
+      "Rodamiento_A": -3.386732926369149,
+      "Rodamiento_B": -5.1837995243242165
+     },
+     "alpha_delta": {
+      "Motor": -0.40404073073240077,
+      "Caja_Engranajes": 0.1820832320885717,
+      "Rodamiento_A": 0.21287440628454668,
+      "Rodamiento_B": 0.4365449900599312
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.007082833347066275,
+      -0.00829705714736817,
+      -0.009354931225184271,
+      -0.3336008484723789
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.03238960363885979,
+      "Caja_Engranajes|Rodamiento_A": 0.013813171217275766,
+      "Rodamiento_A|Rodamiento_B": -0.013007678880023632
+     },
+     "graph_gap": 0.4877431666824785,
+     "stability_gap": 2.5304343927898634,
+     "tonal_delta": {
+      "Motor": -2.7236708247640493,
+      "Caja_Engranajes": -1.5033523067781083,
+      "Rodamiento_A": -4.947520412274628,
+      "Rodamiento_B": -7.179744426059459
+     },
+     "alpha_delta": {
+      "Motor": -0.1941197742418448,
+      "Caja_Engranajes": 0.040733065443201655,
+      "Rodamiento_A": 0.16685716589806054,
+      "Rodamiento_B": 0.7512512855507123
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.0055690540479451656,
+      0.004915506187321617,
+      0.0005968755629954803,
+      -0.4462305747074031
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.016449048043754244,
+      "Caja_Engranajes|Rodamiento_A": -0.0023404930765210663,
+      "Rodamiento_A|Rodamiento_B": -0.0020839143686077755
+     },
+     "graph_gap": 0.4648930850902874,
+     "stability_gap": 2.7889864461744365,
+     "tonal_delta": {
+      "Motor": -3.2815617944010533,
+      "Caja_Engranajes": -3.0392148478043737,
+      "Rodamiento_A": -4.9535460587822335,
+      "Rodamiento_B": -8.943595094560868
+     },
+     "alpha_delta": {
+      "Motor": -0.2653836594192338,
+      "Caja_Engranajes": 0.16329811128816685,
+      "Rodamiento_A": 0.3445885354703403,
+      "Rodamiento_B": 0.8534203868726389
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.0032211776791279956,
+      0.011634702900933824,
+      0.004327091613663292,
+      -0.49408674593026347
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.005188840270386352,
+      "Caja_Engranajes|Rodamiento_A": -0.03196552280957077,
+      "Rodamiento_A|Rodamiento_B": -0.0032044074090304964
+     },
+     "graph_gap": 0.457522694183202,
+     "stability_gap": 3.051369741748677,
+     "tonal_delta": {
+      "Motor": -3.287229884976721,
+      "Caja_Engranajes": -2.259170995625322,
+      "Rodamiento_A": -5.102032242946471,
+      "Rodamiento_B": -8.679746297341433
+     },
+     "alpha_delta": {
+      "Motor": 0.025522150630693075,
+      "Caja_Engranajes": 0.294617722576332,
+      "Rodamiento_A": 0.31209311088861835,
+      "Rodamiento_B": 1.035530948174781
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.00590438982564212,
+      0.006734694282453324,
+      0.009237521658097325,
+      -0.5706240981103168
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0028699885960354887,
+      "Caja_Engranajes|Rodamiento_A": -0.033039279814955136,
+      "Rodamiento_A|Rodamiento_B": -0.0029309207249570424
+     },
+     "graph_gap": 0.46884364136806667,
+     "stability_gap": 2.693039473023813,
+     "tonal_delta": {
+      "Motor": -3.972732407251307,
+      "Caja_Engranajes": -2.3824060191092826,
+      "Rodamiento_A": -3.1221539178039137,
+      "Rodamiento_B": -9.110692248691466
+     },
+     "alpha_delta": {
+      "Motor": -0.3024499634572635,
+      "Caja_Engranajes": 0.15942848908649299,
+      "Rodamiento_A": 0.2884875400654022,
+      "Rodamiento_B": 0.9464233546691743
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.00014626952700735885,
+      0.01438291890436294,
+      -0.009343824880502227,
+      -0.6568628448422782
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0035152000701439423,
+      "Caja_Engranajes|Rodamiento_A": -0.014675866696574502,
+      "Rodamiento_A|Rodamiento_B": 0.004964567147682786
+     },
+     "graph_gap": 0.47327593420614145,
+     "stability_gap": 2.86294698775487,
+     "tonal_delta": {
+      "Motor": -4.01785322013594,
+      "Caja_Engranajes": -2.5702582368763096,
+      "Rodamiento_A": -2.9119912892928284,
+      "Rodamiento_B": -9.347785307091991
+     },
+     "alpha_delta": {
+      "Motor": -0.0639232507472669,
+      "Caja_Engranajes": 0.21649489645885645,
+      "Rodamiento_A": 0.35542457749152956,
+      "Rodamiento_B": 1.3789875595524501
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.010745267371820355,
+      0.020714272303417713,
+      -0.019384331193616156,
+      -0.673861716191025
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.02613977779942811,
+      "Caja_Engranajes|Rodamiento_A": -5.3290070087474994e-05,
+      "Rodamiento_A|Rodamiento_B": -0.020035581804691338
+     },
+     "graph_gap": 0.4656410585947191,
+     "stability_gap": 2.7046507862417615,
+     "tonal_delta": {
+      "Motor": -3.718052229320854,
+      "Caja_Engranajes": -2.0694416756902925,
+      "Rodamiento_A": -3.050585963770324,
+      "Rodamiento_B": -9.808303117146954
+     },
+     "alpha_delta": {
+      "Motor": -0.0953918610391451,
+      "Caja_Engranajes": 0.11926761748957704,
+      "Rodamiento_A": 0.3909708364853949,
+      "Rodamiento_B": 1.235520955602912
+     }
+    }
+   ]
+  },
+  {
+   "cond": "mount",
+   "seed": 101,
+   "sigma": 2.1055109217465215,
+   "final": "structural",
+   "where": "Rodamiento_B",
+   "first_flag_t": 90.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    -0.012774539833471432,
+    -0.010246864479440232,
+    -0.010174298635016954,
+    -0.6765638111025385
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.016319436579418367,
+    "Caja_Engranajes|Rodamiento_A": 0.03068453217528111,
+    "Rodamiento_A|Rodamiento_B": 0.025004714142149886
+   },
+   "final_graph_gap": 0.4686617463546495,
+   "graph_gap_cal": 0.47527931703925863,
+   "final_stability_gap": 2.9097727853208495,
+   "stability_gap_cal": 2.5833743007425833,
+   "extra_modes_final": [
+    [],
+    [
+     35.68
+    ]
+   ],
+   "final_tonal_delta": {
+    "Motor": -3.486728777264233,
+    "Caja_Engranajes": -2.1845102706506445,
+    "Rodamiento_A": -4.3589661177694765,
+    "Rodamiento_B": -9.893396387449835
+   },
+   "final_alpha_delta": {
+    "Motor": 0.07312535483487359,
+    "Caja_Engranajes": 0.3028370863028296,
+    "Rodamiento_A": 0.2606674978345105,
+    "Rodamiento_B": 1.2214664689278854
+   },
+   "fiedler_cut": [
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ],
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": -0.07272609500114413,
+      "Caja_Engranajes": -1.490868003438095,
+      "Rodamiento_A": -0.47316903871024607,
+      "Rodamiento_B": 0.6664830095701628
+     },
+     "alpha_delta": {
+      "Motor": 0.021654573524832577,
+      "Caja_Engranajes": 0.13488324197006984,
+      "Rodamiento_A": -0.12618930358771685,
+      "Rodamiento_B": -0.09310826157506391
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": -1.4295087615944482,
+      "Caja_Engranajes": -1.6589746279588127,
+      "Rodamiento_A": -2.3886726732753623,
+      "Rodamiento_B": -1.5347909666840476
+     },
+     "alpha_delta": {
+      "Motor": -0.1283395306227313,
+      "Caja_Engranajes": 0.20305539403975859,
+      "Rodamiento_A": 0.005635140065036737,
+      "Rodamiento_B": 0.11909234400553026
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.011918218232689792,
+      0.0006932397878105512,
+      -0.00024440804596248533,
+      -0.08257966542850359
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.021505984845963333,
+      "Caja_Engranajes|Rodamiento_A": 0.0001517546843592399,
+      "Rodamiento_A|Rodamiento_B": -0.0002683663140540249
+     },
+     "graph_gap": 0.46445969153476957,
+     "stability_gap": 2.498329583965364,
+     "tonal_delta": {
+      "Motor": -2.1478475869159226,
+      "Caja_Engranajes": -0.7473068058374999,
+      "Rodamiento_A": -4.254512776670204,
+      "Rodamiento_B": -3.7654293279653626
+     },
+     "alpha_delta": {
+      "Motor": 0.08270526305314663,
+      "Caja_Engranajes": -0.03649151161743247,
+      "Rodamiento_A": -0.1309837899179892,
+      "Rodamiento_B": 0.2362379941451096
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.008568015011414243,
+      0.007342614864812136,
+      0.010015283689380539,
+      -0.14768584765474646
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 9.532009166846045e-05,
+      "Caja_Engranajes|Rodamiento_A": -0.004983318505365819,
+      "Rodamiento_A|Rodamiento_B": -0.004340083637285552
+     },
+     "graph_gap": 0.4736763070032335,
+     "stability_gap": 2.577696874295701,
+     "tonal_delta": {
+      "Motor": -2.368309703221268,
+      "Caja_Engranajes": -0.8647013159776087,
+      "Rodamiento_A": -4.167105210817802,
+      "Rodamiento_B": -3.7532712115470357
+     },
+     "alpha_delta": {
+      "Motor": -0.15324599912872827,
+      "Caja_Engranajes": 0.11363836256621607,
+      "Rodamiento_A": 0.042607961747965106,
+      "Rodamiento_B": 0.39261864798505375
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.0006190320722383458,
+      0.018359223512501632,
+      0.010514055948528833,
+      -0.23057858113737328
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.007678086757827662,
+      "Caja_Engranajes|Rodamiento_A": -0.01308715683124495,
+      "Rodamiento_A|Rodamiento_B": 0.01775673469489636
+     },
+     "graph_gap": 0.47127458360600283,
+     "stability_gap": 2.2361867292267545,
+     "tonal_delta": {
+      "Motor": -2.788352757365818,
+      "Caja_Engranajes": -2.578004166871928,
+      "Rodamiento_A": -5.3711623931890635,
+      "Rodamiento_B": -4.760655733588509
+     },
+     "alpha_delta": {
+      "Motor": -0.09349659238842722,
+      "Caja_Engranajes": -0.15636383275392418,
+      "Rodamiento_A": 0.1153911391628637,
+      "Rodamiento_B": 0.5444717850726681
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.003091493472958451,
+      0.017995625226040257,
+      -0.0010012998763048175,
+      -0.27454535237623756
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.014299185345960086,
+      "Caja_Engranajes|Rodamiento_A": -0.012785754447331765,
+      "Rodamiento_A|Rodamiento_B": -0.018901079997116543
+     },
+     "graph_gap": 0.4658969378714003,
+     "stability_gap": 2.455478206823928,
+     "tonal_delta": {
+      "Motor": -3.2852221897416776,
+      "Caja_Engranajes": -2.2314771593506,
+      "Rodamiento_A": -5.145342832895388,
+      "Rodamiento_B": -6.416582313885266
+     },
+     "alpha_delta": {
+      "Motor": 0.06185903812708671,
+      "Caja_Engranajes": 0.041675360098726744,
+      "Rodamiento_A": -0.056614855057804614,
+      "Rodamiento_B": 0.4704929460409242
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.004943746015864781,
+      0.013748324768797282,
+      0.011007974901043438,
+      -0.3123489375152949
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.003844307232555355,
+      "Caja_Engranajes|Rodamiento_A": -0.01457473409359511,
+      "Rodamiento_A|Rodamiento_B": -0.006143144165422165
+     },
+     "graph_gap": 0.458511428660452,
+     "stability_gap": 2.451743785252676,
+     "tonal_delta": {
+      "Motor": -2.7349645674599294,
+      "Caja_Engranajes": -2.202546345121366,
+      "Rodamiento_A": -4.140706852131604,
+      "Rodamiento_B": -7.272688858140635
+     },
+     "alpha_delta": {
+      "Motor": -0.0616301750822823,
+      "Caja_Engranajes": 0.16180430553558067,
+      "Rodamiento_A": 0.2817682597031059,
+      "Rodamiento_B": 0.781518565789201
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.026704485352112672,
+      0.012978687616676199,
+      0.030100273937868183,
+      -0.386796322422018
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.027813337238850044,
+      "Caja_Engranajes|Rodamiento_A": -0.049646593187142596,
+      "Rodamiento_A|Rodamiento_B": 0.006847877206938913
+     },
+     "graph_gap": 0.4654879358066468,
+     "stability_gap": 2.3358739268384316,
+     "tonal_delta": {
+      "Motor": -3.4532240083928762,
+      "Caja_Engranajes": -2.1961169081793663,
+      "Rodamiento_A": -4.676325217109966,
+      "Rodamiento_B": -8.207813626582938
+     },
+     "alpha_delta": {
+      "Motor": -0.031407093749661774,
+      "Caja_Engranajes": 0.02434850818363854,
+      "Rodamiento_A": 0.1833775634497179,
+      "Rodamiento_B": 0.9179873333923718
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.00025489448700666273,
+      0.00948101996035322,
+      0.018034745117743167,
+      -0.49330142447635605
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.02187513372006822,
+      "Caja_Engranajes|Rodamiento_A": -0.0053813886467877214,
+      "Rodamiento_A|Rodamiento_B": 0.006999693328200163
+     },
+     "graph_gap": 0.45691552303790617,
+     "stability_gap": 3.0670217724512074,
+     "tonal_delta": {
+      "Motor": -3.2467924259571816,
+      "Caja_Engranajes": -2.8445765908202425,
+      "Rodamiento_A": -5.390057758584042,
+      "Rodamiento_B": -8.983208435819636
+     },
+     "alpha_delta": {
+      "Motor": 0.15431517682763696,
+      "Caja_Engranajes": -0.09821745369120816,
+      "Rodamiento_A": 0.21625353932605307,
+      "Rodamiento_B": 0.9353924849780757
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.013981081607584933,
+      -0.009073001671422554,
+      -0.004266905419541889,
+      -0.5905135283334981
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.018620713943552802,
+      "Caja_Engranajes|Rodamiento_A": -0.000610970187913451,
+      "Rodamiento_A|Rodamiento_B": 0.02548772051862791
+     },
+     "graph_gap": 0.4614393736314212,
+     "stability_gap": 2.8330718429195842,
+     "tonal_delta": {
+      "Motor": -3.375968608209277,
+      "Caja_Engranajes": -2.051651372801029,
+      "Rodamiento_A": -5.3387338677002205,
+      "Rodamiento_B": -8.290903227539355
+     },
+     "alpha_delta": {
+      "Motor": 0.19019622133130776,
+      "Caja_Engranajes": 0.15735952898768102,
+      "Rodamiento_A": 0.3616135372670082,
+      "Rodamiento_B": 1.1482984133984044
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.0028802685529336625,
+      -0.0015291174719980205,
+      -0.004150393607317504,
+      -0.6458376862846941
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0022835604433388834,
+      "Caja_Engranajes|Rodamiento_A": -0.012451452277322583,
+      "Rodamiento_A|Rodamiento_B": 0.011958174494058449
+     },
+     "graph_gap": 0.47526777343766413,
+     "stability_gap": 2.9970654347683783,
+     "tonal_delta": {
+      "Motor": -4.206314669935111,
+      "Caja_Engranajes": -3.0939484856203556,
+      "Rodamiento_A": -3.7076341492913016,
+      "Rodamiento_B": -8.825421318434048
+     },
+     "alpha_delta": {
+      "Motor": 0.006093591499099382,
+      "Caja_Engranajes": 0.22854549215148823,
+      "Rodamiento_A": 0.3392137096277501,
+      "Rodamiento_B": 1.1590473684932516
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.012774539833471432,
+      -0.010246864479440232,
+      -0.010174298635016954,
+      -0.6765638111025385
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.016319436579418367,
+      "Caja_Engranajes|Rodamiento_A": 0.03068453217528111,
+      "Rodamiento_A|Rodamiento_B": 0.025004714142149886
+     },
+     "graph_gap": 0.4686617463546495,
+     "stability_gap": 2.9097727853208495,
+     "tonal_delta": {
+      "Motor": -3.486728777264233,
+      "Caja_Engranajes": -2.1845102706506445,
+      "Rodamiento_A": -4.3589661177694765,
+      "Rodamiento_B": -9.893396387449835
+     },
+     "alpha_delta": {
+      "Motor": 0.07312535483487359,
+      "Caja_Engranajes": 0.3028370863028296,
+      "Rodamiento_A": 0.2606674978345105,
+      "Rodamiento_B": 1.2214664689278854
+     }
+    }
+   ]
+  },
+  {
+   "cond": "mount",
+   "seed": 102,
+   "sigma": 2.115979558026976,
+   "final": "structural",
+   "where": "Rodamiento_B",
+   "first_flag_t": 100.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    0.036101986466749336,
+    0.011543886525295921,
+    -0.0332832897061478,
+    -0.6564817141882319
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.008170109293998085,
+    "Caja_Engranajes|Rodamiento_A": 0.014463248612211155,
+    "Rodamiento_A|Rodamiento_B": 0.008017081760149924
+   },
+   "final_graph_gap": 0.46404724850486034,
+   "graph_gap_cal": 0.47134080533830774,
+   "final_stability_gap": 2.424147240804056,
+   "stability_gap_cal": 2.772782649867014,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -4.111225796452317,
+    "Caja_Engranajes": -2.710806018973667,
+    "Rodamiento_A": -6.491475296584191,
+    "Rodamiento_B": -10.812383008207414
+   },
+   "final_alpha_delta": {
+    "Motor": 0.10273767797644662,
+    "Caja_Engranajes": 0.021464600634084396,
+    "Rodamiento_A": 0.46331139107294983,
+    "Rodamiento_B": 1.3060278473977356
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01738993130234645,
+      -0.00794230908626492,
+      -0.024722559164314206,
+      0.0003021874729844942
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.005265650800358901,
+      "Caja_Engranajes|Rodamiento_A": -0.006610704465255246,
+      "Rodamiento_A|Rodamiento_B": 0.004611248794526457
+     },
+     "graph_gap": 0.46454738443586907,
+     "stability_gap": 2.470126354689663,
+     "tonal_delta": {
+      "Motor": -0.459645458540372,
+      "Caja_Engranajes": 0.4267530620377151,
+      "Rodamiento_A": -0.8884676140932868,
+      "Rodamiento_B": -0.13726523578843874
+     },
+     "alpha_delta": {
+      "Motor": 0.18418929474992507,
+      "Caja_Engranajes": 0.07836576373224435,
+      "Rodamiento_A": 0.1241124881769593,
+      "Rodamiento_B": 0.07092894270195294
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.034460859737771354,
+      -0.0027717317822040233,
+      -0.024547865923493006,
+      -0.017700647493982258
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.016802048536277425,
+      "Caja_Engranajes|Rodamiento_A": -0.0018115271930549959,
+      "Rodamiento_A|Rodamiento_B": -0.013560762734869947
+     },
+     "graph_gap": 0.46076152325925995,
+     "stability_gap": 2.2959453528387055,
+     "tonal_delta": {
+      "Motor": -1.7250577201448074,
+      "Caja_Engranajes": -1.8670730842362175,
+      "Rodamiento_A": -2.176462743755593,
+      "Rodamiento_B": -1.8029418191638218
+     },
+     "alpha_delta": {
+      "Motor": 0.11125905850976436,
+      "Caja_Engranajes": -0.0053838627577702525,
+      "Rodamiento_A": 0.050208329371148164,
+      "Rodamiento_B": 0.19673157805869335
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.014269512557821828,
+      0.0012310678988489698,
+      -0.016621029424417122,
+      -0.051462110379401516
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.02184627873420797,
+      "Caja_Engranajes|Rodamiento_A": 0.006686434443915257,
+      "Rodamiento_A|Rodamiento_B": -0.008414560363564583
+     },
+     "graph_gap": 0.4646484367172432,
+     "stability_gap": 2.39052789252111,
+     "tonal_delta": {
+      "Motor": -2.307734016559568,
+      "Caja_Engranajes": -2.2815412119468057,
+      "Rodamiento_A": -3.2102043701802643,
+      "Rodamiento_B": -3.181902745755929
+     },
+     "alpha_delta": {
+      "Motor": 0.12805597124524937,
+      "Caja_Engranajes": 0.07578290921725173,
+      "Rodamiento_A": 0.046341199391037646,
+      "Rodamiento_B": 0.2702779947869356
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.020341825108337153,
+      -0.006161244137747657,
+      -0.010351521690694865,
+      -0.10932325610961358
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.03128100634290654,
+      "Caja_Engranajes|Rodamiento_A": 0.015267996859369193,
+      "Rodamiento_A|Rodamiento_B": 0.004572340308922618
+     },
+     "graph_gap": 0.46409106467357997,
+     "stability_gap": 2.67539050995571,
+     "tonal_delta": {
+      "Motor": -1.9896030427397946,
+      "Caja_Engranajes": -1.6876317326441814,
+      "Rodamiento_A": -2.934856550627039,
+      "Rodamiento_B": -3.3977054411645167
+     },
+     "alpha_delta": {
+      "Motor": -0.07867259919029879,
+      "Caja_Engranajes": -0.08147132874542429,
+      "Rodamiento_A": 0.12391979136740183,
+      "Rodamiento_B": 0.4391401372838921
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.014793020045398286,
+      -0.003127734965009177,
+      -0.021312943513902782,
+      -0.19666527033595527
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.033971116813044766,
+      "Caja_Engranajes|Rodamiento_A": 0.00879928168942401,
+      "Rodamiento_A|Rodamiento_B": -0.0023340707104286817
+     },
+     "graph_gap": 0.45987721221219124,
+     "stability_gap": 2.737836210966859,
+     "tonal_delta": {
+      "Motor": -3.2279861288163367,
+      "Caja_Engranajes": -3.0771774121159012,
+      "Rodamiento_A": -3.9967281614021886,
+      "Rodamiento_B": -5.415957515796196
+     },
+     "alpha_delta": {
+      "Motor": 0.24967279242746065,
+      "Caja_Engranajes": 0.10436544944798642,
+      "Rodamiento_A": 0.2244318060009005,
+      "Rodamiento_B": 0.6416543944235256
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.011782377401870825,
+      -0.0072882171652493,
+      -0.013715354610338681,
+      -0.26575898154496047
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.009475882482306686,
+      "Caja_Engranajes|Rodamiento_A": 0.005149827451647049,
+      "Rodamiento_A|Rodamiento_B": 0.0007553659219012854
+     },
+     "graph_gap": 0.4724964885881379,
+     "stability_gap": 3.121996241692318,
+     "tonal_delta": {
+      "Motor": -3.623919006553109,
+      "Caja_Engranajes": -2.191466842347019,
+      "Rodamiento_A": -4.135725004955724,
+      "Rodamiento_B": -5.887896697827406
+     },
+     "alpha_delta": {
+      "Motor": 0.11565908949510972,
+      "Caja_Engranajes": 0.08133664364898308,
+      "Rodamiento_A": 0.20356122812372424,
+      "Rodamiento_B": 0.70247910373914
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.030110094281144306,
+      -0.011074090331447128,
+      -0.012107687087463903,
+      -0.3413696335384391
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.018147787090489365,
+      "Caja_Engranajes|Rodamiento_A": 0.01811653049181361,
+      "Rodamiento_A|Rodamiento_B": -0.002585882723054156
+     },
+     "graph_gap": 0.46797609040027155,
+     "stability_gap": 3.0588099743484065,
+     "tonal_delta": {
+      "Motor": -3.964839461921372,
+      "Caja_Engranajes": -2.5230154286889253,
+      "Rodamiento_A": -2.8934276943336847,
+      "Rodamiento_B": -6.192233804522813
+     },
+     "alpha_delta": {
+      "Motor": 0.16452492364624716,
+      "Caja_Engranajes": 0.13783075046491788,
+      "Rodamiento_A": 0.25422618438452227,
+      "Rodamiento_B": 0.7686264838492725
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.03742308816055262,
+      0.01835759067080356,
+      -0.018934093567812615,
+      -0.4336489089507696
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.015446918944083787,
+      "Caja_Engranajes|Rodamiento_A": 0.01619531531344376,
+      "Rodamiento_A|Rodamiento_B": -0.005741970528193363
+     },
+     "graph_gap": 0.46438739952839014,
+     "stability_gap": 3.0619738450025356,
+     "tonal_delta": {
+      "Motor": -4.478155463890289,
+      "Caja_Engranajes": -2.9142147831735734,
+      "Rodamiento_A": -4.075029413584993,
+      "Rodamiento_B": -9.074526069030993
+     },
+     "alpha_delta": {
+      "Motor": -0.04519190582118382,
+      "Caja_Engranajes": -0.026024521444953264,
+      "Rodamiento_A": 0.2932937054911069,
+      "Rodamiento_B": 1.0410337817794901
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.02973340316955042,
+      0.020683625418131735,
+      -0.032472450756676596,
+      -0.4967846920235466
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.018800366300173454,
+      "Caja_Engranajes|Rodamiento_A": 0.013230669976989295,
+      "Rodamiento_A|Rodamiento_B": -0.004711880248304823
+     },
+     "graph_gap": 0.4699837588140667,
+     "stability_gap": 2.78331446909952,
+     "tonal_delta": {
+      "Motor": -3.896829969133279,
+      "Caja_Engranajes": -2.5391004572267377,
+      "Rodamiento_A": -3.808336519792565,
+      "Rodamiento_B": -8.401372176995578
+     },
+     "alpha_delta": {
+      "Motor": 0.1504939165825263,
+      "Caja_Engranajes": -0.09835056674256903,
+      "Rodamiento_A": 0.3888134369349159,
+      "Rodamiento_B": 1.0801102629204464
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.03619681865842361,
+      0.023453640340912907,
+      -0.03225406199564507,
+      -0.5150645714352248
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.00672327759280722,
+      "Caja_Engranajes|Rodamiento_A": 0.012390353788362951,
+      "Rodamiento_A|Rodamiento_B": -0.013588486323475646
+     },
+     "graph_gap": 0.4656266432470365,
+     "stability_gap": 2.6437002498688402,
+     "tonal_delta": {
+      "Motor": -4.146458447075922,
+      "Caja_Engranajes": -2.963369916482108,
+      "Rodamiento_A": -3.3367720815064352,
+      "Rodamiento_B": -8.301679671983285
+     },
+     "alpha_delta": {
+      "Motor": 0.013991257670400659,
+      "Caja_Engranajes": 0.10802236476937832,
+      "Rodamiento_A": 0.21413523928532008,
+      "Rodamiento_B": 0.986741697411643
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.03826252637177685,
+      0.028641903275164804,
+      -0.031207841992565655,
+      -0.6143270928227997
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0021319476762453604,
+      "Caja_Engranajes|Rodamiento_A": -0.006303061031684765,
+      "Rodamiento_A|Rodamiento_B": -0.02305264551602071
+     },
+     "graph_gap": 0.46255104893283916,
+     "stability_gap": 2.585518588885928,
+     "tonal_delta": {
+      "Motor": -4.391810420632801,
+      "Caja_Engranajes": -2.989787481075897,
+      "Rodamiento_A": -3.4713437146232984,
+      "Rodamiento_B": -9.269990298725494
+     },
+     "alpha_delta": {
+      "Motor": 0.11780355074515314,
+      "Caja_Engranajes": 0.11973225305854185,
+      "Rodamiento_A": 0.6121708872560059,
+      "Rodamiento_B": 1.414327742029572
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "structural",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.036101986466749336,
+      0.011543886525295921,
+      -0.0332832897061478,
+      -0.6564817141882319
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.008170109293998085,
+      "Caja_Engranajes|Rodamiento_A": 0.014463248612211155,
+      "Rodamiento_A|Rodamiento_B": 0.008017081760149924
+     },
+     "graph_gap": 0.46404724850486034,
+     "stability_gap": 2.424147240804056,
+     "tonal_delta": {
+      "Motor": -4.111225796452317,
+      "Caja_Engranajes": -2.710806018973667,
+      "Rodamiento_A": -6.491475296584191,
+      "Rodamiento_B": -10.812383008207414
+     },
+     "alpha_delta": {
+      "Motor": 0.10273767797644662,
+      "Caja_Engranajes": 0.021464600634084396,
+      "Rodamiento_A": 0.46331139107294983,
+      "Rodamiento_B": 1.3060278473977356
+     }
+    }
+   ]
+  },
+  {
+   "cond": "joint",
+   "seed": 100,
+   "sigma": 2.1312114139447744,
+   "final": "structural",
+   "where": "Caja_Engranajes|Rodamiento_A",
+   "first_flag_t": 90.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    -0.0017256051331089317,
+    0.0331333391654649,
+    -0.01947639021672165,
+    -0.028643391707923294
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": -0.0004939339232230555,
+    "Caja_Engranajes|Rodamiento_A": -0.7499434075020077,
+    "Rodamiento_A|Rodamiento_B": -0.023240021760082552
+   },
+   "final_graph_gap": 0.17908834952054783,
+   "graph_gap_cal": 0.4654692273197297,
+   "final_stability_gap": 2.979209001300264,
+   "stability_gap_cal": 2.3659532447766614,
+   "extra_modes_final": [
+    [
+     28.84
+    ],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -3.1756368259779997,
+    "Caja_Engranajes": -1.8128039122602466,
+    "Rodamiento_A": -5.637456841681811,
+    "Rodamiento_B": -7.377850021123708
+   },
+   "final_alpha_delta": {
+    "Motor": -0.195260771976125,
+    "Caja_Engranajes": 0.27214105126838195,
+    "Rodamiento_A": 0.49327260354983593,
+    "Rodamiento_B": 0.06891729554525483
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.0067254560042285805,
+      0.010666805693254844,
+      0.007373282298974937,
+      -0.010573078564419136
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0022092052180244792,
+      "Caja_Engranajes|Rodamiento_A": -0.01769515965405577,
+      "Rodamiento_A|Rodamiento_B": -0.015567192042544975
+     },
+     "graph_gap": 0.46337277571081614,
+     "stability_gap": 2.4228063686767656,
+     "tonal_delta": {
+      "Motor": 0.36408606875559,
+      "Caja_Engranajes": 0.8510826008373051,
+      "Rodamiento_A": 0.2573339969004529,
+      "Rodamiento_B": -0.32928121749471906
+     },
+     "alpha_delta": {
+      "Motor": -0.25255206121180906,
+      "Caja_Engranajes": 0.12985424309179971,
+      "Rodamiento_A": 0.12509808681132417,
+      "Rodamiento_B": -0.02783107797571671
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.0014871936446347878,
+      0.022325603653877923,
+      0.008541768167218411,
+      -0.010093023514624377
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.022106037887655416,
+      "Caja_Engranajes|Rodamiento_A": -0.033809024868198256,
+      "Rodamiento_A|Rodamiento_B": -0.00786592740049552
+     },
+     "graph_gap": 0.4526621637152817,
+     "stability_gap": 2.512574252436797,
+     "tonal_delta": {
+      "Motor": 0.6722064420430556,
+      "Caja_Engranajes": 0.43851874943711877,
+      "Rodamiento_A": 0.5143894640841467,
+      "Rodamiento_B": 0.5036018358288654
+     },
+     "alpha_delta": {
+      "Motor": -0.16564808050287883,
+      "Caja_Engranajes": 0.15412764002222756,
+      "Rodamiento_A": 0.07697048356927727,
+      "Rodamiento_B": -0.08836991421505425
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.0036416772714620294,
+      0.021753282000225305,
+      0.02229382706200611,
+      -0.03022012787202477
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.009293167844075079,
+      "Caja_Engranajes|Rodamiento_A": -0.0801446805697813,
+      "Rodamiento_A|Rodamiento_B": -0.015273764160405157
+     },
+     "graph_gap": 0.4429850901045106,
+     "stability_gap": 2.834188263882331,
+     "tonal_delta": {
+      "Motor": -0.4958993875191382,
+      "Caja_Engranajes": -0.32601315857151647,
+      "Rodamiento_A": -0.6872988210986115,
+      "Rodamiento_B": -0.7122071303785784
+     },
+     "alpha_delta": {
+      "Motor": -0.34382865783665806,
+      "Caja_Engranajes": 0.3131694605161546,
+      "Rodamiento_A": 0.05858875954310261,
+      "Rodamiento_B": -0.11947452335420461
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.007342706330398352,
+      0.008640524090365753,
+      0.021565927974362298,
+      -0.016373116276033883
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.010868608945409086,
+      "Caja_Engranajes|Rodamiento_A": -0.1754495248425363,
+      "Rodamiento_A|Rodamiento_B": -0.0170953298180464
+     },
+     "graph_gap": 0.4263289502639458,
+     "stability_gap": 2.7620694617575463,
+     "tonal_delta": {
+      "Motor": -0.8070292370907026,
+      "Caja_Engranajes": -0.8069160243658722,
+      "Rodamiento_A": -1.6103273925498698,
+      "Rodamiento_B": -1.8607127527174985
+     },
+     "alpha_delta": {
+      "Motor": -0.1597032613425966,
+      "Caja_Engranajes": 0.24386277550093438,
+      "Rodamiento_A": 0.12003042864217817,
+      "Rodamiento_B": 0.029202197751614145
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.008129766781127756,
+      0.010978032347526812,
+      0.025172201444779496,
+      -0.012323522959502453
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0074299815865340735,
+      "Caja_Engranajes|Rodamiento_A": -0.2482630118715643,
+      "Rodamiento_A|Rodamiento_B": -0.02117790291330013
+     },
+     "graph_gap": 0.4014841238020801,
+     "stability_gap": 2.5932265677206012,
+     "tonal_delta": {
+      "Motor": -1.403311014997577,
+      "Caja_Engranajes": -1.017800176342778,
+      "Rodamiento_A": -1.7614981526745304,
+      "Rodamiento_B": -1.7794121166122085
+     },
+     "alpha_delta": {
+      "Motor": -0.20943520005014093,
+      "Caja_Engranajes": 0.2208300496191664,
+      "Rodamiento_A": 0.30703440145136096,
+      "Rodamiento_B": -0.012881513755636398
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.007814575590959993,
+      0.00023912805288484051,
+      0.019521447076204623,
+      -0.01665543744926845
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.04022270815661233,
+      "Caja_Engranajes|Rodamiento_A": -0.33926254598305716,
+      "Rodamiento_A|Rodamiento_B": -0.008635790853552816
+     },
+     "graph_gap": 0.3757930678754041,
+     "stability_gap": 2.4723129079020074,
+     "tonal_delta": {
+      "Motor": -1.393376180536709,
+      "Caja_Engranajes": -0.7409887372667932,
+      "Rodamiento_A": -1.5498052905916992,
+      "Rodamiento_B": -1.9449401279025178
+     },
+     "alpha_delta": {
+      "Motor": -0.385385975686255,
+      "Caja_Engranajes": 0.3943850073830031,
+      "Rodamiento_A": 0.29776032658079343,
+      "Rodamiento_B": -0.03447628923251855
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.004081443613666913,
+      0.007451190732214119,
+      0.00949338735898797,
+      -0.00681880962634529
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.006173684201660645,
+      "Caja_Engranajes|Rodamiento_A": -0.3782782503757267,
+      "Rodamiento_A|Rodamiento_B": 0.0037784907482119046
+     },
+     "graph_gap": 0.3494491798086319,
+     "stability_gap": 2.5232733270270327,
+     "tonal_delta": {
+      "Motor": -2.0206839831659806,
+      "Caja_Engranajes": -1.2053670775620056,
+      "Rodamiento_A": -3.3445802339734954,
+      "Rodamiento_B": -4.303500440278546
+     },
+     "alpha_delta": {
+      "Motor": -0.36036012586198507,
+      "Caja_Engranajes": 0.18092151448283644,
+      "Rodamiento_A": 0.3108937996475897,
+      "Rodamiento_B": -0.02540476154932514
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.00869117629145566,
+      0.002274683475507855,
+      0.017077984116352862,
+      -0.025644588811317925
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.008286690614197845,
+      "Caja_Engranajes|Rodamiento_A": -0.47851100299481175,
+      "Rodamiento_A|Rodamiento_B": -0.007285745954157097
+     },
+     "graph_gap": 0.320766731776428,
+     "stability_gap": 2.684701572850242,
+     "tonal_delta": {
+      "Motor": -2.4998667908052497,
+      "Caja_Engranajes": -2.1430492280563698,
+      "Rodamiento_A": -3.835532742005938,
+      "Rodamiento_B": -6.050272035532762
+     },
+     "alpha_delta": {
+      "Motor": -0.16229508939880466,
+      "Caja_Engranajes": 0.43718644933079776,
+      "Rodamiento_A": 0.42004765676669564,
+      "Rodamiento_B": -0.0014917659869464472
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.0034993588713609913,
+      0.02246096504770989,
+      0.004279349953534073,
+      -0.03583887824124088
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.10195652278533984,
+      "Caja_Engranajes|Rodamiento_A": -0.5769090160555597,
+      "Rodamiento_A|Rodamiento_B": 0.021914062137668333
+     },
+     "graph_gap": 0.26711676921783745,
+     "stability_gap": 2.906500278246269,
+     "tonal_delta": {
+      "Motor": -2.8536771789605027,
+      "Caja_Engranajes": -1.8677634393515454,
+      "Rodamiento_A": -4.959437404083328,
+      "Rodamiento_B": -6.077369824650363
+     },
+     "alpha_delta": {
+      "Motor": 0.05775270012338818,
+      "Caja_Engranajes": 0.5572690849422701,
+      "Rodamiento_A": 0.48121916222496963,
+      "Rodamiento_B": 0.08912532537572337
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.0057328444895208275,
+      0.018798004668490798,
+      0.012089673790417699,
+      -0.028191728885128553
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.014561909021850283,
+      "Caja_Engranajes|Rodamiento_A": -0.6450314971395331,
+      "Rodamiento_A|Rodamiento_B": 0.0037398772476207043
+     },
+     "graph_gap": 0.24266935177279342,
+     "stability_gap": 2.9609785669781483,
+     "tonal_delta": {
+      "Motor": -2.9858761752936154,
+      "Caja_Engranajes": -2.060658588309593,
+      "Rodamiento_A": -4.1078482757221835,
+      "Rodamiento_B": -6.685295652441548
+     },
+     "alpha_delta": {
+      "Motor": -0.22048694581391248,
+      "Caja_Engranajes": 0.39758351339818754,
+      "Rodamiento_A": 0.42785012808477674,
+      "Rodamiento_B": 0.04317128096599787
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.0007017406079170563,
+      0.023345035652629242,
+      -0.021903594433975604,
+      -0.03731029043351608
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0006104792619789912,
+      "Caja_Engranajes|Rodamiento_A": -0.7118229905044484,
+      "Rodamiento_A|Rodamiento_B": -0.005589476359906476
+     },
+     "graph_gap": 0.21104625443598735,
+     "stability_gap": 3.21701426993881,
+     "tonal_delta": {
+      "Motor": -3.388813439544947,
+      "Caja_Engranajes": -2.7694372982586053,
+      "Rodamiento_A": -4.3243184670069255,
+      "Rodamiento_B": -5.916324294734688
+     },
+     "alpha_delta": {
+      "Motor": 0.16131471827270683,
+      "Caja_Engranajes": 0.5853304137079893,
+      "Rodamiento_A": 0.49378732350709853,
+      "Rodamiento_B": 0.2014368041730472
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.0017256051331089317,
+      0.0331333391654649,
+      -0.01947639021672165,
+      -0.028643391707923294
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0004939339232230555,
+      "Caja_Engranajes|Rodamiento_A": -0.7499434075020077,
+      "Rodamiento_A|Rodamiento_B": -0.023240021760082552
+     },
+     "graph_gap": 0.17908834952054783,
+     "stability_gap": 2.979209001300264,
+     "tonal_delta": {
+      "Motor": -3.1756368259779997,
+      "Caja_Engranajes": -1.8128039122602466,
+      "Rodamiento_A": -5.637456841681811,
+      "Rodamiento_B": -7.377850021123708
+     },
+     "alpha_delta": {
+      "Motor": -0.195260771976125,
+      "Caja_Engranajes": 0.27214105126838195,
+      "Rodamiento_A": 0.49327260354983593,
+      "Rodamiento_B": 0.06891729554525483
+     }
+    }
+   ]
+  },
+  {
+   "cond": "joint",
+   "seed": 101,
+   "sigma": 2.1055109217465215,
+   "final": "structural",
+   "where": "Caja_Engranajes|Rodamiento_A",
+   "first_flag_t": 90.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    -0.011438040027333285,
+    0.00824103766609463,
+    -0.014070879655684765,
+    -0.046560947690126975
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.02700230934965364,
+    "Caja_Engranajes|Rodamiento_A": -0.7679083124334614,
+    "Rodamiento_A|Rodamiento_B": 0.008774718017854788
+   },
+   "final_graph_gap": 0.17951981860188665,
+   "graph_gap_cal": 0.47527931703925863,
+   "final_stability_gap": 2.7467018603067372,
+   "stability_gap_cal": 2.5833743007425833,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -3.4509666562900563,
+    "Caja_Engranajes": -2.426408772217126,
+    "Rodamiento_A": -6.063317696065781,
+    "Rodamiento_B": -7.652757383730149
+   },
+   "final_alpha_delta": {
+    "Motor": 0.07574431329641795,
+    "Caja_Engranajes": 0.5230545942413412,
+    "Rodamiento_A": 0.4783699870378093,
+    "Rodamiento_B": 0.04818572544814792
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": 0.11608561281110497,
+      "Caja_Engranajes": -1.3780420883950306,
+      "Rodamiento_A": -0.1310781203688478,
+      "Rodamiento_B": 0.9089052897382288
+     },
+     "alpha_delta": {
+      "Motor": 0.03145381032200345,
+      "Caja_Engranajes": 0.15425816113862933,
+      "Rodamiento_A": -0.09873890103436644,
+      "Rodamiento_B": -0.10894156294192281
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": -0.7719578044566582,
+      "Caja_Engranajes": -1.2701206459364833,
+      "Rodamiento_A": -1.5523856704228791,
+      "Rodamiento_B": -0.6421986674894118
+     },
+     "alpha_delta": {
+      "Motor": -0.06319960702172,
+      "Caja_Engranajes": 0.24558277452189325,
+      "Rodamiento_A": 0.011532085515882362,
+      "Rodamiento_B": -0.04626319296033876
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.008544879196529465,
+      -0.006506503671082076,
+      0.009914896664349193,
+      -0.01759525401077544
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.034421926581784223,
+      "Caja_Engranajes|Rodamiento_A": -0.08555668686974105,
+      "Rodamiento_A|Rodamiento_B": -0.005692373771230996
+     },
+     "graph_gap": 0.44399388545020374,
+     "stability_gap": 2.4556745307255374,
+     "tonal_delta": {
+      "Motor": -1.3293366762341812,
+      "Caja_Engranajes": -0.18664032944174025,
+      "Rodamiento_A": -3.4698561628592373,
+      "Rodamiento_B": -2.2911000633166108
+     },
+     "alpha_delta": {
+      "Motor": 0.10754997054037485,
+      "Caja_Engranajes": 0.1300954463274666,
+      "Rodamiento_A": -0.08178059633491297,
+      "Rodamiento_B": -0.020736376491053976
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.010392549756748526,
+      0.003678812979890367,
+      -0.002872469844540926,
+      -0.023251957673711576
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.010804559348694731,
+      "Caja_Engranajes|Rodamiento_A": -0.15794568160739286,
+      "Rodamiento_A|Rodamiento_B": 0.002238140660835608
+     },
+     "graph_gap": 0.42536899066098854,
+     "stability_gap": 2.5995073681853693,
+     "tonal_delta": {
+      "Motor": -1.0528573745454182,
+      "Caja_Engranajes": -0.06075921928688288,
+      "Rodamiento_A": -2.412172717633144,
+      "Rodamiento_B": -1.2011171736108555
+     },
+     "alpha_delta": {
+      "Motor": -0.06442899579283878,
+      "Caja_Engranajes": 0.33520565418797643,
+      "Rodamiento_A": 0.06774702925310205,
+      "Rodamiento_B": 0.022548728874491886
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.00031302862420590216,
+      0.009659143456603347,
+      0.004408781663911565,
+      -0.022976623742609448
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.010546565479265357,
+      "Caja_Engranajes|Rodamiento_A": -0.23154137698230914,
+      "Rodamiento_A|Rodamiento_B": 0.017164455239400578
+     },
+     "graph_gap": 0.40934200845290125,
+     "stability_gap": 2.3255551636154297,
+     "tonal_delta": {
+      "Motor": -1.6818467310419258,
+      "Caja_Engranajes": -2.027977238172678,
+      "Rodamiento_A": -2.2434112465949525,
+      "Rodamiento_B": -1.6488504705724107
+     },
+     "alpha_delta": {
+      "Motor": 0.16069044392954135,
+      "Caja_Engranajes": 0.22771563274840334,
+      "Rodamiento_A": 0.17565290044773574,
+      "Rodamiento_B": 0.062195257517098756
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.006407264512764188,
+      0.016235466275859922,
+      0.006297025494447217,
+      -0.024180513747732224
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0026144822944922375,
+      "Caja_Engranajes|Rodamiento_A": -0.32454759241559916,
+      "Rodamiento_A|Rodamiento_B": 0.016881852052559987
+     },
+     "graph_gap": 0.3853524551347355,
+     "stability_gap": 2.3782730230382336,
+     "tonal_delta": {
+      "Motor": -2.53196207513966,
+      "Caja_Engranajes": -2.0673041967769556,
+      "Rodamiento_A": -4.595232487470767,
+      "Rodamiento_B": -3.850151093534949
+     },
+     "alpha_delta": {
+      "Motor": -0.1663011398055736,
+      "Caja_Engranajes": 0.1848223465863723,
+      "Rodamiento_A": 0.1248330098698952,
+      "Rodamiento_B": -0.04315164002987393
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.001025294086988593,
+      0.010480895414784364,
+      0.002296779314662878,
+      -0.012353170974514383
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.008829953500304022,
+      "Caja_Engranajes|Rodamiento_A": -0.41315193734353706,
+      "Rodamiento_A|Rodamiento_B": 0.023732176554648987
+     },
+     "graph_gap": 0.34274907169337826,
+     "stability_gap": 2.3331647263927673,
+     "tonal_delta": {
+      "Motor": -2.535012069653334,
+      "Caja_Engranajes": -2.652804073994691,
+      "Rodamiento_A": -3.820684055387929,
+      "Rodamiento_B": -5.0972588993243715
+     },
+     "alpha_delta": {
+      "Motor": 0.04145892256891104,
+      "Caja_Engranajes": 0.3774317724063938,
+      "Rodamiento_A": 0.3701613681938192,
+      "Rodamiento_B": 0.14583625240147846
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.005750390337679878,
+      0.013138572325101183,
+      0.014782580627272335,
+      -0.012626698577040907
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.024092801075114245,
+      "Caja_Engranajes|Rodamiento_A": -0.4841238415119855,
+      "Rodamiento_A|Rodamiento_B": 0.019847505487958106
+     },
+     "graph_gap": 0.3025466324330234,
+     "stability_gap": 2.2059823990473104,
+     "tonal_delta": {
+      "Motor": -2.813759842360305,
+      "Caja_Engranajes": -2.229598587897687,
+      "Rodamiento_A": -5.051363336588082,
+      "Rodamiento_B": -5.784884461054771
+     },
+     "alpha_delta": {
+      "Motor": -0.1514909757859384,
+      "Caja_Engranajes": 0.2613163121771147,
+      "Rodamiento_A": 0.3178425184435496,
+      "Rodamiento_B": 0.15354100134224202
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.007601250986042141,
+      0.021114990743103856,
+      -0.0035062465847306434,
+      -0.021832286850458904
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.01851151761189085,
+      "Caja_Engranajes|Rodamiento_A": -0.5548957894150031,
+      "Rodamiento_A|Rodamiento_B": 0.022402549701334262
+     },
+     "graph_gap": 0.28137383175830943,
+     "stability_gap": 2.863026848883698,
+     "tonal_delta": {
+      "Motor": -2.909188688537256,
+      "Caja_Engranajes": -2.582651424599298,
+      "Rodamiento_A": -5.997811640176813,
+      "Rodamiento_B": -7.036679811314
+     },
+     "alpha_delta": {
+      "Motor": -0.17023148496594787,
+      "Caja_Engranajes": 0.40517537658331926,
+      "Rodamiento_A": 0.3303624540413064,
+      "Rodamiento_B": 0.07375017872905043
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.01573576550474942,
+      0.0011177216166995407,
+      -0.02393882747919318,
+      -0.00822907901223524
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.025163231647612694,
+      "Caja_Engranajes|Rodamiento_A": -0.658112093475125,
+      "Rodamiento_A|Rodamiento_B": 0.010656153490071096
+     },
+     "graph_gap": 0.2512971143729532,
+     "stability_gap": 2.646389963626522,
+     "tonal_delta": {
+      "Motor": -3.185725596135903,
+      "Caja_Engranajes": -2.4028546004241527,
+      "Rodamiento_A": -5.650000814441295,
+      "Rodamiento_B": -6.149806567551289
+     },
+     "alpha_delta": {
+      "Motor": 0.38362709338189216,
+      "Caja_Engranajes": 0.4095672729245148,
+      "Rodamiento_A": 0.5105972099937726,
+      "Rodamiento_B": 0.10188648151484703
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.017183206165738096,
+      0.006436139914066885,
+      0.003163461199829687,
+      -0.04279590736382399
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.03281308506601821,
+      "Caja_Engranajes|Rodamiento_A": -0.7303971380290768,
+      "Rodamiento_A|Rodamiento_B": 0.007846022578780643
+     },
+     "graph_gap": 0.19720278023406052,
+     "stability_gap": 2.7525280012831272,
+     "tonal_delta": {
+      "Motor": -3.9779565973472835,
+      "Caja_Engranajes": -3.4718420037586952,
+      "Rodamiento_A": -5.120136998355299,
+      "Rodamiento_B": -5.558092579582018
+     },
+     "alpha_delta": {
+      "Motor": -0.011184165506908927,
+      "Caja_Engranajes": 0.31240758550776415,
+      "Rodamiento_A": 0.4427924688216549,
+      "Rodamiento_B": 0.02296080662836797
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      -0.011438040027333285,
+      0.00824103766609463,
+      -0.014070879655684765,
+      -0.046560947690126975
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.02700230934965364,
+      "Caja_Engranajes|Rodamiento_A": -0.7679083124334614,
+      "Rodamiento_A|Rodamiento_B": 0.008774718017854788
+     },
+     "graph_gap": 0.17951981860188665,
+     "stability_gap": 2.7467018603067372,
+     "tonal_delta": {
+      "Motor": -3.4509666562900563,
+      "Caja_Engranajes": -2.426408772217126,
+      "Rodamiento_A": -6.063317696065781,
+      "Rodamiento_B": -7.652757383730149
+     },
+     "alpha_delta": {
+      "Motor": 0.07574431329641795,
+      "Caja_Engranajes": 0.5230545942413412,
+      "Rodamiento_A": 0.4783699870378093,
+      "Rodamiento_B": 0.04818572544814792
+     }
+    }
+   ]
+  },
+  {
+   "cond": "joint",
+   "seed": 102,
+   "sigma": 2.115979558026976,
+   "final": "structural",
+   "where": "Caja_Engranajes|Rodamiento_A",
+   "first_flag_t": 90.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    0.028946676726548937,
+    0.03311996001702977,
+    -0.04758518405657686,
+    0.005570674634037598
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.001747437391018014,
+    "Caja_Engranajes|Rodamiento_A": -0.7538180410951871,
+    "Rodamiento_A|Rodamiento_B": 0.0074348082251263214
+   },
+   "final_graph_gap": 0.18868310387775378,
+   "graph_gap_cal": 0.47134080533830774,
+   "final_stability_gap": 2.7281065242580613,
+   "stability_gap_cal": 2.772782649867014,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -3.8482732643501407,
+    "Caja_Engranajes": -2.9509081207850194,
+    "Rodamiento_A": -4.967417841767926,
+    "Rodamiento_B": -7.522818150614279
+   },
+   "final_alpha_delta": {
+    "Motor": 0.21194363160265506,
+    "Caja_Engranajes": 0.2535205487274863,
+    "Rodamiento_A": 0.6011014074891103,
+    "Rodamiento_B": 0.35927624429659
+   },
+   "fiedler_cut": [
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ],
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.014581562568097173,
+      -0.007399778191980788,
+      -0.021049546411404663,
+      0.005787435553314957
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0040226910653087256,
+      "Caja_Engranajes|Rodamiento_A": -0.006765008387330296,
+      "Rodamiento_A|Rodamiento_B": 0.0008314749758906448
+     },
+     "graph_gap": 0.4696643845255154,
+     "stability_gap": 2.480589454121316,
+     "tonal_delta": {
+      "Motor": -0.3341623489787011,
+      "Caja_Engranajes": 0.519778298091925,
+      "Rodamiento_A": -0.6805404144489096,
+      "Rodamiento_B": 0.04599572002744701
+     },
+     "alpha_delta": {
+      "Motor": 0.17537607228992802,
+      "Caja_Engranajes": 0.09653406975901424,
+      "Rodamiento_A": 0.13800228586868957,
+      "Rodamiento_B": 0.04147387472490449
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01856517068050567,
+      -0.002615946688068971,
+      -0.026115865708462804,
+      0.006186111088602786
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0323869055792525,
+      "Caja_Engranajes|Rodamiento_A": -0.04662841898285852,
+      "Rodamiento_A|Rodamiento_B": -0.003191863735112155
+     },
+     "graph_gap": 0.449326752504361,
+     "stability_gap": 2.317420777923168,
+     "tonal_delta": {
+      "Motor": -1.101397753994565,
+      "Caja_Engranajes": -1.522579707092632,
+      "Rodamiento_A": -1.2590666088972675,
+      "Rodamiento_B": -0.8902846909079098
+     },
+     "alpha_delta": {
+      "Motor": 0.20198838010417242,
+      "Caja_Engranajes": 0.09100323443323499,
+      "Rodamiento_A": 0.09545174126806233,
+      "Rodamiento_B": 0.07776929674912014
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.013450852915683154,
+      0.0014794581150228137,
+      -0.03909906384912776,
+      0.01875838555567899
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.018485123728023467,
+      "Caja_Engranajes|Rodamiento_A": -0.07141320362679737,
+      "Rodamiento_A|Rodamiento_B": 0.011689680255570378
+     },
+     "graph_gap": 0.4396923764666948,
+     "stability_gap": 2.4070977146630916,
+     "tonal_delta": {
+      "Motor": -1.265139068029157,
+      "Caja_Engranajes": -1.6856272459580666,
+      "Rodamiento_A": -1.141952223641944,
+      "Rodamiento_B": -1.0708909844369625
+     },
+     "alpha_delta": {
+      "Motor": 0.041447664361253134,
+      "Caja_Engranajes": 0.2058968242464878,
+      "Rodamiento_A": 0.11174752188353365,
+      "Rodamiento_B": 0.05718932054068615
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.0008348915320561812,
+      0.003101360082768956,
+      -0.02664200764982705,
+      0.020380555227406116
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.027428736905268147,
+      "Caja_Engranajes|Rodamiento_A": -0.13963002198069407,
+      "Rodamiento_A|Rodamiento_B": 0.007338541907696339
+     },
+     "graph_gap": 0.4347413080287189,
+     "stability_gap": 2.7139834297924033,
+     "tonal_delta": {
+      "Motor": -0.8632684967183408,
+      "Caja_Engranajes": -1.3255662744885477,
+      "Rodamiento_A": -0.7404445314614208,
+      "Rodamiento_B": -0.7416409416750884
+     },
+     "alpha_delta": {
+      "Motor": -0.12985628057165477,
+      "Caja_Engranajes": -0.023024589672854257,
+      "Rodamiento_A": 0.12395137487067953,
+      "Rodamiento_B": 0.04406168394117327
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.003508406369049144,
+      -0.01030271358725865,
+      -0.0303324868412278,
+      0.023168114797439188
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.014254700466091563,
+      "Caja_Engranajes|Rodamiento_A": -0.22035917854290543,
+      "Rodamiento_A|Rodamiento_B": -0.005635422375569132
+     },
+     "graph_gap": 0.40726085830251835,
+     "stability_gap": 2.6199283813232235,
+     "tonal_delta": {
+      "Motor": -2.1734412097157048,
+      "Caja_Engranajes": -2.6146004490102115,
+      "Rodamiento_A": -2.4751972379344345,
+      "Rodamiento_B": -2.5952966009875578
+     },
+     "alpha_delta": {
+      "Motor": 0.2844458134155523,
+      "Caja_Engranajes": 0.23208307857573507,
+      "Rodamiento_A": 0.3598043521505775,
+      "Rodamiento_B": 0.28341998171529226
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.021008268341342617,
+      -0.01651009245252677,
+      -0.02611933329346683,
+      0.008123478300931852
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.011294341644191963,
+      "Caja_Engranajes|Rodamiento_A": -0.31181120095054915,
+      "Rodamiento_A|Rodamiento_B": -0.009239982080431641
+     },
+     "graph_gap": 0.3910133893839579,
+     "stability_gap": 3.047341493111639,
+     "tonal_delta": {
+      "Motor": -2.5924760787952614,
+      "Caja_Engranajes": -1.7784380904131467,
+      "Rodamiento_A": -3.2356535435416625,
+      "Rodamiento_B": -3.263085872168473
+     },
+     "alpha_delta": {
+      "Motor": 0.12082515770516378,
+      "Caja_Engranajes": 0.35761970566225565,
+      "Rodamiento_A": 0.2851666660037494,
+      "Rodamiento_B": 0.1687306487812954
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.03464957945147651,
+      0.005681885656513286,
+      -0.019704606277071046,
+      0.013392811751341105
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.018822320454877417,
+      "Caja_Engranajes|Rodamiento_A": -0.42582119898360205,
+      "Rodamiento_A|Rodamiento_B": -0.010915611535169845
+     },
+     "graph_gap": 0.34329113720561966,
+     "stability_gap": 2.9314413415589784,
+     "tonal_delta": {
+      "Motor": -2.8035134237895285,
+      "Caja_Engranajes": -2.2747915326138433,
+      "Rodamiento_A": -2.269012001402391,
+      "Rodamiento_B": -3.0351669984205767
+     },
+     "alpha_delta": {
+      "Motor": 0.25069210053004887,
+      "Caja_Engranajes": 0.49688946829564506,
+      "Rodamiento_A": 0.42139478607603165,
+      "Rodamiento_B": 0.22485213857602582
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.035956838212514164,
+      0.024806584714565982,
+      -0.023809411047319484,
+      -0.014364080707889193
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.014964250923625855,
+      "Caja_Engranajes|Rodamiento_A": -0.4807078694100435,
+      "Rodamiento_A|Rodamiento_B": -0.00114670320787702
+     },
+     "graph_gap": 0.3066922079042075,
+     "stability_gap": 2.8578321913477005,
+     "tonal_delta": {
+      "Motor": -3.907774618796374,
+      "Caja_Engranajes": -2.7430217913902553,
+      "Rodamiento_A": -5.567582683444581,
+      "Rodamiento_B": -6.6134205404029895
+     },
+     "alpha_delta": {
+      "Motor": 0.015273129144828035,
+      "Caja_Engranajes": 0.11593340652381778,
+      "Rodamiento_A": 0.4133414159662019,
+      "Rodamiento_B": 0.24213940727307537
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.029562008092716807,
+      0.04357976172732059,
+      -0.047083234286266484,
+      0.006952778868131171
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.012816666114484176,
+      "Caja_Engranajes|Rodamiento_A": -0.5526966568034382,
+      "Rodamiento_A|Rodamiento_B": 0.013145942776531694
+     },
+     "graph_gap": 0.27476142652984165,
+     "stability_gap": 2.723043255535925,
+     "tonal_delta": {
+      "Motor": -3.509554919993697,
+      "Caja_Engranajes": -2.5698598419296594,
+      "Rodamiento_A": -4.419952625552515,
+      "Rodamiento_B": -6.675322779328061
+     },
+     "alpha_delta": {
+      "Motor": 0.3866969863215086,
+      "Caja_Engranajes": 0.3477541696164135,
+      "Rodamiento_A": 0.44057155605548415,
+      "Rodamiento_B": 0.13630535102619667
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.037370745258057614,
+      0.04963413662927829,
+      -0.07537504236819181,
+      0.01676657793949321
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0020092260237924986,
+      "Caja_Engranajes|Rodamiento_A": -0.6319876615052535,
+      "Rodamiento_A|Rodamiento_B": 0.003970806575268382
+     },
+     "graph_gap": 0.24828399907672644,
+     "stability_gap": 2.764430107148462,
+     "tonal_delta": {
+      "Motor": -3.9054677227553256,
+      "Caja_Engranajes": -3.3939431615876927,
+      "Rodamiento_A": -4.2131610440990634,
+      "Rodamiento_B": -5.569824720776792
+     },
+     "alpha_delta": {
+      "Motor": 0.10844563271085739,
+      "Caja_Engranajes": 0.3243115714931839,
+      "Rodamiento_A": 0.42853420498653416,
+      "Rodamiento_B": 0.03986491717482088
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.015978150755786125,
+      0.06161284767746533,
+      -0.05499003393334978,
+      0.032787712879512876
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.006078899811564398,
+      "Caja_Engranajes|Rodamiento_A": -0.6914603810964944,
+      "Rodamiento_A|Rodamiento_B": -0.00017937558291880595
+     },
+     "graph_gap": 0.21682268336933375,
+     "stability_gap": 2.6016301456846245,
+     "tonal_delta": {
+      "Motor": -3.9608269457246053,
+      "Caja_Engranajes": -3.2211735035919062,
+      "Rodamiento_A": -5.707178920874103,
+      "Rodamiento_B": -6.251069842661051
+     },
+     "alpha_delta": {
+      "Motor": 0.08205485340201735,
+      "Caja_Engranajes": 0.4975494741950479,
+      "Rodamiento_A": 0.6813853121366367,
+      "Rodamiento_B": 0.37405728285569984
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "structural",
+     "where": "Caja_Engranajes|Rodamiento_A",
+     "mount_rel": [
+      0.028946676726548937,
+      0.03311996001702977,
+      -0.04758518405657686,
+      0.005570674634037598
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.001747437391018014,
+      "Caja_Engranajes|Rodamiento_A": -0.7538180410951871,
+      "Rodamiento_A|Rodamiento_B": 0.0074348082251263214
+     },
+     "graph_gap": 0.18868310387775378,
+     "stability_gap": 2.7281065242580613,
+     "tonal_delta": {
+      "Motor": -3.8482732643501407,
+      "Caja_Engranajes": -2.9509081207850194,
+      "Rodamiento_A": -4.967417841767926,
+      "Rodamiento_B": -7.522818150614279
+     },
+     "alpha_delta": {
+      "Motor": 0.21194363160265506,
+      "Caja_Engranajes": 0.2535205487274863,
+      "Rodamiento_A": 0.6011014074891103,
+      "Rodamiento_B": 0.35927624429659
+     }
+    }
+   ]
+  },
+  {
+   "cond": "imbalance",
+   "seed": 100,
+   "sigma": 2.1312114139447744,
+   "final": "forcing",
+   "where": "Motor",
+   "first_flag_t": 100.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    0.004812359078505413,
+    0.03573047685644104,
+    -0.030325656233448073,
+    -0.012890730661183625
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": -0.031081092174887415,
+    "Caja_Engranajes|Rodamiento_A": 0.015439573135171525,
+    "Rodamiento_A|Rodamiento_B": -0.02220892100913674
+   },
+   "final_graph_gap": 0.4774382978205676,
+   "graph_gap_cal": 0.4654692273197297,
+   "final_stability_gap": 2.7981331142803736,
+   "stability_gap_cal": 2.3659532447766614,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": 9.724086417307294,
+    "Caja_Engranajes": 8.799552271836614,
+    "Rodamiento_A": 5.5864541130760195,
+    "Rodamiento_B": 7.200319881346483
+   },
+   "final_alpha_delta": {
+    "Motor": -0.055270713213308786,
+    "Caja_Engranajes": 0.22517503763711888,
+    "Rodamiento_A": -0.016914604336218497,
+    "Rodamiento_B": -0.005143946736190674
+   },
+   "fiedler_cut": [
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ],
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.0041908667637080566,
+      0.009055125185350565,
+      0.006470522269283574,
+      -0.007199528408177613
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.008146041748990362,
+      "Caja_Engranajes|Rodamiento_A": -0.03357934195704315,
+      "Rodamiento_A|Rodamiento_B": -0.013689654231019532
+     },
+     "graph_gap": 0.4680397334035865,
+     "stability_gap": 2.3892282657591055,
+     "tonal_delta": {
+      "Motor": 0.9369175766129985,
+      "Caja_Engranajes": 1.3128945205217626,
+      "Rodamiento_A": 0.42342021347844394,
+      "Rodamiento_B": -0.03292767365499394
+     },
+     "alpha_delta": {
+      "Motor": -0.26138175041372413,
+      "Caja_Engranajes": 0.032085478020963176,
+      "Rodamiento_A": 0.12376733306336307,
+      "Rodamiento_B": 0.030148283899847916
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.00804856947074728,
+      0.009275642867188072,
+      0.013851837951849522,
+      -0.0028162677498285715
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.016291513526483836,
+      "Caja_Engranajes|Rodamiento_A": -0.0032367496577705435,
+      "Rodamiento_A|Rodamiento_B": -0.02398102121817336
+     },
+     "graph_gap": 0.46688592438665455,
+     "stability_gap": 2.5409459774746717,
+     "tonal_delta": {
+      "Motor": 2.858410645401225,
+      "Caja_Engranajes": 2.179989924859324,
+      "Rodamiento_A": 1.6469775396137507,
+      "Rodamiento_B": 2.0914358389223704
+     },
+     "alpha_delta": {
+      "Motor": -0.20846531206372765,
+      "Caja_Engranajes": 0.06802013993287348,
+      "Rodamiento_A": 0.051995545460835735,
+      "Rodamiento_B": -0.1791783745161163
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.0016663849579579004,
+      0.015577035529967365,
+      0.038732683920720046,
+      -0.010700227915275695
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.015906051279066524,
+      "Caja_Engranajes|Rodamiento_A": -0.011633011573336738,
+      "Rodamiento_A|Rodamiento_B": -0.02014534806901347
+     },
+     "graph_gap": 0.46197873130580525,
+     "stability_gap": 2.2320456300772644,
+     "tonal_delta": {
+      "Motor": 3.448841687361405,
+      "Caja_Engranajes": 2.830357943261763,
+      "Rodamiento_A": 1.7852352564777227,
+      "Rodamiento_B": 2.287970437700567
+     },
+     "alpha_delta": {
+      "Motor": -0.3176043271509379,
+      "Caja_Engranajes": 0.21829146056017756,
+      "Rodamiento_A": -0.07747942070995983,
+      "Rodamiento_B": -0.1455235256080496
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.008922368038434936,
+      0.0055985667287088425,
+      0.00834994465423411,
+      -0.004135449955933401
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.018592487165629112,
+      "Caja_Engranajes|Rodamiento_A": -0.004030975040575813,
+      "Rodamiento_A|Rodamiento_B": -0.013126112292470848
+     },
+     "graph_gap": 0.48004162204114725,
+     "stability_gap": 2.57009524946955,
+     "tonal_delta": {
+      "Motor": 4.723775365158705,
+      "Caja_Engranajes": 3.6704573633772064,
+      "Rodamiento_A": 2.25511417928068,
+      "Rodamiento_B": 3.096411533157452
+     },
+     "alpha_delta": {
+      "Motor": -0.14121634650426484,
+      "Caja_Engranajes": 0.22120650110478945,
+      "Rodamiento_A": -0.06088032479641681,
+      "Rodamiento_B": -0.07140283096478361
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.0014749071249517964,
+      0.016060882180962466,
+      0.013230604325312978,
+      -0.004163799628110532
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.008734102927560938,
+      "Caja_Engranajes|Rodamiento_A": -0.00026695413934507695,
+      "Rodamiento_A|Rodamiento_B": -0.019267988994754237
+     },
+     "graph_gap": 0.4642284207231426,
+     "stability_gap": 2.4864111350779745,
+     "tonal_delta": {
+      "Motor": 5.229907364744285,
+      "Caja_Engranajes": 4.423622946770841,
+      "Rodamiento_A": 1.9436229635456428,
+      "Rodamiento_B": 3.3316622936273976
+     },
+     "alpha_delta": {
+      "Motor": -0.2927304497128673,
+      "Caja_Engranajes": 0.09206819688598622,
+      "Rodamiento_A": 0.07290343450511205,
+      "Rodamiento_B": -0.02448085480320117
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.0034817130487194703,
+      0.00338781081964612,
+      0.0037049485568156904,
+      0.0007931740924957964
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.021890264235433943,
+      "Caja_Engranajes|Rodamiento_A": -0.031813783958189124,
+      "Rodamiento_A|Rodamiento_B": -0.009500597562413282
+     },
+     "graph_gap": 0.4644057362535151,
+     "stability_gap": 2.5067987050516916,
+     "tonal_delta": {
+      "Motor": 6.673825642538869,
+      "Caja_Engranajes": 5.631755964448713,
+      "Rodamiento_A": 3.611168131814079,
+      "Rodamiento_B": 4.954151027423881
+     },
+     "alpha_delta": {
+      "Motor": -0.21982310505345737,
+      "Caja_Engranajes": 0.16574395349490523,
+      "Rodamiento_A": 0.015410598452597846,
+      "Rodamiento_B": -0.22037797832726147
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.000138022415090866,
+      0.008306047086159118,
+      0.013005868469130988,
+      -0.00022274837641633738
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.011845126396044403,
+      "Caja_Engranajes|Rodamiento_A": -0.029428194432163157,
+      "Rodamiento_A|Rodamiento_B": -0.016291225661861253
+     },
+     "graph_gap": 0.4598337018956018,
+     "stability_gap": 2.505992587368822,
+     "tonal_delta": {
+      "Motor": 7.243744319274498,
+      "Caja_Engranajes": 6.371228305607552,
+      "Rodamiento_A": 3.3566699430036167,
+      "Rodamiento_B": 4.921370453183519
+     },
+     "alpha_delta": {
+      "Motor": -0.09221521859412918,
+      "Caja_Engranajes": 0.1080606863691187,
+      "Rodamiento_A": -0.07158916729075937,
+      "Rodamiento_B": -0.013625660287656327
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.003576899942772327,
+      0.0012149059556088027,
+      0.014057859390080862,
+      -0.009005024244177706
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.014568787242534409,
+      "Caja_Engranajes|Rodamiento_A": 0.008683645951770735,
+      "Rodamiento_A|Rodamiento_B": -0.0098130806322545
+     },
+     "graph_gap": 0.47440644730806375,
+     "stability_gap": 2.6924451202074398,
+     "tonal_delta": {
+      "Motor": 7.846786990738526,
+      "Caja_Engranajes": 6.952342676983346,
+      "Rodamiento_A": 3.8588076303453214,
+      "Rodamiento_B": 5.038042139958998
+     },
+     "alpha_delta": {
+      "Motor": -0.20668002990884582,
+      "Caja_Engranajes": 0.2911272691911464,
+      "Rodamiento_A": 0.08354996669528192,
+      "Rodamiento_B": -0.0693370442509178
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.003079113771362829,
+      0.014142112607119728,
+      0.005242038963046536,
+      -0.01246270094722246
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0013367845379281817,
+      "Caja_Engranajes|Rodamiento_A": -0.020300056048996096,
+      "Rodamiento_A|Rodamiento_B": -0.011374989524791768
+     },
+     "graph_gap": 0.4655870988962788,
+     "stability_gap": 2.9697530747139576,
+     "tonal_delta": {
+      "Motor": 8.75549139249761,
+      "Caja_Engranajes": 8.125793577400172,
+      "Rodamiento_A": 4.226848527992187,
+      "Rodamiento_B": 6.10828971011
+     },
+     "alpha_delta": {
+      "Motor": -0.3223031772985525,
+      "Caja_Engranajes": 0.2173245159030499,
+      "Rodamiento_A": 0.02856725531580162,
+      "Rodamiento_B": -0.11576829560120838
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.001019738744527432,
+      0.02129793908431532,
+      -0.009529653571413332,
+      -0.01303131169323768
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.016835964023140915,
+      "Caja_Engranajes|Rodamiento_A": -0.030192580952811854,
+      "Rodamiento_A|Rodamiento_B": 0.0014295694909487455
+     },
+     "graph_gap": 0.46085713488289487,
+     "stability_gap": 2.9639369517429377,
+     "tonal_delta": {
+      "Motor": 9.227311225706453,
+      "Caja_Engranajes": 8.596695461422506,
+      "Rodamiento_A": 4.731136034558473,
+      "Rodamiento_B": 6.614248925995348
+     },
+     "alpha_delta": {
+      "Motor": -0.012432425324179874,
+      "Caja_Engranajes": 0.03812733202053975,
+      "Rodamiento_A": 0.07420101342632779,
+      "Rodamiento_B": 0.022844677352560128
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.005473665975966657,
+      0.03399130407285389,
+      -0.020183554648760316,
+      -0.015514105229168629
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.00877546463615797,
+      "Caja_Engranajes|Rodamiento_A": -0.012048497666225622,
+      "Rodamiento_A|Rodamiento_B": 0.003332641877201059
+     },
+     "graph_gap": 0.461143910276948,
+     "stability_gap": 3.129041171822107,
+     "tonal_delta": {
+      "Motor": 9.592102087506357,
+      "Caja_Engranajes": 8.681838370843055,
+      "Rodamiento_A": 4.685470135525286,
+      "Rodamiento_B": 6.65953646138936
+     },
+     "alpha_delta": {
+      "Motor": -0.2482361883216586,
+      "Caja_Engranajes": 0.22453498572402664,
+      "Rodamiento_A": 0.07555100707510265,
+      "Rodamiento_B": 0.22272591290628374
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.004812359078505413,
+      0.03573047685644104,
+      -0.030325656233448073,
+      -0.012890730661183625
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.031081092174887415,
+      "Caja_Engranajes|Rodamiento_A": 0.015439573135171525,
+      "Rodamiento_A|Rodamiento_B": -0.02220892100913674
+     },
+     "graph_gap": 0.4774382978205676,
+     "stability_gap": 2.7981331142803736,
+     "tonal_delta": {
+      "Motor": 9.724086417307294,
+      "Caja_Engranajes": 8.799552271836614,
+      "Rodamiento_A": 5.5864541130760195,
+      "Rodamiento_B": 7.200319881346483
+     },
+     "alpha_delta": {
+      "Motor": -0.055270713213308786,
+      "Caja_Engranajes": 0.22517503763711888,
+      "Rodamiento_A": -0.016914604336218497,
+      "Rodamiento_B": -0.005143946736190674
+     }
+    }
+   ]
+  },
+  {
+   "cond": "imbalance",
+   "seed": 101,
+   "sigma": 2.1055109217465215,
+   "final": "forcing",
+   "where": "Motor",
+   "first_flag_t": 110.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    -0.01319096536711084,
+    0.01481780939215338,
+    -0.019523662382641138,
+    -0.02167574706198816
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.021814761538864635,
+    "Caja_Engranajes|Rodamiento_A": -0.03412724630993624,
+    "Rodamiento_A|Rodamiento_B": 0.008749574713262431
+   },
+   "final_graph_gap": 0.4593465296465389,
+   "graph_gap_cal": 0.47527931703925863,
+   "final_stability_gap": 3.322993203009824,
+   "stability_gap_cal": 2.5833743007425833,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": 9.345446489972629,
+    "Caja_Engranajes": 8.299065133877491,
+    "Rodamiento_A": 3.9239383231099136,
+    "Rodamiento_B": 6.989199527670252
+   },
+   "final_alpha_delta": {
+    "Motor": 0.07026559633271523,
+    "Caja_Engranajes": 0.14861919768947707,
+    "Rodamiento_A": -0.05031603808006191,
+    "Rodamiento_B": -0.08782838321920439
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": 0.7422726633264034,
+      "Caja_Engranajes": -0.8676206070294157,
+      "Rodamiento_A": 0.14372461749230325,
+      "Rodamiento_B": 1.2937307189544835
+     },
+     "alpha_delta": {
+      "Motor": 0.02698164440772266,
+      "Caja_Engranajes": 0.1350082333656748,
+      "Rodamiento_A": -0.1172224520823354,
+      "Rodamiento_B": -0.10848191961219034
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": 1.5642100602747533,
+      "Caja_Engranajes": 0.6376728765409503,
+      "Rodamiento_A": -0.27367217793964116,
+      "Rodamiento_B": 1.0084056678150617
+     },
+     "alpha_delta": {
+      "Motor": -0.03370817114283864,
+      "Caja_Engranajes": 0.2099122482370086,
+      "Rodamiento_A": -0.06342399308716029,
+      "Rodamiento_B": -0.04579878259588299
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.0077637279504352286,
+      -0.007876437964572047,
+      0.007741374938652346,
+      -0.010316527625175431
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.01870770101340824,
+      "Caja_Engranajes|Rodamiento_A": 0.001534719512743532,
+      "Rodamiento_A|Rodamiento_B": -0.005548730680713598
+     },
+     "graph_gap": 0.467657788701734,
+     "stability_gap": 2.4386053470921727,
+     "tonal_delta": {
+      "Motor": 2.5885775706976446,
+      "Caja_Engranajes": 2.684187393734053,
+      "Rodamiento_A": -0.8563600072618271,
+      "Rodamiento_B": 1.3511464367442212
+     },
+     "alpha_delta": {
+      "Motor": 0.09694341994047062,
+      "Caja_Engranajes": 0.05038840914553311,
+      "Rodamiento_A": -0.20046860258847998,
+      "Rodamiento_B": -0.02799268216167783
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01538207484914289,
+      0.008861728900097177,
+      0.006801340188469007,
+      -0.01419319728289492
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0013396987637388502,
+      "Caja_Engranajes|Rodamiento_A": -0.0015673049272694195,
+      "Rodamiento_A|Rodamiento_B": -0.0003262811475599481
+     },
+     "graph_gap": 0.46865023498282093,
+     "stability_gap": 2.554036466292513,
+     "tonal_delta": {
+      "Motor": 3.7832738435428475,
+      "Caja_Engranajes": 3.262768381352217,
+      "Rodamiento_A": 0.4059227592538406,
+      "Rodamiento_B": 2.8344789732900093
+     },
+     "alpha_delta": {
+      "Motor": -0.11161711859253232,
+      "Caja_Engranajes": 0.16109503639277123,
+      "Rodamiento_A": -0.07911118512159332,
+      "Rodamiento_B": -0.018269669916602282
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.007277511687871163,
+      0.015208922400513192,
+      -0.01261484490253717,
+      -0.020279000444610507
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.010446486458704829,
+      "Caja_Engranajes|Rodamiento_A": -0.0022703459422313,
+      "Rodamiento_A|Rodamiento_B": 0.011961226028050831
+     },
+     "graph_gap": 0.48316969463921233,
+     "stability_gap": 2.4229423916720836,
+     "tonal_delta": {
+      "Motor": 5.014216111792155,
+      "Caja_Engranajes": 3.5713826772185904,
+      "Rodamiento_A": 1.5258542860500768,
+      "Rodamiento_B": 3.747599599643097
+     },
+     "alpha_delta": {
+      "Motor": -0.0007600877157023511,
+      "Caja_Engranajes": -0.15083368960433619,
+      "Rodamiento_A": -0.061237325288507116,
+      "Rodamiento_B": -0.016211684478398825
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.0009756987754504509,
+      0.024261827837021688,
+      0.009409793857659832,
+      -0.005508681872714805
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0005996876786247274,
+      "Caja_Engranajes|Rodamiento_A": 0.005520953314223309,
+      "Rodamiento_A|Rodamiento_B": -0.009061553005115908
+     },
+     "graph_gap": 0.4648237077732379,
+     "stability_gap": 2.4273630456305755,
+     "tonal_delta": {
+      "Motor": 5.72175518456779,
+      "Caja_Engranajes": 4.424519030218157,
+      "Rodamiento_A": 1.6505042665968048,
+      "Rodamiento_B": 4.236126658170878
+     },
+     "alpha_delta": {
+      "Motor": 0.13930861447928944,
+      "Caja_Engranajes": 0.03028368259024261,
+      "Rodamiento_A": -0.17970845214887643,
+      "Rodamiento_B": -0.19226455593053438
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.00800291909418771,
+      0.016986611482555203,
+      -0.0009112297924859236,
+      -0.006717847607632388
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.003924430820593905,
+      "Caja_Engranajes|Rodamiento_A": 0.030227873744185008,
+      "Rodamiento_A|Rodamiento_B": 0.0049764371695206755
+     },
+     "graph_gap": 0.471746865584445,
+     "stability_gap": 2.3613806602343352,
+     "tonal_delta": {
+      "Motor": 6.973763235395673,
+      "Caja_Engranajes": 5.56399553427722,
+      "Rodamiento_A": 2.6681950213463335,
+      "Rodamiento_B": 4.878965639901409
+     },
+     "alpha_delta": {
+      "Motor": -0.10284458089175219,
+      "Caja_Engranajes": 0.11410092765060709,
+      "Rodamiento_A": 0.04990443950203216,
+      "Rodamiento_B": 0.024108854808772007
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.018494416718140227,
+      0.011643018642412795,
+      0.00913150914176164,
+      0.006062516249996541
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.029448423151652747,
+      "Caja_Engranajes|Rodamiento_A": 0.04105429590237031,
+      "Rodamiento_A|Rodamiento_B": -0.013482920728453696
+     },
+     "graph_gap": 0.47699191023672954,
+     "stability_gap": 2.3167644415328876,
+     "tonal_delta": {
+      "Motor": 7.498520700665562,
+      "Caja_Engranajes": 5.981120608558271,
+      "Rodamiento_A": 2.6707831999913356,
+      "Rodamiento_B": 5.353894258532328
+     },
+     "alpha_delta": {
+      "Motor": -0.28365538395331114,
+      "Caja_Engranajes": 0.16676060235286827,
+      "Rodamiento_A": -0.03828018251919274,
+      "Rodamiento_B": 0.0441803856280063
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.006677560186809428,
+      0.026653068997208207,
+      -0.0071646628376038635,
+      0.0054936143486363775
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.005569654199391705,
+      "Caja_Engranajes|Rodamiento_A": -0.028120991064243372,
+      "Rodamiento_A|Rodamiento_B": 0.012972786782200929
+     },
+     "graph_gap": 0.4587227473134754,
+     "stability_gap": 2.9497619354279845,
+     "tonal_delta": {
+      "Motor": 8.451718845561153,
+      "Caja_Engranajes": 7.110706299921272,
+      "Rodamiento_A": 3.4682771747611767,
+      "Rodamiento_B": 6.110613982780441
+     },
+     "alpha_delta": {
+      "Motor": -0.22463376242099264,
+      "Caja_Engranajes": -0.15835848816328735,
+      "Rodamiento_A": -0.08954439879197029,
+      "Rodamiento_B": 0.06626389466412519
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.01672174277217442,
+      0.0031327332204047487,
+      -0.007482569835615127,
+      -0.005493069580504439
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.020172735118873852,
+      "Caja_Engranajes|Rodamiento_A": -0.05140853567070869,
+      "Rodamiento_A|Rodamiento_B": 0.011567639116371708
+     },
+     "graph_gap": 0.4585211981595062,
+     "stability_gap": 3.0257190345729654,
+     "tonal_delta": {
+      "Motor": 9.371728241706482,
+      "Caja_Engranajes": 7.7745487818160015,
+      "Rodamiento_A": 4.817664250927191,
+      "Rodamiento_B": 7.668286888138212
+     },
+     "alpha_delta": {
+      "Motor": 0.24755218501887044,
+      "Caja_Engranajes": 0.10317760993955316,
+      "Rodamiento_A": 0.030812834356122698,
+      "Rodamiento_B": 0.09981819083553845
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.014088961090967134,
+      0.0118620058152612,
+      -0.0115241419493477,
+      -0.004008478699246476
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.023938765541189566,
+      "Caja_Engranajes|Rodamiento_A": -0.008813091960347852,
+      "Rodamiento_A|Rodamiento_B": -0.0029157184501629185
+     },
+     "graph_gap": 0.47074728723124304,
+     "stability_gap": 3.1777826605742767,
+     "tonal_delta": {
+      "Motor": 9.404605828587327,
+      "Caja_Engranajes": 7.473840914592472,
+      "Rodamiento_A": 5.230137462416753,
+      "Rodamiento_B": 7.737044902900996
+     },
+     "alpha_delta": {
+      "Motor": -0.32567124167845907,
+      "Caja_Engranajes": 0.013570140507112916,
+      "Rodamiento_A": 0.03922376171796782,
+      "Rodamiento_B": 0.006156069781326101
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      -0.01319096536711084,
+      0.01481780939215338,
+      -0.019523662382641138,
+      -0.02167574706198816
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.021814761538864635,
+      "Caja_Engranajes|Rodamiento_A": -0.03412724630993624,
+      "Rodamiento_A|Rodamiento_B": 0.008749574713262431
+     },
+     "graph_gap": 0.4593465296465389,
+     "stability_gap": 3.322993203009824,
+     "tonal_delta": {
+      "Motor": 9.345446489972629,
+      "Caja_Engranajes": 8.299065133877491,
+      "Rodamiento_A": 3.9239383231099136,
+      "Rodamiento_B": 6.989199527670252
+     },
+     "alpha_delta": {
+      "Motor": 0.07026559633271523,
+      "Caja_Engranajes": 0.14861919768947707,
+      "Rodamiento_A": -0.05031603808006191,
+      "Rodamiento_B": -0.08782838321920439
+     }
+    }
+   ]
+  },
+  {
+   "cond": "imbalance",
+   "seed": 102,
+   "sigma": 2.115979558026976,
+   "final": "forcing",
+   "where": "Motor",
+   "first_flag_t": 100.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    0.028466198544187638,
+    0.04645761784478353,
+    -0.060094720445780014,
+    0.007468585172922815
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.00454737547554962,
+    "Caja_Engranajes|Rodamiento_A": -0.016454549478475133,
+    "Rodamiento_A|Rodamiento_B": -0.00021971986173952018
+   },
+   "final_graph_gap": 0.4676135664911598,
+   "graph_gap_cal": 0.47134080533830774,
+   "final_stability_gap": 2.226309937389922,
+   "stability_gap_cal": 2.772782649867014,
+   "extra_modes_final": [
+    [],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": 9.106161321627313,
+    "Caja_Engranajes": 8.196721302867228,
+    "Rodamiento_A": 4.046008484448306,
+    "Rodamiento_B": 6.655447423801512
+   },
+   "final_alpha_delta": {
+    "Motor": -0.08003902650373229,
+    "Caja_Engranajes": -0.0002334596545534584,
+    "Rodamiento_A": 0.11661809020051361,
+    "Rodamiento_B": 0.15219535869362644
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01771063945135465,
+      -0.00758077171774274,
+      -0.02125819825382036,
+      0.0060779539263149385
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.000871344954904818,
+      "Caja_Engranajes|Rodamiento_A": 0.002843283889285564,
+      "Rodamiento_A|Rodamiento_B": 0.00011979550717100551
+     },
+     "graph_gap": 0.46805766075019917,
+     "stability_gap": 2.462198726940308,
+     "tonal_delta": {
+      "Motor": 0.22192208211891895,
+      "Caja_Engranajes": 0.8616656067655342,
+      "Rodamiento_A": -0.516379263069819,
+      "Rodamiento_B": 0.36210471524973187
+     },
+     "alpha_delta": {
+      "Motor": 0.17917716068381617,
+      "Caja_Engranajes": 0.07443632240277087,
+      "Rodamiento_A": 0.1183739265794379,
+      "Rodamiento_B": 0.02688920521243765
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.024382314319832288,
+      0.001982343353681859,
+      -0.03220502053235119,
+      0.012670720978536831
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.022427659272549416,
+      "Caja_Engranajes|Rodamiento_A": -0.013955825377795827,
+      "Rodamiento_A|Rodamiento_B": -0.006999750882089817
+     },
+     "graph_gap": 0.4562717512729221,
+     "stability_gap": 2.3069039399028117,
+     "tonal_delta": {
+      "Motor": 1.3408577720983352,
+      "Caja_Engranajes": 0.44562785527975635,
+      "Rodamiento_A": 0.09757689327774344,
+      "Rodamiento_B": 0.7942349592447204
+     },
+     "alpha_delta": {
+      "Motor": 0.12667263408431118,
+      "Caja_Engranajes": 0.07583334169043043,
+      "Rodamiento_A": 0.01694355518503088,
+      "Rodamiento_B": 0.03169905187842004
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.02223559342064041,
+      -0.008607448738828571,
+      -0.040403154853729584,
+      0.006084407168037931
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0017189960310839414,
+      "Caja_Engranajes|Rodamiento_A": -0.0317170370801807,
+      "Rodamiento_A|Rodamiento_B": 0.02767214689094799
+     },
+     "graph_gap": 0.450567810065466,
+     "stability_gap": 2.392037714839959,
+     "tonal_delta": {
+      "Motor": 2.639521051367929,
+      "Caja_Engranajes": 1.5221845251246826,
+      "Rodamiento_A": 0.9340794185373955,
+      "Rodamiento_B": 1.736869907007053
+     },
+     "alpha_delta": {
+      "Motor": 0.16217765230640802,
+      "Caja_Engranajes": 0.13979042287577603,
+      "Rodamiento_A": -0.006736068588184763,
+      "Rodamiento_B": 0.044030552836023196
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.0034741937393354405,
+      0.00536351362840759,
+      -0.03215598916575413,
+      0.028581079567158385
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.00971638093869931,
+      "Caja_Engranajes|Rodamiento_A": -0.002996297049235652,
+      "Rodamiento_A|Rodamiento_B": 0.01700851979922291
+     },
+     "graph_gap": 0.4709781638414151,
+     "stability_gap": 2.8068866920221045,
+     "tonal_delta": {
+      "Motor": 4.3760307129415565,
+      "Caja_Engranajes": 2.952732625296271,
+      "Rodamiento_A": 2.209737732718052,
+      "Rodamiento_B": 3.3352834121199013
+     },
+     "alpha_delta": {
+      "Motor": -0.021495858949027058,
+      "Caja_Engranajes": -0.07843764786497154,
+      "Rodamiento_A": 0.048580767973668504,
+      "Rodamiento_B": 0.08633313214448335
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.00035425271729017105,
+      -0.008235638444691107,
+      0.0013389493831421628,
+      0.02082982142370371
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.02727563758677909,
+      "Caja_Engranajes|Rodamiento_A": -0.0032364046385837675,
+      "Rodamiento_A|Rodamiento_B": 0.004483915419527085
+     },
+     "graph_gap": 0.45702490012384256,
+     "stability_gap": 2.7845929425597635,
+     "tonal_delta": {
+      "Motor": 4.951862515688738,
+      "Caja_Engranajes": 3.610387939111412,
+      "Rodamiento_A": 2.4319151512846098,
+      "Rodamiento_B": 3.7445254052129986
+     },
+     "alpha_delta": {
+      "Motor": 0.3342116109728883,
+      "Caja_Engranajes": 0.051634142327163124,
+      "Rodamiento_A": 0.1384970837627174,
+      "Rodamiento_B": 0.2013573492513432
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.021952895729862032,
+      -0.008602739967478401,
+      -0.01463521514972288,
+      0.012518929656770705
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.014954626435850216,
+      "Caja_Engranajes|Rodamiento_A": 0.027051718415983306,
+      "Rodamiento_A|Rodamiento_B": -0.0016903068651817899
+     },
+     "graph_gap": 0.4666886199345629,
+     "stability_gap": 3.1481882590714863,
+     "tonal_delta": {
+      "Motor": 5.895658098687754,
+      "Caja_Engranajes": 4.848284295658242,
+      "Rodamiento_A": 2.9607701639570365,
+      "Rodamiento_B": 4.782611278424275
+     },
+     "alpha_delta": {
+      "Motor": 0.17786652503315925,
+      "Caja_Engranajes": 0.02098820060444795,
+      "Rodamiento_A": 0.0353474580876354,
+      "Rodamiento_B": 0.01729369240695089
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.03818534546477581,
+      0.014275412299233903,
+      -0.041062269838259,
+      0.026129687522413736
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.025299118912855523,
+      "Caja_Engranajes|Rodamiento_A": 0.015991022063501337,
+      "Rodamiento_A|Rodamiento_B": 0.004463533679469833
+     },
+     "graph_gap": 0.46395079977860043,
+     "stability_gap": 2.8442126908848815,
+     "tonal_delta": {
+      "Motor": 6.8058570147315685,
+      "Caja_Engranajes": 5.282158698951244,
+      "Rodamiento_A": 4.121420333907345,
+      "Rodamiento_B": 5.62544332761696
+     },
+     "alpha_delta": {
+      "Motor": 0.20573417120283288,
+      "Caja_Engranajes": 0.26985591382053764,
+      "Rodamiento_A": 0.12138716668508076,
+      "Rodamiento_B": 0.13068225085476515
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.03589702643286952,
+      0.028052030180562237,
+      -0.03871078095577163,
+      -0.0012338157476905476
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.01998786058849733,
+      "Caja_Engranajes|Rodamiento_A": 0.03282441195867625,
+      "Rodamiento_A|Rodamiento_B": -0.01024440356297418
+     },
+     "graph_gap": 0.47685185330772717,
+     "stability_gap": 2.6069283973389656,
+     "tonal_delta": {
+      "Motor": 7.082067650872638,
+      "Caja_Engranajes": 5.591972965588051,
+      "Rodamiento_A": 3.6649728657536933,
+      "Rodamiento_B": 5.186320022045209
+     },
+     "alpha_delta": {
+      "Motor": 0.0421699180167352,
+      "Caja_Engranajes": 0.09920215259592013,
+      "Rodamiento_A": 0.16615556808186593,
+      "Rodamiento_B": 0.1314998730226582
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.01904590936520223,
+      0.043466097886385224,
+      -0.028355436471486417,
+      0.009009583162706392
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.011727800239811126,
+      "Caja_Engranajes|Rodamiento_A": 0.002827569820993414,
+      "Rodamiento_A|Rodamiento_B": -0.0031109422287083355
+     },
+     "graph_gap": 0.46794878496542625,
+     "stability_gap": 2.495697038294021,
+     "tonal_delta": {
+      "Motor": 8.264217961316445,
+      "Caja_Engranajes": 7.146714791405504,
+      "Rodamiento_A": 4.5812277240354025,
+      "Rodamiento_B": 6.575870184668014
+     },
+     "alpha_delta": {
+      "Motor": -0.12830179042087653,
+      "Caja_Engranajes": -0.157839746935172,
+      "Rodamiento_A": 0.03584425567866911,
+      "Rodamiento_B": 0.007451716414027643
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.0395586798302896,
+      0.03820435022835866,
+      -0.05327446546247727,
+      0.02493564561490169
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.009323003625596238,
+      "Caja_Engranajes|Rodamiento_A": 0.0038154767092446473,
+      "Rodamiento_A|Rodamiento_B": 0.008609986149999305
+     },
+     "graph_gap": 0.4710430466293034,
+     "stability_gap": 2.533556389240375,
+     "tonal_delta": {
+      "Motor": 9.309461430471377,
+      "Caja_Engranajes": 7.805197368413657,
+      "Rodamiento_A": 5.850989012763767,
+      "Rodamiento_B": 7.745413627956159
+     },
+     "alpha_delta": {
+      "Motor": -0.03997549415823842,
+      "Caja_Engranajes": -0.01822157634635846,
+      "Rodamiento_A": -0.05057699293424345,
+      "Rodamiento_B": 0.0037936671732525795
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.04556941376737611,
+      0.05773639632686178,
+      -0.07080027282830759,
+      0.019969174373037468
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.007128150357500029,
+      "Caja_Engranajes|Rodamiento_A": -0.02001674164677092,
+      "Rodamiento_A|Rodamiento_B": 0.017031149651509647
+     },
+     "graph_gap": 0.4537990500373753,
+     "stability_gap": 2.2870244451659443,
+     "tonal_delta": {
+      "Motor": 9.43300293310597,
+      "Caja_Engranajes": 8.10307054547203,
+      "Rodamiento_A": 5.614911906119639,
+      "Rodamiento_B": 7.596034137819734
+     },
+     "alpha_delta": {
+      "Motor": 0.13066691210870207,
+      "Caja_Engranajes": -0.12220100278908985,
+      "Rodamiento_A": 0.24656362463147707,
+      "Rodamiento_B": 0.26608932401162844
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "forcing",
+     "where": "Motor",
+     "mount_rel": [
+      0.028466198544187638,
+      0.04645761784478353,
+      -0.060094720445780014,
+      0.007468585172922815
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.00454737547554962,
+      "Caja_Engranajes|Rodamiento_A": -0.016454549478475133,
+      "Rodamiento_A|Rodamiento_B": -0.00021971986173952018
+     },
+     "graph_gap": 0.4676135664911598,
+     "stability_gap": 2.226309937389922,
+     "tonal_delta": {
+      "Motor": 9.106161321627313,
+      "Caja_Engranajes": 8.196721302867228,
+      "Rodamiento_A": 4.046008484448306,
+      "Rodamiento_B": 6.655447423801512
+     },
+     "alpha_delta": {
+      "Motor": -0.08003902650373229,
+      "Caja_Engranajes": -0.0002334596545534584,
+      "Rodamiento_A": 0.11661809020051361,
+      "Rodamiento_B": 0.15219535869362644
+     }
+    }
+   ]
+  },
+  {
+   "cond": "bearing",
+   "seed": 100,
+   "sigma": 2.1312114139447744,
+   "final": "impacts",
+   "where": "Rodamiento_B",
+   "first_flag_t": 150.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    0.0040060979377969375,
+    0.028946386688850634,
+    -0.024643149274638843,
+    -0.01877062884761105
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": -0.005036789114841511,
+    "Caja_Engranajes|Rodamiento_A": -0.008071171857303883,
+    "Rodamiento_A|Rodamiento_B": -0.007327383692448786
+   },
+   "final_graph_gap": 0.4666352038595033,
+   "graph_gap_cal": 0.4654692273197297,
+   "final_stability_gap": 2.807708517635905,
+   "stability_gap_cal": 2.3659532447766614,
+   "extra_modes_final": [
+    [
+     43.71
+    ],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -0.06307286893393638,
+    "Caja_Engranajes": 0.14959946377894084,
+    "Rodamiento_A": 0.6134364254570706,
+    "Rodamiento_B": 0.06970580516400382
+   },
+   "final_alpha_delta": {
+    "Motor": -0.1926111693480348,
+    "Caja_Engranajes": 0.049071668147814496,
+    "Rodamiento_A": -0.020214075455115776,
+    "Rodamiento_B": -0.9337178042700436
+   },
+   "fiedler_cut": [
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ],
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.004109494976332062,
+      0.008591352279264886,
+      0.006571014008310616,
+      -0.00724586991219478
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.00873433280225877,
+      "Caja_Engranajes|Rodamiento_A": -0.033758105992079734,
+      "Rodamiento_A|Rodamiento_B": -0.013228610435940258
+     },
+     "graph_gap": 0.4680126387879977,
+     "stability_gap": 2.4160889643642607,
+     "tonal_delta": {
+      "Motor": 0.44312982842621906,
+      "Caja_Engranajes": 0.937476264853732,
+      "Rodamiento_A": 0.31497595580333737,
+      "Rodamiento_B": -0.23861880670778213
+     },
+     "alpha_delta": {
+      "Motor": -0.2603967180350204,
+      "Caja_Engranajes": 0.09834283083775808,
+      "Rodamiento_A": 0.1232924701659115,
+      "Rodamiento_B": -0.01025797340799417
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.007609906959417545,
+      0.010438871295810337,
+      0.014201056124829137,
+      -0.005460015135015706
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.016095813059920028,
+      "Caja_Engranajes|Rodamiento_A": -0.008731671221076542,
+      "Rodamiento_A|Rodamiento_B": -0.022825998124004765
+     },
+     "graph_gap": 0.46158677293591954,
+     "stability_gap": 2.530195185047611,
+     "tonal_delta": {
+      "Motor": 1.1655897744567838,
+      "Caja_Engranajes": 0.7876906506908448,
+      "Rodamiento_A": 1.0335309647942168,
+      "Rodamiento_B": 1.1593295118804932
+     },
+     "alpha_delta": {
+      "Motor": -0.3121483590758314,
+      "Caja_Engranajes": 0.1312948327872001,
+      "Rodamiento_A": 0.007054061820294111,
+      "Rodamiento_B": -0.1331352964743927
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.006836321589722916,
+      0.01597234397731606,
+      0.015303280813241837,
+      -0.02258916578378023
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.01278703560696881,
+      "Caja_Engranajes|Rodamiento_A": -0.008303049096300086,
+      "Rodamiento_A|Rodamiento_B": -0.01751940157320231
+     },
+     "graph_gap": 0.46406966202336897,
+     "stability_gap": 2.818759302974833,
+     "tonal_delta": {
+      "Motor": 0.3721354840066837,
+      "Caja_Engranajes": 0.3219923112980112,
+      "Rodamiento_A": 0.7040811935373128,
+      "Rodamiento_B": 0.6088197079351101
+     },
+     "alpha_delta": {
+      "Motor": -0.3058255048119467,
+      "Caja_Engranajes": 0.22335664703356595,
+      "Rodamiento_A": -0.07666610351052905,
+      "Rodamiento_B": -0.15369708873140042
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.02903748336012657,
+      0.012654065774280632,
+      0.015958654564385277,
+      -0.010303807240749085
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.03891243966613578,
+      "Caja_Engranajes|Rodamiento_A": 0.018197300656533688,
+      "Rodamiento_A|Rodamiento_B": -0.0228619728538475
+     },
+     "graph_gap": 0.46544111659491383,
+     "stability_gap": 2.5978933263338106,
+     "tonal_delta": {
+      "Motor": 0.5513532551066049,
+      "Caja_Engranajes": 0.1627036622400766,
+      "Rodamiento_A": 0.5305542364019082,
+      "Rodamiento_B": 0.35907011888938634
+     },
+     "alpha_delta": {
+      "Motor": -0.2778913271347938,
+      "Caja_Engranajes": 0.17276613605190572,
+      "Rodamiento_A": -0.0671427325332653,
+      "Rodamiento_B": -0.07547847635751093
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.0023521067256029315,
+      0.014660927869400098,
+      0.013930812913336865,
+      -0.0019438312421420356
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.008940030854906578,
+      "Caja_Engranajes|Rodamiento_A": -0.006693324504041365,
+      "Rodamiento_A|Rodamiento_B": -0.01868397996836868
+     },
+     "graph_gap": 0.4625222027468764,
+     "stability_gap": 2.515254710125715,
+     "tonal_delta": {
+      "Motor": 0.11210959473969595,
+      "Caja_Engranajes": -0.0005941158816114012,
+      "Rodamiento_A": 0.29109745340291227,
+      "Rodamiento_B": 0.6242997783849518
+     },
+     "alpha_delta": {
+      "Motor": -0.22328963917368805,
+      "Caja_Engranajes": 0.11572445187688785,
+      "Rodamiento_A": 0.07136622743160093,
+      "Rodamiento_B": -0.11216989864475901
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.022067969527131304,
+      0.0007904588005689384,
+      0.011310716792822362,
+      -0.0014587202264173538
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.03177667327112821,
+      "Caja_Engranajes|Rodamiento_A": -0.011738152771751942,
+      "Rodamiento_A|Rodamiento_B": -0.01752475736314163
+     },
+     "graph_gap": 0.45895958842724915,
+     "stability_gap": 2.4847887137223745,
+     "tonal_delta": {
+      "Motor": 1.07591671610772,
+      "Caja_Engranajes": 0.6370823376058361,
+      "Rodamiento_A": 1.4156198698753606,
+      "Rodamiento_B": 1.6990765562362267
+     },
+     "alpha_delta": {
+      "Motor": -0.44073485146573543,
+      "Caja_Engranajes": 0.23083844876436554,
+      "Rodamiento_A": 0.008430825576659862,
+      "Rodamiento_B": -0.19476380770504498
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.00826552550099846,
+      -0.004933597767340148,
+      0.034508445764853235,
+      -0.0068096674280747616
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.002204240530771173,
+      "Caja_Engranajes|Rodamiento_A": 0.004457981594549576,
+      "Rodamiento_A|Rodamiento_B": -0.03309620873371344
+     },
+     "graph_gap": 0.4700026584850155,
+     "stability_gap": 2.5262067432298805,
+     "tonal_delta": {
+      "Motor": 0.4848846047513362,
+      "Caja_Engranajes": 0.7184571957739756,
+      "Rodamiento_A": -0.02227985059020199,
+      "Rodamiento_B": 0.38975326869361204
+     },
+     "alpha_delta": {
+      "Motor": -0.2031450448154326,
+      "Caja_Engranajes": 0.1263979971890945,
+      "Rodamiento_A": -0.07476999595023137,
+      "Rodamiento_B": -0.15622152402360034
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.006308951436732713,
+      -0.00457917084933035,
+      0.028176395558835,
+      -0.012050290064320679
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.020275818773802023,
+      "Caja_Engranajes|Rodamiento_A": -0.023639841834125708,
+      "Rodamiento_A|Rodamiento_B": -0.00976691576095734
+     },
+     "graph_gap": 0.478739664250318,
+     "stability_gap": 2.6846696397836496,
+     "tonal_delta": {
+      "Motor": -0.18394991250042736,
+      "Caja_Engranajes": -0.20942796590203372,
+      "Rodamiento_A": -0.08106417672726351,
+      "Rodamiento_B": -0.6668783217481185
+     },
+     "alpha_delta": {
+      "Motor": -0.18396316787151368,
+      "Caja_Engranajes": 0.19749136394262545,
+      "Rodamiento_A": 0.07280964931090961,
+      "Rodamiento_B": -0.20398780901989144
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "impacts",
+     "where": "Motor",
+     "mount_rel": [
+      0.008869776168605847,
+      0.010344301739685813,
+      0.015798195596746112,
+      -0.01749462187951978
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.003835600516813198,
+      "Caja_Engranajes|Rodamiento_A": -0.04061413191843266,
+      "Rodamiento_A|Rodamiento_B": -0.0016313872562924159
+     },
+     "graph_gap": 0.4664238758418056,
+     "stability_gap": 2.950517307973155,
+     "tonal_delta": {
+      "Motor": 0.15670997171885404,
+      "Caja_Engranajes": 0.4495069319509568,
+      "Rodamiento_A": -0.04433130708398281,
+      "Rodamiento_B": 0.218592199028933
+     },
+     "alpha_delta": {
+      "Motor": -0.5599543016684856,
+      "Caja_Engranajes": 0.18927760231489743,
+      "Rodamiento_A": 0.014870061945676305,
+      "Rodamiento_B": -0.5138991797292805
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.0010098626845695957,
+      0.014792211387294918,
+      0.011921921589047146,
+      -0.012834941858882676
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.010900889110034173,
+      "Caja_Engranajes|Rodamiento_A": -0.03322272296672546,
+      "Rodamiento_A|Rodamiento_B": -0.0009783184112408527
+     },
+     "graph_gap": 0.4696163238040537,
+     "stability_gap": 3.006110788481939,
+     "tonal_delta": {
+      "Motor": -0.35573362692088395,
+      "Caja_Engranajes": 0.22203448669401382,
+      "Rodamiento_A": 0.8167539014333549,
+      "Rodamiento_B": 0.04519370069029982
+     },
+     "alpha_delta": {
+      "Motor": -0.10072672886804845,
+      "Caja_Engranajes": -0.038259712547559444,
+      "Rodamiento_A": 0.05717590117153537,
+      "Rodamiento_B": -0.6722183479245298
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.0006872899881610328,
+      0.019903318890882815,
+      -0.02083838682924477,
+      -0.013316546586601863
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0009892472534622776,
+      "Caja_Engranajes|Rodamiento_A": -0.020517492139840665,
+      "Rodamiento_A|Rodamiento_B": -0.009178224836181137
+     },
+     "graph_gap": 0.4597093882959619,
+     "stability_gap": 3.2240775197673623,
+     "tonal_delta": {
+      "Motor": 0.34795009830470747,
+      "Caja_Engranajes": 0.08810195335527737,
+      "Rodamiento_A": 1.2333150904227637,
+      "Rodamiento_B": 0.9096617383186665
+     },
+     "alpha_delta": {
+      "Motor": -0.10391540295515234,
+      "Caja_Engranajes": 0.21196260310307125,
+      "Rodamiento_A": 0.06426266924217305,
+      "Rodamiento_B": -0.8137678734008627
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.0040060979377969375,
+      0.028946386688850634,
+      -0.024643149274638843,
+      -0.01877062884761105
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.005036789114841511,
+      "Caja_Engranajes|Rodamiento_A": -0.008071171857303883,
+      "Rodamiento_A|Rodamiento_B": -0.007327383692448786
+     },
+     "graph_gap": 0.4666352038595033,
+     "stability_gap": 2.807708517635905,
+     "tonal_delta": {
+      "Motor": -0.06307286893393638,
+      "Caja_Engranajes": 0.14959946377894084,
+      "Rodamiento_A": 0.6134364254570706,
+      "Rodamiento_B": 0.06970580516400382
+     },
+     "alpha_delta": {
+      "Motor": -0.1926111693480348,
+      "Caja_Engranajes": 0.049071668147814496,
+      "Rodamiento_A": -0.020214075455115776,
+      "Rodamiento_B": -0.9337178042700436
+     }
+    }
+   ]
+  },
+  {
+   "cond": "bearing",
+   "seed": 101,
+   "sigma": 2.1055109217465215,
+   "final": "impacts",
+   "where": "Rodamiento_B",
+   "first_flag_t": 160.0,
+   "false_windows": 0,
+   "final_mount_rel": [
+    -0.0030100271704760484,
+    -0.0010814491342383548,
+    -0.001449413021024526,
+    -0.010440545472078955
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.014065345467968005,
+    "Caja_Engranajes|Rodamiento_A": -0.019848292049073568,
+    "Rodamiento_A|Rodamiento_B": -0.00617260083357718
+   },
+   "final_graph_gap": 0.46534024343756786,
+   "graph_gap_cal": 0.47527931703925863,
+   "final_stability_gap": 3.3393715614105948,
+   "stability_gap_cal": 2.5833743007425833,
+   "extra_modes_final": [
+    [
+     44.58
+    ],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -0.0635751882115656,
+    "Caja_Engranajes": 0.5481650901250141,
+    "Rodamiento_A": -0.7225751651772327,
+    "Rodamiento_B": -0.06260011640017282
+   },
+   "final_alpha_delta": {
+    "Motor": -0.01023780934030638,
+    "Caja_Engranajes": 0.143181519231115,
+    "Rodamiento_A": -0.0700211894719206,
+    "Rodamiento_B": -0.9400563870230176
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": 0.23359128640753468,
+      "Caja_Engranajes": -1.3000418097976834,
+      "Rodamiento_A": -0.01495782123543421,
+      "Rodamiento_B": 1.03783074512452
+     },
+     "alpha_delta": {
+      "Motor": 0.03158096548698919,
+      "Caja_Engranajes": 0.1374896383014017,
+      "Rodamiento_A": -0.11814153369086622,
+      "Rodamiento_B": -0.10599299743403168
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "tonal_delta": {
+      "Motor": -0.33901287182573725,
+      "Caja_Engranajes": -0.9212648917747011,
+      "Rodamiento_A": -0.8907956993077732,
+      "Rodamiento_B": -0.03380195676246167
+     },
+     "alpha_delta": {
+      "Motor": 0.01574938685266969,
+      "Caja_Engranajes": 0.21287040063986384,
+      "Rodamiento_A": -0.06262832517712402,
+      "Rodamiento_B": -0.054797571409032075
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.008820553432248301,
+      -0.0067679372571143315,
+      0.007536696985149582,
+      -0.005989632183852178
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.027590936529859,
+      "Caja_Engranajes|Rodamiento_A": 0.010076584876123507,
+      "Rodamiento_A|Rodamiento_B": -0.010994109723747147
+     },
+     "graph_gap": 0.4683729423171388,
+     "stability_gap": 2.442223215543372,
+     "tonal_delta": {
+      "Motor": -0.7039281470544942,
+      "Caja_Engranajes": 0.45036322445938026,
+      "Rodamiento_A": -2.029811489269843,
+      "Rodamiento_B": -0.7255688293607836
+     },
+     "alpha_delta": {
+      "Motor": 0.09280420013489121,
+      "Caja_Engranajes": 0.06197910203683521,
+      "Rodamiento_A": -0.20199550675647993,
+      "Rodamiento_B": -0.026812990692124172
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.015745389446127245,
+      0.005790417122835567,
+      0.010057852143598112,
+      -0.011992298927117728
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0012004756395831429,
+      "Caja_Engranajes|Rodamiento_A": 0.0020909906187625005,
+      "Rodamiento_A|Rodamiento_B": -0.001303913013112279
+     },
+     "graph_gap": 0.46645534967509217,
+     "stability_gap": 2.5722984144867658,
+     "tonal_delta": {
+      "Motor": 0.003593600437923783,
+      "Caja_Engranajes": 0.6724567646557098,
+      "Rodamiento_A": -0.7687951759669076,
+      "Rodamiento_B": 0.7534458234684909
+     },
+     "alpha_delta": {
+      "Motor": -0.15749412417180308,
+      "Caja_Engranajes": 0.1651586779391303,
+      "Rodamiento_A": -0.07966363755455685,
+      "Rodamiento_B": 0.03991791708363479
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.0016423304291313112,
+      0.013410634669758448,
+      -0.011324936238646499,
+      -0.015364941084244021
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.013843996911675926,
+      "Caja_Engranajes|Rodamiento_A": -0.0018906327764421915,
+      "Rodamiento_A|Rodamiento_B": 0.011728039817036962
+     },
+     "graph_gap": 0.47975889832890317,
+     "stability_gap": 2.4339089700014167,
+     "tonal_delta": {
+      "Motor": 0.12841722343753403,
+      "Caja_Engranajes": -0.7486166272517529,
+      "Rodamiento_A": -0.3332407056570936,
+      "Rodamiento_B": 1.0496774356707785
+     },
+     "alpha_delta": {
+      "Motor": -0.050935484537819375,
+      "Caja_Engranajes": -0.23480120125565462,
+      "Rodamiento_A": -0.0688395532676287,
+      "Rodamiento_B": -0.10616773883732822
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.014559887562875184,
+      0.017311637709438887,
+      0.008625357739646455,
+      -0.004862900137498349
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.010068786002061847,
+      "Caja_Engranajes|Rodamiento_A": 0.024029046464232984,
+      "Rodamiento_A|Rodamiento_B": -0.014484050937484616
+     },
+     "graph_gap": 0.46718360841763557,
+     "stability_gap": 2.392767028767164,
+     "tonal_delta": {
+      "Motor": -0.7428186061313831,
+      "Caja_Engranajes": -0.8130781275863548,
+      "Rodamiento_A": -1.5168762492268328,
+      "Rodamiento_B": -0.16699533281356516
+     },
+     "alpha_delta": {
+      "Motor": 0.18241514636684397,
+      "Caja_Engranajes": -0.023053796926668646,
+      "Rodamiento_A": -0.18437787971785724,
+      "Rodamiento_B": -0.15659412442055265
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.004826577673851196,
+      0.013604484807183681,
+      -0.00586481013710638,
+      -0.004369332606036558
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.045436613339464804,
+      "Caja_Engranajes|Rodamiento_A": 0.045034506717405165,
+      "Rodamiento_A|Rodamiento_B": -0.004546551911513097
+     },
+     "graph_gap": 0.4819716018016577,
+     "stability_gap": 2.3799063120040964,
+     "tonal_delta": {
+      "Motor": 0.20419435880563697,
+      "Caja_Engranajes": -0.08666820930564256,
+      "Rodamiento_A": -0.3213997608221568,
+      "Rodamiento_B": 0.1622733413180839
+     },
+     "alpha_delta": {
+      "Motor": -0.09664019679649916,
+      "Caja_Engranajes": 0.06410583798659131,
+      "Rodamiento_A": 0.04264918181082589,
+      "Rodamiento_B": -0.0917858373698246
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.011651481096955907,
+      0.010103712822947752,
+      0.015663323425111342,
+      0.011309055672265478
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.01597690087598691,
+      "Caja_Engranajes|Rodamiento_A": 0.02993758848202166,
+      "Rodamiento_A|Rodamiento_B": -0.008812575450971472
+     },
+     "graph_gap": 0.4704404902538474,
+     "stability_gap": 2.457197201664642,
+     "tonal_delta": {
+      "Motor": -0.20396607506415876,
+      "Caja_Engranajes": -0.19590607711701935,
+      "Rodamiento_A": -1.0870400677201673,
+      "Rodamiento_B": -0.2640463792977652
+     },
+     "alpha_delta": {
+      "Motor": -0.3511982357474617,
+      "Caja_Engranajes": 0.03111064751771031,
+      "Rodamiento_A": -0.11815433191835989,
+      "Rodamiento_B": -0.24821589049060122
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.017722576734345186,
+      0.0038056259346002097,
+      -0.0006445891095920864,
+      0.012798717086452527
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.004073749111782932,
+      "Caja_Engranajes|Rodamiento_A": 0.022359538071061724,
+      "Rodamiento_A|Rodamiento_B": -0.004749458668316664
+     },
+     "graph_gap": 0.46186121903450716,
+     "stability_gap": 3.142848803007966,
+     "tonal_delta": {
+      "Motor": 0.06503460105635384,
+      "Caja_Engranajes": 0.05250314762914954,
+      "Rodamiento_A": -1.0930971447182145,
+      "Rodamiento_B": -0.2177796945765298
+     },
+     "alpha_delta": {
+      "Motor": -0.07733685331447093,
+      "Caja_Engranajes": -0.0837969696980404,
+      "Rodamiento_A": -0.0979794234838075,
+      "Rodamiento_B": -0.4000980165443643
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.016640393837578316,
+      -0.0048185949149446294,
+      -0.010719461541595643,
+      0.005191777101515971
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.020574907230140216,
+      "Caja_Engranajes|Rodamiento_A": -0.011669499965575758,
+      "Rodamiento_A|Rodamiento_B": 0.03148121542199345
+     },
+     "graph_gap": 0.4636438057172807,
+     "stability_gap": 3.0468532827185957,
+     "tonal_delta": {
+      "Motor": 0.6808703357418366,
+      "Caja_Engranajes": -0.012724836609532275,
+      "Rodamiento_A": 0.15535134196358413,
+      "Rodamiento_B": 1.5750273206234713
+     },
+     "alpha_delta": {
+      "Motor": 0.07189608228356392,
+      "Caja_Engranajes": 0.09931755147990007,
+      "Rodamiento_A": 0.0310419230058957,
+      "Rodamiento_B": -0.6568259586180671
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.027543109776695163,
+      0.0034863082538409973,
+      0.002280860877849289,
+      -0.010256346479462608
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.015341764020694537,
+      "Caja_Engranajes|Rodamiento_A": -0.006770185025333775,
+      "Rodamiento_A|Rodamiento_B": 0.009703617767194972
+     },
+     "graph_gap": 0.4732270730579726,
+     "stability_gap": 3.161162935979859,
+     "tonal_delta": {
+      "Motor": -0.040094118600258355,
+      "Caja_Engranajes": -1.1129889166540146,
+      "Rodamiento_A": 0.7727642768403982,
+      "Rodamiento_B": 1.3045822697808411
+     },
+     "alpha_delta": {
+      "Motor": -0.21029115224663153,
+      "Caja_Engranajes": 0.018995930802228944,
+      "Rodamiento_A": 0.026300997202233778,
+      "Rodamiento_B": -0.8112518585162342
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      -0.0030100271704760484,
+      -0.0010814491342383548,
+      -0.001449413021024526,
+      -0.010440545472078955
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.014065345467968005,
+      "Caja_Engranajes|Rodamiento_A": -0.019848292049073568,
+      "Rodamiento_A|Rodamiento_B": -0.00617260083357718
+     },
+     "graph_gap": 0.46534024343756786,
+     "stability_gap": 3.3393715614105948,
+     "tonal_delta": {
+      "Motor": -0.0635751882115656,
+      "Caja_Engranajes": 0.5481650901250141,
+      "Rodamiento_A": -0.7225751651772327,
+      "Rodamiento_B": -0.06260011640017282
+     },
+     "alpha_delta": {
+      "Motor": -0.01023780934030638,
+      "Caja_Engranajes": 0.143181519231115,
+      "Rodamiento_A": -0.0700211894719206,
+      "Rodamiento_B": -0.9400563870230176
+     }
+    }
+   ]
+  },
+  {
+   "cond": "bearing",
+   "seed": 102,
+   "sigma": 2.115979558026976,
+   "final": "impacts",
+   "where": "Rodamiento_B",
+   "first_flag_t": 130.0,
+   "false_windows": 1,
+   "final_mount_rel": [
+    0.03202411142768469,
+    0.027050965738474098,
+    -0.04404415955031038,
+    0.008364756312688959
+   ],
+   "final_coupling_rel": {
+    "Motor|Caja_Engranajes": 0.0515698946695784,
+    "Caja_Engranajes|Rodamiento_A": 0.0036396215656897546,
+    "Rodamiento_A|Rodamiento_B": -0.0021947934464410235
+   },
+   "final_graph_gap": 0.4633496527357506,
+   "graph_gap_cal": 0.47134080533830774,
+   "final_stability_gap": 2.167955366723391,
+   "stability_gap_cal": 2.772782649867014,
+   "extra_modes_final": [
+    [
+     44.64
+    ],
+    []
+   ],
+   "final_tonal_delta": {
+    "Motor": -0.5922351133030119,
+    "Caja_Engranajes": -0.08403502445099775,
+    "Rodamiento_A": -1.0982080371702985,
+    "Rodamiento_B": -0.1508624987455338
+   },
+   "final_alpha_delta": {
+    "Motor": -0.11022960082983158,
+    "Caja_Engranajes": -0.16596032608518652,
+    "Rodamiento_A": 0.11320048538407712,
+    "Rodamiento_B": -0.7030364395633144
+   },
+   "fiedler_cut": [
+    [
+     "Motor",
+     "Caja_Engranajes"
+    ],
+    [
+     "Rodamiento_A",
+     "Rodamiento_B"
+    ]
+   ],
+   "series": [
+    {
+     "t": 70.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.023945431105302672,
+      -0.004578324244148613,
+      -0.021566629180247654,
+      0.015288498199069522
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": -0.0002010553369685697,
+      "Caja_Engranajes|Rodamiento_A": -0.00043154685711088714,
+      "Rodamiento_A|Rodamiento_B": -0.0011662817653754765
+     },
+     "graph_gap": 0.4638631335751996,
+     "stability_gap": 2.4590811286970107,
+     "tonal_delta": {
+      "Motor": -0.2562913157079798,
+      "Caja_Engranajes": 0.542090420869787,
+      "Rodamiento_A": -0.5877141969614286,
+      "Rodamiento_B": 0.16538414462863749
+     },
+     "alpha_delta": {
+      "Motor": 0.17053760513672622,
+      "Caja_Engranajes": 0.07566851073890923,
+      "Rodamiento_A": 0.11612060470769725,
+      "Rodamiento_B": 0.028405675346811377
+     }
+    },
+    {
+     "t": 80.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.021983785205797357,
+      -0.0035646787958573123,
+      -0.026475145067227146,
+      0.013470418684944585
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.010099206106185754,
+      "Caja_Engranajes|Rodamiento_A": -0.010992509015211649,
+      "Rodamiento_A|Rodamiento_B": -0.007259956992872296
+     },
+     "graph_gap": 0.4585398415946689,
+     "stability_gap": 2.2995668613615856,
+     "tonal_delta": {
+      "Motor": -0.6483478858549638,
+      "Caja_Engranajes": -1.1918441778048816,
+      "Rodamiento_A": -0.5801707189194829,
+      "Rodamiento_B": -0.2875356200174508
+     },
+     "alpha_delta": {
+      "Motor": 0.12285063045039046,
+      "Caja_Engranajes": 0.04601720769450468,
+      "Rodamiento_A": 0.01681980899285418,
+      "Rodamiento_B": 0.06876831266988426
+     }
+    },
+    {
+     "t": 90.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.021864227034241512,
+      -0.0025681393585099688,
+      -0.03068362382827572,
+      0.01868997620542978
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.024494156170581816,
+      "Caja_Engranajes|Rodamiento_A": -0.012464356841913826,
+      "Rodamiento_A|Rodamiento_B": 0.007861716021619003
+     },
+     "graph_gap": 0.46288673299241523,
+     "stability_gap": 2.394897783085175,
+     "tonal_delta": {
+      "Motor": -0.5589242118034576,
+      "Caja_Engranajes": -1.1979415572898056,
+      "Rodamiento_A": -0.23339324726390842,
+      "Rodamiento_B": -0.09434279435309278
+     },
+     "alpha_delta": {
+      "Motor": 0.12065078347394809,
+      "Caja_Engranajes": 0.13780417654193022,
+      "Rodamiento_A": -0.0045826745453265705,
+      "Rodamiento_B": -0.010194124707493035
+     }
+    },
+    {
+     "t": 100.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.01578093873210773,
+      0.004500092146061174,
+      -0.03420443172722343,
+      0.025986575022558966
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.055899105517344116,
+      "Caja_Engranajes|Rodamiento_A": 0.012464457068279255,
+      "Rodamiento_A|Rodamiento_B": 0.009433109318858879
+     },
+     "graph_gap": 0.47080225193544634,
+     "stability_gap": 2.823546710665622,
+     "tonal_delta": {
+      "Motor": 0.5407584326314314,
+      "Caja_Engranajes": -0.5080356548409348,
+      "Rodamiento_A": 0.8615724800472435,
+      "Rodamiento_B": 1.153646607226971
+     },
+     "alpha_delta": {
+      "Motor": -0.10816924716357468,
+      "Caja_Engranajes": -0.12840005918671604,
+      "Rodamiento_A": 0.043844154393673396,
+      "Rodamiento_B": 0.0867950321552029
+     }
+    },
+    {
+     "t": 110.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.006650837658499942,
+      -0.010748063655715123,
+      -0.027147336937699773,
+      0.032502182725397066
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.034770684712549516,
+      "Caja_Engranajes|Rodamiento_A": -0.008664238175840056,
+      "Rodamiento_A|Rodamiento_B": -0.0022582716223575883
+     },
+     "graph_gap": 0.46657992573281193,
+     "stability_gap": 2.8125308041779524,
+     "tonal_delta": {
+      "Motor": -0.4481043782852261,
+      "Caja_Engranajes": -1.2792323152052312,
+      "Rodamiento_A": 0.11912440535209612,
+      "Rodamiento_B": 0.4102785999018774
+     },
+     "alpha_delta": {
+      "Motor": 0.1686229831355135,
+      "Caja_Engranajes": 0.03440811032967428,
+      "Rodamiento_A": 0.13718115993062518,
+      "Rodamiento_B": 0.21054303211182002
+     }
+    },
+    {
+     "t": 120.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      -0.01364803908532708,
+      -0.004463161738487154,
+      -0.03219039365543841,
+      0.006393303424977237
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.020137749564941743,
+      "Caja_Engranajes|Rodamiento_A": 0.023292417840692803,
+      "Rodamiento_A|Rodamiento_B": -0.0024658646659252437
+     },
+     "graph_gap": 0.4762424887164096,
+     "stability_gap": 3.132037386705716,
+     "tonal_delta": {
+      "Motor": -0.34706541270435665,
+      "Caja_Engranajes": -0.24865440595192467,
+      "Rodamiento_A": -0.07600212873455447,
+      "Rodamiento_B": 0.6491627683975505
+     },
+     "alpha_delta": {
+      "Motor": 0.06064599838700713,
+      "Caja_Engranajes": 0.02431849756668769,
+      "Rodamiento_A": 0.021800232752971715,
+      "Rodamiento_B": 0.000886149551136195
+     }
+    },
+    {
+     "t": 130.0,
+     "label": "structural",
+     "where": "Motor|Caja_Engranajes",
+     "mount_rel": [
+      0.06029493131759045,
+      0.01547555450402971,
+      9.097963702942025e-05,
+      0.02088743417863914
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.07955897925509725,
+      "Caja_Engranajes|Rodamiento_A": 0.011492421380849827,
+      "Rodamiento_A|Rodamiento_B": -0.022676130807546824
+     },
+     "graph_gap": 0.4598218334947629,
+     "stability_gap": 2.644382862237812,
+     "tonal_delta": {
+      "Motor": -0.028471155952402682,
+      "Caja_Engranajes": -0.6558672640399124,
+      "Rodamiento_A": 1.2789381143513392,
+      "Rodamiento_B": 1.298937256530973
+     },
+     "alpha_delta": {
+      "Motor": 0.15499818136432442,
+      "Caja_Engranajes": 0.2355990175978553,
+      "Rodamiento_A": 0.11732871327279559,
+      "Rodamiento_B": 0.04170343127616072
+     }
+    },
+    {
+     "t": 140.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.005216093585538317,
+      0.019845572207665363,
+      -0.01400584637752511,
+      0.0004933582712625117
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.010891590529461315,
+      "Caja_Engranajes|Rodamiento_A": 0.01845888441865995,
+      "Rodamiento_A|Rodamiento_B": -0.011886373145984397
+     },
+     "graph_gap": 0.49156448651276746,
+     "stability_gap": 2.665791384132466,
+     "tonal_delta": {
+      "Motor": -1.751731871489035,
+      "Caja_Engranajes": -1.6969546698154687,
+      "Rodamiento_A": -0.5765227801619801,
+      "Rodamiento_B": -1.0334943713612699
+     },
+     "alpha_delta": {
+      "Motor": -0.0036595262877012757,
+      "Caja_Engranajes": 0.06731234982768419,
+      "Rodamiento_A": 0.15136191440410707,
+      "Rodamiento_B": -0.03872945661466953
+     }
+    },
+    {
+     "t": 150.0,
+     "label": "healthy",
+     "where": null,
+     "mount_rel": [
+      0.027867843746497645,
+      0.030081858263378614,
+      -0.008641220779524561,
+      0.0020205104632919912
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.015113560831131245,
+      "Caja_Engranajes|Rodamiento_A": -4.7839173705099824e-05,
+      "Rodamiento_A|Rodamiento_B": -0.005542461517159314
+     },
+     "graph_gap": 0.46041509696769106,
+     "stability_gap": 2.581142964444222,
+     "tonal_delta": {
+      "Motor": -0.22726958869679237,
+      "Caja_Engranajes": -0.19491022996290042,
+      "Rodamiento_A": 0.6641436552893278,
+      "Rodamiento_B": 0.7483974881932784
+     },
+     "alpha_delta": {
+      "Motor": -0.023973375886944925,
+      "Caja_Engranajes": -0.21218403929872554,
+      "Rodamiento_A": -0.014397022605451837,
+      "Rodamiento_B": -0.30452030273667974
+     }
+    },
+    {
+     "t": 160.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.02478810996035996,
+      0.036183865601979726,
+      -0.0304545182208682,
+      0.021348674925765643
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0028261429371154723,
+      "Caja_Engranajes|Rodamiento_A": 0.005764548865806685,
+      "Rodamiento_A|Rodamiento_B": -0.0009433119424786529
+     },
+     "graph_gap": 0.4684497642341836,
+     "stability_gap": 2.4879671839886237,
+     "tonal_delta": {
+      "Motor": 0.8053182133864816,
+      "Caja_Engranajes": -0.3317373800462704,
+      "Rodamiento_A": 1.770696387460477,
+      "Rodamiento_B": 1.8444040536032187
+     },
+     "alpha_delta": {
+      "Motor": -0.1776294793138815,
+      "Caja_Engranajes": 0.022262872165633718,
+      "Rodamiento_A": -0.05544344844457627,
+      "Rodamiento_B": -0.6406442970617554
+     }
+    },
+    {
+     "t": 170.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.011548226395122763,
+      0.037158311611313444,
+      -0.04018347389644639,
+      0.003683907872980674
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.008294856232045955,
+      "Caja_Engranajes|Rodamiento_A": -0.011451092613598002,
+      "Rodamiento_A|Rodamiento_B": 0.00027617242727817626
+     },
+     "graph_gap": 0.4670176231733807,
+     "stability_gap": 2.2779999538158355,
+     "tonal_delta": {
+      "Motor": 0.015432734521496627,
+      "Caja_Engranajes": -0.8113973934387602,
+      "Rodamiento_A": 1.1868842528527974,
+      "Rodamiento_B": 1.1476193481912649
+     },
+     "alpha_delta": {
+      "Motor": 0.093782403463476,
+      "Caja_Engranajes": -0.18458790088714827,
+      "Rodamiento_A": 0.23143813381297929,
+      "Rodamiento_B": -0.632223407986263
+     }
+    },
+    {
+     "t": 180.0,
+     "label": "impacts",
+     "where": "Rodamiento_B",
+     "mount_rel": [
+      0.03202411142768469,
+      0.027050965738474098,
+      -0.04404415955031038,
+      0.008364756312688959
+     ],
+     "coupling_rel": {
+      "Motor|Caja_Engranajes": 0.0515698946695784,
+      "Caja_Engranajes|Rodamiento_A": 0.0036396215656897546,
+      "Rodamiento_A|Rodamiento_B": -0.0021947934464410235
+     },
+     "graph_gap": 0.4633496527357506,
+     "stability_gap": 2.167955366723391,
+     "tonal_delta": {
+      "Motor": -0.5922351133030119,
+      "Caja_Engranajes": -0.08403502445099775,
+      "Rodamiento_A": -1.0982080371702985,
+      "Rodamiento_B": -0.1508624987455338
+     },
+     "alpha_delta": {
+      "Motor": -0.11022960082983158,
+      "Caja_Engranajes": -0.16596032608518652,
+      "Rodamiento_A": 0.11320048538407712,
+      "Rodamiento_B": -0.7030364395633144
+     }
+    }
+   ]
+  }
+ ],
+ "confusion": {
+  "healthy->healthy": 3,
+  "mount->structural": 3,
+  "joint->structural": 3,
+  "imbalance->forcing": 3,
+  "bearing->impacts": 3
+ },
+ "accuracy": {
+  "class": 1.0,
+  "n": 15,
+  "localisation_structural": 1.0
+ },
+ "identification": {
+  "mount_rel_err_median_abs": 0.016551827692566468,
+  "mount_rel_err_p95_abs": 0.051047624812122834,
+  "values": 352,
+  "ok_fraction": 0.9592592592592593
+ },
+ "_meta": {
+  "fps": 120.0,
+  "duration_s": 180.0,
+  "window_s": 40.0,
+  "step_s": 10.0,
+  "calibration_end_s": 60.0,
+  "seeds": 3,
+  "calib_seeds": 3,
+  "wall_s": 456.05619859695435
+ }
+}

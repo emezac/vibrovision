@@ -1,0 +1,241 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: VibroVision demo on Graviton with CloudFront HTTPS, authenticated analysis, private evidence and verified readiness.
+Metadata:
+  AWSToolsMetrics: {AWSAgentToolkit: 'aws-cloudformation@3'}
+  com.aws.cloudformation.Context:
+    ref: [{at: DEPLOYMENT_AWS.md, has: architecture and lifecycle, scope: shared}]
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t4g.small
+    AllowedValues: [t4g.small]
+  VpcId: {Type: 'AWS::EC2::VPC::Id'}
+  SubnetId: {Type: 'AWS::EC2::Subnet::Id'}
+  CloudFrontPrefixListId:
+    Type: String
+    AllowedPattern: 'pl-[a-f0-9]+'
+  ReleaseBucket:
+    Type: String
+    AllowedPattern: '[a-z0-9][a-z0-9.-]{1,61}[a-z0-9]'
+  ReleaseKey:
+    Type: String
+    AllowedPattern: 'releases/[a-f0-9]{64}\.tar\.gz'
+  ReleaseSha256:
+    Type: String
+    AllowedPattern: '[a-f0-9]{64}'
+Resources:
+  AccessSecret:
+    Type: AWS::SecretsManager::Secret
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: generated access token shared by the origin guard and authenticated API
+        must: [never put the resolved token in outputs or user data]
+    Properties:
+      Description: VibroVision demo access key; never embedded in source or EC2 user data.
+      GenerateSecretString:
+        SecretStringTemplate: '{"purpose":"vibrovision-demo"}'
+        GenerateStringKey: api_key
+        PasswordLength: 48
+        ExcludePunctuation: true
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      VersioningConfiguration: {Status: Enabled}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules:
+          - Id: expire-evidence
+            Status: Enabled
+            ExpirationInDays: 30
+            NoncurrentVersionExpiration: {NoncurrentDays: 30}
+            AbortIncompleteMultipartUpload: {DaysAfterInitiation: 7}
+      Tags: [{Key: Project, Value: VibroVision}]
+  ArtifactPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ArtifactBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource: [!GetAtt ArtifactBucket.Arn, !Sub '${ArtifactBucket.Arn}/*']
+            Condition: {Bool: {'aws:SecureTransport': false}}
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/vibrovision/${AWS::StackName}'
+      RetentionInDays: 14
+  Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement: [{Effect: Allow, Principal: {Service: ec2.amazonaws.com}, Action: 'sts:AssumeRole'}]
+      ManagedPolicyArns: [!Sub 'arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore']
+      Policies:
+        - PolicyName: application-resources
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - {Effect: Allow, Action: 's3:GetObject', Resource: !Sub 'arn:${AWS::Partition}:s3:::${ReleaseBucket}/${ReleaseKey}'}
+              - {Effect: Allow, Action: ['s3:PutObject', 's3:GetObject'], Resource: !Sub '${ArtifactBucket.Arn}/jobs/*'}
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref AccessSecret}
+              - {Effect: Allow, Action: ['logs:CreateLogStream', 'logs:PutLogEvents', 'logs:DescribeLogStreams'], Resource: !GetAtt LogGroup.Arn}
+              - {Effect: Allow, Action: 'cloudformation:SignalResource', Resource: !Ref 'AWS::StackId'}
+  Profile:
+    Type: AWS::IAM::InstanceProfile
+    Properties: {Roles: [!Ref Role]}
+  SG:
+    Type: AWS::EC2::SecurityGroup
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: reach the instance through the HTTPS distribution while using SSM for management
+        must: [keep ingress scoped to CloudFront origin addresses; keep SSH closed]
+    Properties:
+      VpcId: !Ref VpcId
+      GroupDescription: Only CloudFront origin-facing addresses; no SSH.
+      SecurityGroupIngress:
+        - {IpProtocol: tcp, FromPort: 80, ToPort: 80, SourcePrefixListId: !Ref CloudFrontPrefixListId}
+  Instance:
+    Type: AWS::EC2::Instance
+    CreationPolicy:
+      ResourceSignal: {Count: 1, Timeout: PT25M}
+    Properties:
+      InstanceType: !Ref InstanceType
+      CreditSpecification: {CPUCredits: standard}
+      ImageId: '{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-arm64}}'
+      IamInstanceProfile: !Ref Profile
+      NetworkInterfaces:
+        - DeviceIndex: '0'
+          AssociatePublicIpAddress: true
+          SubnetId: !Ref SubnetId
+          GroupSet: [!Ref SG]
+      MetadataOptions: {HttpTokens: required, HttpPutResponseHopLimit: 2}
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs: {VolumeSize: 24, VolumeType: gp3, Encrypted: true, DeleteOnTermination: true}
+      Tags: [{Key: Name, Value: !Sub '${AWS::StackName}'}, {Key: Project, Value: VibroVision}]
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          set -euo pipefail
+          umask 077
+          signal_exit() {
+            code=$?
+            if [ -x /opt/aws/bin/cfn-signal ]; then
+              /opt/aws/bin/cfn-signal -e "$code" --stack '${AWS::StackName}' --resource Instance --region '${AWS::Region}' || true
+            fi
+          }
+          trap signal_exit EXIT
+          dnf install -y docker aws-cfn-bootstrap awscli-2
+          systemctl enable --now docker
+          mkdir -p /opt/vibrovision
+          aws s3 cp 's3://${ReleaseBucket}/${ReleaseKey}' /run/vibrovision-release.tar.gz --region '${AWS::Region}' --only-show-errors
+          echo '${ReleaseSha256}  /run/vibrovision-release.tar.gz' | sha256sum --check --status
+          tar -xzf /run/vibrovision-release.tar.gz --no-same-owner --same-permissions -C /opt/vibrovision
+          cd /opt/vibrovision
+          aws secretsmanager get-secret-value --secret-id '${AccessSecret}' --region '${AWS::Region}' --query SecretString --output text > /run/vibrovision-secret.json
+          python3 - <<'PY'
+          import json, pathlib
+          key = json.loads(pathlib.Path('/run/vibrovision-secret.json').read_text())['api_key']
+          assert key.isascii() and key.isalnum()
+          pathlib.Path('/opt/vibrovision/runtime.env').write_text('API_KEY=' + key + '\nORIGIN_VERIFY_KEY=' + key + '\n')
+          PY
+          rm -f /run/vibrovision-secret.json
+          mkdir -p /opt/vibrovision/work
+          chown 10001:10001 /opt/vibrovision/work
+          docker build --pull -t vibrovision:${ReleaseSha256} -f infra/Dockerfile .
+          docker run -d --restart unless-stopped -p 80:8000 --env-file /opt/vibrovision/runtime.env \
+            -e S3_BUCKET='${ArtifactBucket}' -e MAX_BUFFER_MB=512 \
+            -e AWS_REGION='${AWS::Region}' -e AWS_DEFAULT_REGION='${AWS::Region}' \
+            -e RELEASE_SHA256='${ReleaseSha256}' -e WORK_DIR=/var/lib/vibrovision \
+            -v /opt/vibrovision/work:/var/lib/vibrovision \
+            --log-driver awslogs --log-opt awslogs-region='${AWS::Region}' \
+            --log-opt awslogs-group='${LogGroup}' --log-opt awslogs-create-group=false \
+            --name vibrovision vibrovision:${ReleaseSha256}
+          ready=0
+          for i in $(seq 1 90); do
+            if curl -fsS http://127.0.0.1/healthz > /run/vibrovision-health.json; then ready=1; break; fi
+            sleep 5
+          done
+          test "$ready" = 1
+          python3 - <<'PY'
+          import json
+          data=json.load(open('/run/vibrovision-health.json'))
+          assert data['ok'] and data['opencv'].startswith('5.') and data['arch']=='aarch64', data
+          assert data['release_sha256']=='${ReleaseSha256}'
+          PY
+  Distribution:
+    Type: AWS::CloudFront::Distribution
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: browser-trusted HTTPS without a custom domain for a small hackathon demo
+        must: [disable dynamic-response caching; retain secret origin verification; redirect HTTP viewers to HTTPS]
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: !Sub 'VibroVision ${AWS::StackName}; authenticated dynamic API'
+        HttpVersion: http2and3
+        IPV6Enabled: true
+        PriceClass: PriceClass_100
+        Origins:
+          - Id: application
+            DomainName: !GetAtt Instance.PublicDnsName
+            CustomOriginConfig:
+              HTTPPort: 80
+              OriginProtocolPolicy: http-only
+              OriginReadTimeout: 60
+            OriginCustomHeaders:
+              - HeaderName: X-Origin-Verify
+                HeaderValue: !Sub '{{resolve:secretsmanager:${AccessSecret}:SecretString:api_key}}'
+        DefaultCacheBehavior:
+          TargetOriginId: application
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods: [DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT]
+          CachedMethods: [GET, HEAD]
+          Compress: true
+          MinTTL: 0
+          DefaultTTL: 0
+          MaxTTL: 0
+          ForwardedValues:
+            QueryString: true
+            Cookies: {Forward: all}
+            Headers: ['*']
+        ViewerCertificate: {CloudFrontDefaultCertificate: true}
+        CustomErrorResponses:
+          - {ErrorCode: 403, ErrorCachingMinTTL: 0}
+          - {ErrorCode: 500, ErrorCachingMinTTL: 0}
+          - {ErrorCode: 502, ErrorCachingMinTTL: 0}
+          - {ErrorCode: 503, ErrorCachingMinTTL: 0}
+  HighEscalationRate:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Repeated escalations may indicate a camera/setup problem.
+      Namespace: VibroVision
+      MetricName: Escalations
+      Dimensions: [{Name: Service, Value: vibrovision}, {Name: Arch, Value: aarch64}]
+      Statistic: Sum
+      Period: 3600
+      EvaluationPeriods: 1
+      Threshold: 5
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+Outputs:
+  Endpoint: {Value: !Sub 'https://${Distribution.DomainName}/'}
+  Bucket: {Value: !Ref ArtifactBucket}
+  InstanceId: {Value: !Ref Instance}
+  AccessSecretArn: {Value: !Ref AccessSecret}
+  DistributionId: {Value: !Ref Distribution}
+  LogGroup: {Value: !Ref LogGroup}
+  ReleaseSha256: {Value: !Ref ReleaseSha256}

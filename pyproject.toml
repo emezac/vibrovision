@@ -1,0 +1,12 @@
+[project]
+name = "vibrovision"
+version = "3.0.0"
+description = "Camera-based vibration inspection with OpenCV 5 and an inspection agent"
+requires-python = ">=3.12"
+readme = "README.md"
+
+[tool.setuptools]
+packages = ["vibrovision"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

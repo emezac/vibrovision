@@ -1,0 +1,58 @@
+[
+ {
+  "file": "fan_nocoin.mp4",
+  "fps": 29.898592283820804,
+  "frames": 451,
+  "circle": [
+   615.75,
+   236.25,
+   189.0500030517578
+  ],
+  "drift_px": [
+   7.017411292824704,
+   1.2719043025942085
+  ],
+  "rotation_deg": -0.20261628822579025,
+  "housing_inliers": 0.9616325107845286,
+  "vibration_rms_px_per_frame": 0.06843751837350898,
+  "camera_motion_rms_px_per_frame": 0.03675466775894165,
+  "video_peak_hz": 11.679137610867503,
+  "camera_peak_hz": 3.2701585310429007,
+  "audio_modulation_peak_hz": 3.173828125,
+  "audio_rms": 0.006727768105791367,
+  "tone_hz": 11.679137610867503,
+  "tone_displacement_rms_px": 0.028101563188104528,
+  "tone_prominence_db_video": 20.33119187847653,
+  "tone_prominence_db_audio_at_same_hz": 2.8695276773495655,
+  "outline_radius_px": 189.0500030517578,
+  "label": "no coin"
+ },
+ {
+  "file": "fan_coin.mp4",
+  "fps": 29.864639772758625,
+  "frames": 457,
+  "circle": [
+   617.25,
+   255.75,
+   213.5
+  ],
+  "drift_px": [
+   106.42805110322763,
+   -19.5135843203592
+  ],
+  "rotation_deg": -11.099935462158744,
+  "housing_inliers": 0.6055462015821677,
+  "vibration_rms_px_per_frame": 2.155257523694031,
+  "camera_motion_rms_px_per_frame": 0.09041307121515274,
+  "video_peak_hz": 12.365827405907869,
+  "camera_peak_hz": 12.365827405907869,
+  "audio_modulation_peak_hz": 12.451171875,
+  "audio_rms": 0.004858306478904921,
+  "tone_hz": 12.365827405907869,
+  "tone_displacement_rms_px": 0.9976301482160904,
+  "tone_prominence_db_video": 28.137978481763017,
+  "tone_prominence_db_audio_at_same_hz": 33.00504994927796,
+  "outline_radius_px": 213.5,
+  "label": "coin taped to a blade"
+ }
+]

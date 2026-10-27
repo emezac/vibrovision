@@ -1,0 +1,16 @@
+{
+  "endpoint": "https://d30icy4clt3p0c.cloudfront.net/",
+  "captured_at_unix": 1793066333.644138,
+  "captures": [
+    {
+      "kind": "comparison",
+      "job_id": "7459d1077a62",
+      "wall_s": 43.9
+    },
+    {
+      "kind": "synthetic",
+      "job_id": "7b61959df6ab",
+      "wall_s": 80.6
+    }
+  ]
+}

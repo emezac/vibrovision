@@ -1,0 +1,373 @@
+#
+#####################################
+##           Gherkin               ##
+#####################################
+# Rule Identifier:
+#    S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED
+#
+# Description:
+#   Checks if your Amazon S3 bucket either has the Amazon S3 default encryption enabled or that the Amazon S3 bucket policy
+#   explicitly denies put-object requests without server side encryption that uses AES-256 or AWS Key Management Service.
+#
+# Reports on:
+#    AWS::S3::Bucket
+#
+# Evaluates:
+#    AWS CloudFormation
+#
+# Rule Parameters:
+#    NA
+#
+# Scenarios:
+# a) SKIP: when there are no S3 resource present
+# b) PASS: when all S3 resources Bucket Encryption ServerSideEncryptionByDefault is set to either "aws:kms" or "AES256"
+# c) FAIL: when all S3 resources have Bucket Encryption ServerSideEncryptionByDefault is not set or does not have "aws:kms" or "AES256" configurations
+# d) SKIP: when metadata includes the suppression for rule S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED
+
+#
+# Select all S3 resources from incoming template (payload)
+#
+
+let s3_buckets_server_side_encryption = Resources.*[ Type == 'AWS::S3::Bucket'
+  Metadata.cfn_nag.rules_to_suppress not exists or
+  Metadata.cfn_nag.rules_to_suppress.*.id != "W41"
+  Metadata.guard.SuppressedRules not exists or
+  Metadata.guard.SuppressedRules.* != "S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED"
+]
+
+rule S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED when %s3_buckets_server_side_encryption !empty {
+  %s3_buckets_server_side_encryption.Properties.BucketEncryption exists
+  %s3_buckets_server_side_encryption.Properties.BucketEncryption.ServerSideEncryptionConfiguration[*].ServerSideEncryptionByDefault.SSEAlgorithm in ["aws:kms","AES256"]
+  <<
+    Violation: S3 Bucket must enable server-side encryption.
+    Fix: Set the S3 Bucket property BucketEncryption.ServerSideEncryptionConfiguration.ServerSideEncryptionByDefault.SSEAlgorithm to either "aws:kms" or "AES256"
+  >>
+}
+
+
+#
+#####################################
+##           Gherkin               ##
+#####################################
+# Rule Identifier:
+#    S3_BUCKET_LEVEL_PUBLIC_ACCESS_PROHIBITED
+#
+# Description:
+#   Checks if Amazon Simple Storage Service (Amazon S3) buckets are publicly accessible.
+#
+# Reports on:
+#    AWS::S3::Bucket
+#
+# Evaluates:
+#    AWS CloudFormation
+#
+# Rule Parameters:
+#    NA
+#
+# Scenarios:
+# a) SKIP: when there are no S3 resource present
+# b) PASS: when all S3 resources Public Access Block Configuration element is present and properties are set to true
+# c) FAIL: when all S3 resources do not have the Public Access Block Configuration element present or all properties set to true
+# d) SKIP: when metada has rule suppression for S3_BUCKET_LEVEL_PUBLIC_ACCESS_PROHIBITED
+
+#
+# Select all S3 resources from incoming template (payload)
+#
+let s3_buckets_level_public_access_prohibited = Resources.*[ Type == 'AWS::S3::Bucket'
+  Metadata.guard.SuppressedRules not exists or
+  Metadata.guard.SuppressedRules.* != "S3_BUCKET_LEVEL_PUBLIC_ACCESS_PROHIBITED"
+]
+
+rule S3_BUCKET_LEVEL_PUBLIC_ACCESS_PROHIBITED when %s3_buckets_level_public_access_prohibited !empty {
+  %s3_buckets_level_public_access_prohibited.Properties.PublicAccessBlockConfiguration exists
+  %s3_buckets_level_public_access_prohibited.Properties.PublicAccessBlockConfiguration.BlockPublicAcls == true
+  %s3_buckets_level_public_access_prohibited.Properties.PublicAccessBlockConfiguration.BlockPublicPolicy == true
+  %s3_buckets_level_public_access_prohibited.Properties.PublicAccessBlockConfiguration.IgnorePublicAcls == true
+  %s3_buckets_level_public_access_prohibited.Properties.PublicAccessBlockConfiguration.RestrictPublicBuckets == true
+  <<
+    Violation: S3 Bucket Public Access controls need to be restricted.
+    Fix: Set S3 Bucket PublicAccessBlockConfiguration properties for BlockPublicAcls, BlockPublicPolicy, IgnorePublicAcls, RestrictPublicBuckets parameters to true.
+  >>
+}
+
+#
+#####################################
+##           Gherkin               ##
+#####################################
+# Rule Identifier:
+#    S3_BUCKET_VERSIONING_ENABLED
+#
+# Description:
+#   Checks if versioning is enabled for your S3 buckets.
+#
+# Reports on:
+#    AWS::S3::Bucket
+#
+# Evaluates:
+#    AWS CloudFormation
+#
+# Rule Parameters:
+#    NA
+#
+# Scenarios:
+# a) SKIP: when there are no S3 resource present
+# b) PASS: when all S3 resources Versioning Configuration status is set to Enabled
+# c) FAIL: when all S3 resources have Versioning Configuration status property not set or set to Suspended
+# d) SKIP: when metadata includes the suppression for rule S3_BUCKET_VERSIONING_ENABLED
+
+#
+# Select all S3 resources from incoming template (payload)
+#
+let s3_buckets_versioning_enabled = Resources.*[ Type == 'AWS::S3::Bucket'
+  Metadata.guard.SuppressedRules not exists or
+  Metadata.guard.SuppressedRules.* != "S3_BUCKET_VERSIONING_ENABLED"
+]
+
+rule S3_BUCKET_VERSIONING_ENABLED when %s3_buckets_versioning_enabled !empty {
+  %s3_buckets_versioning_enabled.Properties.VersioningConfiguration exists
+  %s3_buckets_versioning_enabled.Properties.VersioningConfiguration.Status == 'Enabled'
+  <<
+    Violation: S3 Bucket Versioning must be enabled.
+    Fix: Set the S3 Bucket property VersioningConfiguration.Status to 'Enabled' .
+  >>
+}
+
+#
+#####################################
+##           Gherkin               ##
+#####################################
+# Rule Identifier:
+#    EC2_INSTANCE_PROFILE_ATTACHED
+#
+# Description:
+#    Checks if an Amazon Elastic Compute Cloud (Amazon EC2) instance has an Identity and Access Management (IAM) profile attached to it.
+#
+# Reports on:
+#    AWS::EC2::Instance
+#
+# Evaluates:
+#    AWS CloudFormation
+#
+# Rule Parameters:
+#    NA
+#
+# Scenarios:
+# a) SKIP: when no EC2 Instance resources are present
+# b) PASS: when all EC2 Instace resources have an associated IAM instance profile
+# d) FAIL: when any EC2 Instace resources do not have an associated IAM instance profile
+# e) SKIP: hen metadata includes the suppression for rule EC2_INSTANCE_PROFILE_ATTACHED
+
+#
+# Select all EC2 Instance resources from incoming template (payload)
+#
+let ec2_instances_profile_attached = Resources.*[ Type == 'AWS::EC2::Instance'
+  Metadata.guard.SuppressedRules not exists or
+  Metadata.guard.SuppressedRules.* != "EC2_INSTANCE_PROFILE_ATTACHED"
+]
+
+rule EC2_INSTANCE_PROFILE_ATTACHED when %ec2_instances_profile_attached !empty {
+  %ec2_instances_profile_attached.Properties.IamInstanceProfile EXISTS
+  <<
+    Violation: EC2 Instances must have IAM profile attached to it.
+    Fix: Associate the EC2 Instance property IamInstanceProfile with an IAM Instance Profile.
+  >>
+}
+
+
+#
+#####################################
+##          AWS Solutions          ##
+#####################################
+# Rule Identifier:
+#    EC2_SECURITY_GROUP_INGRESS_OPEN_TO_WORLD_RULE
+#
+# Description:
+#   Check if cidr FOR ipv4 and ipv6 on security group ingress is open or private.
+#
+# Reports on:
+#    [AWS::EC2::SecurityGroupIngress, AWS::EC2::SecurityGroup]
+#
+# Evaluates:
+#    AWS CloudFormation
+#
+# Rule Parameters:
+#    NA
+#
+# CFN_NAG Rule Id:
+#   W2
+#
+# Scenarios:
+# a) SKIP: when there are no Security Ingress Groups resource present
+# b) PASS: When all Security Ingress Groups do not use open to world cidr
+# c) FAIL: when any Security Ingress Groups uses open to world cidr
+# d) SKIP: when metadata has rule suppression for EC2_SECURITY_GROUP_INGRESS_OPEN_TO_WORLD_RULE
+
+#
+# Select all Security Group Ingress resources from incoming template (payload)
+#
+
+let ec2_security_group_ingress_open_to_world_rule_sg_ingress_resources = Resources.*[ Type == 'AWS::EC2::SecurityGroup'
+  Metadata.cfn_nag.rules_to_suppress not exists or
+  Metadata.cfn_nag.rules_to_suppress.*.id != "W2"
+  Metadata.guard.SuppressedRules not exists or
+  Metadata.guard.SuppressedRules.* != "EC2_SECURITY_GROUP_INGRESS_OPEN_TO_WORLD_RULE"
+]
+
+let ec2_security_group_ingress_open_to_world_rule_sgi_resources = Resources.*[ Type == 'AWS::EC2::SecurityGroupIngress'
+  Metadata.cfn_nag.rules_to_suppress not exists or
+  Metadata.cfn_nag.rules_to_suppress.*.id != "W2"
+  Metadata.guard.SuppressedRules not exists or
+  Metadata.guard.SuppressedRules.* != "EC2_SECURITY_GROUP_INGRESS_OPEN_TO_WORLD_RULE"
+]
+
+rule EC2_SECURITY_GROUP_INGRESS_OPEN_TO_WORLD_RULE when %ec2_security_group_ingress_open_to_world_rule_sgi_resources !empty OR %ec2_security_group_ingress_open_to_world_rule_sg_ingress_resources !empty {
+  let violations_sg = %ec2_security_group_ingress_open_to_world_rule_sg_ingress_resources[
+    Type == 'AWS::EC2::SecurityGroup'
+    Properties.SecurityGroupIngress exists
+    some Properties.SecurityGroupIngress[*].CidrIp == '0.0.0.0/0'
+    OR
+    some Properties.SecurityGroupIngress[*].CidrIpv6 == '::/0'
+  ]
+
+  let violations_sgi = %ec2_security_group_ingress_open_to_world_rule_sgi_resources[
+    Type == 'AWS::EC2::SecurityGroupIngress'
+    Properties.CidrIp == '0.0.0.0/0'
+    OR
+    Properties.CidrIpv6 == '::/0'
+  ]
+
+  %violations_sg empty
+  %violations_sgi empty
+  <<
+    Violation: Security Group Ingress has a range of ports instead of a single port
+    Fix: Use single port instead of range of ports for ingress rules
+  >>
+}
+
+
+#
+#####################################
+##           Gherkin               ##
+#####################################
+# Rule Identifier:
+#    INCOMING_SSH_DISABLED
+#
+# Description:
+#    Checks if the incoming SSH traffic for the security groups is accessible.
+#
+# Reports on:
+#    AWS::EC2::SecurityGroup
+#
+# Evaluates:
+#    AWS CloudFormation
+#
+# Rule Parameters:
+#    NA
+#
+# Scenarios:
+# a) SKIP: when no Security Group resources are present
+# b) SKIP: when no SSH ingress is defined (port 22)
+# c) PASS: when all Security Groups resources restrict the IP address of the incoming SSH traffic
+# d) FAIL: when a Security Group allows SSH traffic from any IP address (0.0.0.0/0).
+# e) SKIP: hen metadata includes the suppression for rule INCOMING_SSH_DISABLED
+
+#
+# Select all Security Group resources from incoming template (payload)
+#
+let aws_security_groups_restricted_ssh = Resources.*[
+	Type == 'AWS::EC2::SecurityGroup'
+	some Properties.SecurityGroupIngress[*] {
+		ToPort == 22
+		FromPort == 22
+		IpProtocol == "tcp"
+	}
+  Metadata.guard.SuppressedRules not exists or
+  Metadata.guard.SuppressedRules.* != "INCOMING_SSH_DISABLED"
+]
+
+rule INCOMING_SSH_DISABLED when %aws_security_groups_restricted_ssh !empty {
+	%aws_security_groups_restricted_ssh.Properties.SecurityGroupIngress[*] != {CidrIp:"0.0.0.0/0", ToPort:22, FromPort:22, IpProtocol:"tcp"}
+  <<
+    Violation: IP addresses of the incoming SSH traffic in the security groups are restricted (CIDR other than 0.0.0.0/0)
+    Fix: set SecurityGroupIngress.CidrIp property to a more restrictive CIDR than 0.0.0.0/0
+  >>
+}
+
+#
+#####################################
+##           Gherkin               ##
+#####################################
+# Rule Identifier:
+#    CLOUDFRONT_VIEWER_POLICY_HTTPS
+#
+# Description:
+#  Checks whether your Amazon CloudFront distributions use HTTPS (directly or via a redirection).
+#
+# Reports on:
+#    AWS::CloudFront::Distribution
+#
+# Evaluates:
+#    AWS CloudFormation
+#
+# Rule Parameters:
+#    NA
+#
+# Scenarios:
+# a) SKIP: when there are no CloudFront Distribution Resources
+# b) SKIP: when metadata has rule suppression for CLOUDFRONT_VIEWER_POLICY_HTTPS
+# c) SKIP: when no CloudFront Distribution Cache Behaviors or Default Cache Behaviors are provided
+# d) FAIL: when CloudFront Distribution Default Cache Behavior Viewer Protocol Policies are configured to allow all (HTTP & HTTPS)
+# e) FAIL: when one or more CloudFront Distribution Cache Behavior Viewer Protocol Policies are configured to allow all (HTTP & HTTPS)
+# f) PASS: when CloudFront Distribution Default Cache Behavior Viewer Protocol Policies are configured with HTTPS (directly or via a redirection)
+# g) PASS: when all CloudFront Distribution Cache Behavior Viewer Protocol Policies are configured with HTTPS (directly or via a redirection)
+
+#
+# Select all CloudFront Distribution Resources from incoming template (payload)
+#
+let cloudfront_viewer_policy_https_resources = Resources.*[ Type == 'AWS::CloudFront::Distribution'
+  Metadata.guard.SuppressedRules not exists or
+  Metadata.guard.SuppressedRules.* != "CLOUDFRONT_VIEWER_POLICY_HTTPS"
+]
+
+rule CLOUDFRONT_VIEWER_POLICY_HTTPS when %cloudfront_viewer_policy_https_resources !empty {
+  %cloudfront_viewer_policy_https_resources.Properties.DistributionConfig {
+
+    when DefaultCacheBehavior exists {
+        # Scenario c)
+        DefaultCacheBehavior.ViewerProtocolPolicy != "allow-all"
+        DefaultCacheBehavior.ViewerProtocolPolicy in ["redirect-to-https", "https-only"]
+        # Scenario e)
+    }
+
+    when CacheBehaviors exists
+         CacheBehaviors not empty {
+      CacheBehaviors.*{
+          # Scenario d)
+          ViewerProtocolPolicy != "allow-all"
+          # Scenario f)
+          ViewerProtocolPolicy in ["redirect-to-https", "https-only"]
+          <<
+            Violation: Amazon CloudFront distributions must use HTTPS (directly or via a redirection).
+            Fix: Set the ViewerProtocolPolicy in DefaultCacheBehavior or CacheBehaviors to one of "redirect-to-https" or "https-only".
+          >>
+      }
+    }
+
+  }
+}
+
+
+let demo_instances = Resources.*[ Type == 'AWS::EC2::Instance' ]
+rule VIBROVISION_IMDSV2 when %demo_instances !empty {
+  %demo_instances.Properties.MetadataOptions.HttpTokens == 'required'
+  %demo_instances.Properties.MetadataOptions.HttpPutResponseHopLimit == 2
+}
+rule VIBROVISION_EBS_ENCRYPTION when %demo_instances !empty {
+  %demo_instances.Properties.BlockDeviceMappings[*].Ebs.Encrypted == true
+}
+let demo_distributions = Resources.*[ Type == 'AWS::CloudFront::Distribution' ]
+rule VIBROVISION_NO_DYNAMIC_CACHE when %demo_distributions !empty {
+  %demo_distributions.Properties.DistributionConfig.DefaultCacheBehavior.MinTTL == 0
+  %demo_distributions.Properties.DistributionConfig.DefaultCacheBehavior.DefaultTTL == 0
+  %demo_distributions.Properties.DistributionConfig.DefaultCacheBehavior.MaxTTL == 0
+}
