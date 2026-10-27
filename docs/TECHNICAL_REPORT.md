@@ -1,5 +1,7 @@
 # VibroVision: technical report
 
+[Download the judge-facing submission PDF](VibroVision_Technical_Submission.pdf).
+
 ## Problem and intended users
 
 Video can help maintenance engineers, researchers and educators inspect several visible regions without attaching a sensor to every location. The challenge is deciding which conclusions the footage supports. Camera movement, image scale, excitation, texture, compression and sampling rate can affect an apparent vibration change.
